@@ -1,4 +1,4 @@
-﻿using Content.Shared.Movement.Systems;
+using Content.Shared.Movement.Systems;
 using Lidgren.Network;
 using Robust.Shared.Network;
 using Robust.Shared.Serialization;

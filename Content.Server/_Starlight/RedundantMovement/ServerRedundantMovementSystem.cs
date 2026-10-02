@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Content.Server._Starlight.Physics;
 using Content.Shared._Starlight.CCVar;
 using Content.Shared._Starlight.RedundantMovement;
