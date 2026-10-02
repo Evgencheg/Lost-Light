@@ -226,6 +226,7 @@
     Head: MobMothHead
     Hair: MobHumanoidAnyMarking
     Snout: MobHumanoidAnyMarking
+    # LP edit - убрано нижнее бельё (цензура наготы)
     Chest: MobKoniTorso
     HeadTop: MobHumanoidAnyMarking
     HeadSide: MobHumanoidAnyMarking
