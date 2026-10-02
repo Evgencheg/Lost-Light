@@ -142,10 +142,10 @@ Loadout-group-brighteye-neck = Яркоглазый, шея
 loadout-group-brighteye-gloves = Яркоглазый, перчатки
 
 # NCT
-loadout-group-NanotrasenCareerTrainer-jumpsuit = Карьерный наставник НаноТрейзен, комбинезон
-loadout-group-NanotrasenCareerTrainer-hat = Карьерный наставник НаноТрейзен, голова
-loadout-group-NanotrasenCareerTrainer-shoes = Карьерный наставник НаноТрейзен, обувь
-loadout-group-NanotrasenCareerTrainer-eyewear = Карьерный наставник НаноТрейзен, очки
+loadout-group-NanotrasenCareerTrainer-jumpsuit = Карьерный коуч НаноТрейзен, комбинезон
+loadout-group-NanotrasenCareerTrainer-hat = Карьерный коуч НаноТрейзен, голова
+loadout-group-NanotrasenCareerTrainer-shoes = Карьерный коуч НаноТрейзен, обувь
+loadout-group-NanotrasenCareerTrainer-eyewear = Карьерный коуч НаноТрейзен, очки
 
 # Security
 loadout-group-warden-neck = Смотритель, шея
