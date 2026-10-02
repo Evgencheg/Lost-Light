@@ -177,8 +177,7 @@ public sealed partial class TextToSpeechSystem : EntitySystem
             var @params = audioParams ?? AudioParams.Default;
             var audioStream = _audioManager.LoadAudioOggVorbis(new MemoryStream(audioBytes));
 
-            if (previous is var (eid, audio, tts))
-                silencePadding = Math.Clamp(1f - (float)(tts.AudioLength.TotalSeconds - audio.PlaybackPosition) - CrossFade, 0f, 1f);
+            // LP edit - убран расчёт смещения после предыдущего куска/звонка: он тоже рассчитан на секунду тишины и срезал ~1 с речи после звонка рации
 
             Log.Debug($"Play TTS chunk: {audioBytes.Length}, prependSilence: {silencePadding:F3}s");
             @params = @params.WithPlayOffset(silencePadding);

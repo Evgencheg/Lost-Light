@@ -72,17 +72,22 @@ public sealed partial class NttsClient : ITTSClient
         [EnumeratorCancellation] CancellationToken cancellationToken = default
     )
     {
+        // Пустой массив в конце всегда: по нему клиент закрывает поток, иначе поток висит до конца раунда.
         var speaker = GetSpeaker(voice);
         if (string.IsNullOrWhiteSpace(text) || string.IsNullOrEmpty(speaker) || string.IsNullOrEmpty(_apiUrl))
+        {
+            yield return [];
             yield break;
+        }
 
         var key = (speaker, effect, text);
         var audio = GetCache(key) ?? await Request(speaker, text, effect, cancellationToken);
-        if (audio is null)
-            yield break;
+        if (audio is not null)
+        {
+            AddCache(key, audio);
+            yield return audio;
+        }
 
-        AddCache(key, audio);
-        yield return audio;
         yield return [];
     }
 
@@ -108,7 +113,14 @@ public sealed partial class NttsClient : ITTSClient
                 return null;
             }
 
-            return await response.Content.ReadAsByteArrayAsync(cts.Token);
+            var audio = await response.Content.ReadAsByteArrayAsync(cts.Token);
+            if (audio.Length < 4 || audio[0] != 'O' || audio[1] != 'g' || audio[2] != 'g' || audio[3] != 'S')
+            {
+                _sawmill.Warning($"ntts вернул не ogg для голоса {speaker} ({audio.Length} байт, {response.Content.Headers.ContentType})");
+                return null;
+            }
+
+            return audio;
         }
         catch (OperationCanceledException) when (!cancellationToken.IsCancellationRequested)
         {
