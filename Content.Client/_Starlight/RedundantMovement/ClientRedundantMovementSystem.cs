@@ -1,4 +1,4 @@
-﻿using Content.Shared._Starlight.CCVar;
+using Content.Shared._Starlight.CCVar;
 using Content.Shared._Starlight.RedundantMovement;
 using Content.Shared.Input;
 using Content.Shared.Movement.Systems;

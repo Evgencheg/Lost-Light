@@ -1,4 +1,4 @@
-﻿using Content.Server._Starlight.Physics;
+using Content.Server._Starlight.Physics;
 using Robust.Shared.Timing;
 
 namespace Content.Server._Starlight.RedundantMovement;
