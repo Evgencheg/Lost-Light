@@ -33,7 +33,7 @@ public sealed partial class NttsClient : ITTSClient
         [TTSEffect.Walkie] = "walkie_talkie",
         [TTSEffect.Phone] = "telephone",
         [TTSEffect.Megaphone] = "announce",
-        [TTSEffect.Underwater] = "echo",
+        [TTSEffect.Underwater] = "tunnel",
         [TTSEffect.Mystical] = "ghost",
     };
 
