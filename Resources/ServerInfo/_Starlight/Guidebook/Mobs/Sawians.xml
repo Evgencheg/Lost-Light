@@ -10,18 +10,17 @@
     Они не привыкли носить одежду. [color=yellow]Чем меньше на них надето, тем быстрее они двигаются[/color],
     постепенно переходя от [color=yellow]125% базовой скорости[/color] без одежды [color=lightgreen](голова, верхняя одежда, маска, обувь, нижняя одежда, перчатки)[/color] к [color=yellow]95% скорости при заполненных слотах[/color].
 
-    #Здоровье
-    Савианы на редкость выносливы, созданы жить в условиях, смертельных для большинства рас
-    - Большинству дают мозговые импланты, дающие продвинутую индикацию состояния их тела.
-    - Их выносливость позволяет некоторое время терпеть последствия [color=red]критического состояния[/color].
-    При [color=red]100 урона[/color] они входят в «мягкий крит», когда могут [color=yellow]ползти, говорить и использовать предметы. [/color]
-    Однако они будут получать урон от [color=red]удушья[/color],
-    в итоге теряя сознание при [color=red]150 урона[/color] и окончательно умирая при [color=red]200 урона[/color].
-    - Их чрезвычайно быстрый метаболизм делает их отличными в заживлении большинства ран, хотя это ценой сильно возросшего голода, который в крайних случаях может их убить.
-    - Они голодают в [color=red]3 раза быстрее[/color] людей, но [color=green]естественно регенерируют здоровье[/color], пока [color=orange]урон ниже 100[/color],
-    и [color=green]получают дополнительное лечение[/color], пока они [color=red]не голодают[/color],
-    фактически [color=green]лечась в три раза быстрее[/color], пока [color=red]не в крите.[/color]
-    - Пока они голодают, они постепенно получают [color=orange]0,2 едкого[/color] урона каждую секунду до смерти.
+    #Health
+    Sawians are remarkably durable, made to live in conditions deadly to most species
+    - Most are given brain implants allowing them an advanced readout of their bodies condition.
+    - Their durability allows them to endure the effects of being in [color=red]critical condition[/color] for some time.
+    At [color=red]100 damage[/color] they enter "soft critical" state, where they can [color=yellow]crawl, talk, and use items. [/color]
+    They will however take [color=red]Asphyxiation[/color] Damage,
+    eventually passing out at [color=red]150 damage[/color] before ultimately dying at [color=red]200 damage[/color].
+    - Their hastened metabolism makes them process chems and poisons faster.
+    - They get hungry and thirsty [color=red]3 times faster[/color] than humans, but they [color=green]have an additional healing[/color] while they are [color=red]not starving[/color],
+    effectively making them [color=green]heal twice as fast passively[/color] while [color=red]not critical.[/color]
+    - While they are starving they gradually take [color=orange]0.5 Caustic[/color] damage every second until death.
 
 
     #Единообразие
