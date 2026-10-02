@@ -41,7 +41,7 @@
     - shittersafari2
   name: shitstation-title
   description: shitstation-description
-  showInVote: true
+  showInVote: false
   minPlayers: 0
   voteCooldown: 2
   rules:

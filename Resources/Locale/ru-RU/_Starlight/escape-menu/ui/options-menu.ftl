@@ -1,4 +1,6 @@
 ui-options-function-open-m-help = Открыть помощь ментора
+ui-options-function-jump = Прыжок
+ui-options-function-latch-struggle = Вырываться (когда в вас вцепились)
 ui-escape-connect-discord = Привязать Discord
 server-info-connect-discord-button = Привязать Discord
 ui-escape-connect-steam = Привязать Steam

@@ -4,15 +4,15 @@ on:
   workflow_dispatch:
     inputs:
       maps:
-        description: "Game map prototype IDs, space separated (e.g. StarlightBagel StarlightBox). Empty with empty directories renders the default directories."
+        description: "ID прототипов карт через пробел. Если пусто и папки пустые - рендерятся папки по умолчанию (vars.MAPS_DIRECTORIES)." # LP edit
         required: false
         default: ""
       directories:
-        description: "Directories to render every map from, space separated, relative to the repository root."
+        description: "Папки, из которых рендерить все карты, через пробел, от корня репозитория." # LP edit
         required: false
         default: ""
       type:
-        description: "Force the map type, otherwise detected from the map file."
+        description: "Принудительный тип карты, иначе определяется по файлу карты." # LP edit
         required: false
         default: auto
         type: choice
@@ -22,20 +22,23 @@ concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: false
 
+# LP edit start - репозиторий карт и папки берутся из переменных репозитория
 env:
-  MAPS_REPO: ss14Starlight/Starlight.Maps
-  MAPS_BASE_URL: https://raw.githubusercontent.com/ss14Starlight/Starlight.Maps/main
-  DEFAULT_DIRECTORIES: Resources/Maps/_Starlight/Stations Resources/Maps/_Starlight/Shuttles
+  MAPS_REPO: ${{ vars.MAPS_REPO }}
+  MAPS_BASE_URL: https://raw.githubusercontent.com/${{ vars.MAPS_REPO }}/main
+  DEFAULT_DIRECTORIES: ${{ vars.MAPS_DIRECTORIES || 'Resources/Maps/_Starlight/Stations Resources/Maps/_Starlight/Shuttles' }}
+# LP edit end
 
 jobs:
   render:
+    if: ${{ vars.MAPS_REPO != '' }} # LP edit - без репозитория карт не запускаем
     runs-on: ubuntu-latest
     permissions:
       contents: read
     timeout-minutes: 300
 
     steps:
-      - name: Checkout Starlight
+      - name: Checkout # LP edit
         uses: actions/checkout@v7
 
       - name: Setup Submodule
@@ -50,11 +53,11 @@ jobs:
           cd RobustToolbox/
           git submodule update --init --recursive
 
-      - name: Checkout Starlight.Maps
+      - name: Checkout maps repository # LP edit
         uses: actions/checkout@v7
         with:
           repository: ${{ env.MAPS_REPO }}
-          token: ${{ secrets.MAPS_REPO_TOKEN }}
+          token: ${{ secrets.BOT_TOKEN }} # LP edit
           persist-credentials: false
           path: Starlight.Maps
           fetch-depth: 1
@@ -117,7 +120,7 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           path: Starlight.Maps
-          token: ${{ secrets.MAPS_REPO_TOKEN }}
+          token: ${{ secrets.BOT_TOKEN }} # LP edit
           branch: map-render/${{ github.run_id }}
           delete-branch: true
           commit-message: Render maps from ${{ github.repository }}@${{ github.sha }}

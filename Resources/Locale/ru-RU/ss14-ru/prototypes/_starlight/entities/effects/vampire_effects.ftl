@@ -36,3 +36,5 @@ ent-VampireShadowSnare = теневой капкан
     .desc = Почти невидимая ловушка из сгущённых теней.
 ent-VampireShadowSnareEnsnare = теневые щупальца
     .desc = Тёмные щупальца, связывающие ваши ноги.
+ent-MobVampireSanguinePool = кровавая лужа
+    .desc = Разумная лужа вампирской крови.
