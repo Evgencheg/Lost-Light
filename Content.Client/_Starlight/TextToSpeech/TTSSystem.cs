@@ -173,7 +173,7 @@ public sealed partial class TextToSpeechSystem : EntitySystem
             if (audioBytes.Length < 10 || (sourceUid != null && sourceUid.Value.Id == 0))
                 return null;
 
-            var silencePadding = 1f;
+            var silencePadding = 0f; // LP edit - ntts не добавляет секунду тишины в начало, как воркер Starlight, иначе срезается начало речи
             var @params = audioParams ?? AudioParams.Default;
             var audioStream = _audioManager.LoadAudioOggVorbis(new MemoryStream(audioBytes));
 

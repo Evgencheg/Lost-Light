@@ -110,7 +110,7 @@ internal static class ServerContentIoC
         // 🌟Starlight🌟 start
         deps.Register<ISharedPlayersRoleManager, PlayerRolesManager>();
         deps.Register<IPlayerRolesManager, PlayerRolesManager>();
-        deps.Register<ITTSClient, TTSClient>();
+        deps.Register<ITTSClient, Content.Server._LP.TextToSpeech.NttsClient>(); // LP edit - TTS через ntts вместо Redis
         deps.Register<ItemPriceManager, ItemPriceManager>();
         deps.Register<IBugReportManager, BugReportManager>();
         deps.Register<IAchievementRewardManager, NullLinkPlayerManager>();

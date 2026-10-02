@@ -27,12 +27,14 @@ public sealed partial class TTSSystem : EntitySystem
     [Dependency] private LanguageSystem _language = default!;
     [Dependency] private SharedAudioSystem _audio = default!;
 
+    // LP edit start - примеры на русском
     private readonly List<string> _sampleText =
     [
-        "Can someone bring me a pair of insulating gloves, please?",
-        "Security, the clown has stolen the captain's ID!",
-        "The singularity has reached the arrivals area!",
+        "Кто-нибудь, принесите мне изолированные перчатки, пожалуйста!",
+        "Служба безопасности, клоун украл карту капитана!",
+        "Сингулярность добралась до зоны прибытия!",
     ];
+    // LP edit end
 
     private const int DefaultAnnounceVoice = 2001;
     private const int DefaultVoice = 0;
@@ -255,7 +257,7 @@ public sealed partial class TTSSystem : EntitySystem
         text = TagStripperRegex().Replace(text, "");
         text = SmartQuotes().Replace(text, "'");
         text = CharFilter().Replace(text, "");
-        text = NumberConverter.NumberPattern().Replace(text, match => NumberConverter.Convert(match.Value));
+        // LP edit - числа не переводим в английские слова: ntts сам читает цифры по-русски
         return text;
     }
 
