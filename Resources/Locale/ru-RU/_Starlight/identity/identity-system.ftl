@@ -5,4 +5,4 @@ identity-gender-animal-generic = хороший { $noun }
 identity-animal-noun-dog = собака
 identity-animal-noun-fox = лиса
 
-animal-identity-component-examine = Это { $noun }.
+animal-identity-component-examine = { CAPITALIZE(SUBJECT($user)) } — { $noun }.

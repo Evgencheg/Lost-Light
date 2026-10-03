@@ -20,6 +20,10 @@ ui-options-sparks = Показывать искры
 ui-options-sparks-tooltip = Если при стрельбе лагает, снимите этот флажок,
                            и хитскан перестанет рисовать искры при попадании пули в поверхность.
 
+ui-options-hitscan-prediction = Предугадывать свои выстрелы
+ui-options-hitscan-prediction-tooltip = Рисовать ваши пули до того как сервер их засчитал.
+                                        Сервер всё ещё решает кто попал.
+
 ## Accessibility
 
 ui-options-arachnophobia = Режим арахнофобии
