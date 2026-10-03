@@ -1,4 +1,4 @@
-﻿using Content.Shared._Starlight.StationRadio.Events;
+using Content.Shared._Starlight.StationRadio.Events;
 using Content.Shared._Starlight.StationRadio.Systems;
 using Content.Shared._Starlight.StationRadio.Components;
 using Content.Shared.Destructible;

@@ -18,4 +18,3 @@ public sealed partial class StationRadioServerComponent : Component
     [DataField]
     public TimeSpan? PlaybackStartTime;
 }
-
