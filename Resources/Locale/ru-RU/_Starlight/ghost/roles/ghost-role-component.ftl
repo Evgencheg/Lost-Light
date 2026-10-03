@@ -128,7 +128,7 @@ ghost-role-information-kobold-advanced-description = Вам хочется фи�
 ghost-role-information-kiki-name = Кики
 ghost-role-information-kiki-description = Достойный член общества кобольдов, отвечающая за ботанику и помогающая ботаникам чем только может.
 
-ghost-role-information-stirstir-name = Размешать, размешать
+ghost-role-information-stirstir-name = Стир Стир
 ghost-role-information-stirstir-description = Сомнительная обезьяна, которой не стоит доверять. Настоящий забивальщик камер. Подробнее см. в Руководстве.
 
 ghost-role-information-syndicate-mothroach-reinforcement-name = Таракамоль Синдиката
