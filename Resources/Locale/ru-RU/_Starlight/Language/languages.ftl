@@ -153,3 +153,6 @@ language-Xenomind-description = Различные разумы ксеносов
 
 language-Squeakish-name = Пискиш
 language-Squeakish-description = Язык грызунов, состоящий из череды чириканья и писка.
+
+language-Penguin-name = Пингвиний
+language-Penguin-description = Кррря!
