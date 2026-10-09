@@ -23,11 +23,11 @@ GITHUB_API_URL = os.environ.get("GITHUB_API_URL", "https://api.github.com")
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
 DISCORD_CHANGELOG_ROLE_ID = int(os.environ.get("DISCORD_CHANGELOG_ROLE_ID", "1308143973684088883"))
 
-CHANGELOG_FILE = "Resources/Changelog/ChangelogStarlight.yml"
+CHANGELOG_FILE = "Resources/Changelog/ChangelogLP.yml"
 # Must match the changelog job name in .github/workflows/publish.yml and publish-testing.yml
 CHANGELOG_JOB_NAME = "Publish Changelogs"
 MAX_RUN_PAGES = 10
-TYPES_TO_EMOJI = {"Fix": "🐛", "Add": "🆕", "Remove": "❌", "Tweak": "⚒️"}
+TYPES_TO_EMOJI = {"Fix": "🐛", "Add": "✨", "Remove": "❌", "Tweak": "⚒️"}
 ChangelogEntry = dict[str, Any]
 
 EMBED_DESCRIPTION_LIMIT = 4096
@@ -212,7 +212,7 @@ def build_embed_for_pr(pr_id: str, entries: list[ChangelogEntry]) -> dict[str, A
   #      "fields": [
   #          {"name": "Author(s)", "value": author_field[:EMBED_FIELD_VALUE_LIMIT], "inline": False}
   #      ],
-        "footer": {"text": "Starlight changelog"},
+        "footer": {"text": "Lost Paradise changelog"},
         "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
     }
     if pr_id != "no-pr":
