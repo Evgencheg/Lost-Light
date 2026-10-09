@@ -233,4 +233,3 @@ public sealed partial class SocialInteractionSystem : EntitySystem
         public LocId? EmoteMessageSelf;
     }
 }
-

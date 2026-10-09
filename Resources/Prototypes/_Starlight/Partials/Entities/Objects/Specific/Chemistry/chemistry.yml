@@ -36,4 +36,3 @@
   - type: EmitSoundOnLand
     sound:
       path: /Audio/_Starlight/Items/Handling/pill_bottle_place.ogg
-

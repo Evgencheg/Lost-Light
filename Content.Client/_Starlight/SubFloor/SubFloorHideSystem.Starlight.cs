@@ -1,4 +1,4 @@
-﻿using Content.Shared.SubFloor;
+using Content.Shared.SubFloor;
 
 // ReSharper disable once CheckNamespace
 namespace Content.Client.SubFloor;

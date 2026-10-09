@@ -1,4 +1,4 @@
-﻿using System.Runtime.InteropServices;
+using System.Runtime.InteropServices;
 using Content.Shared._Starlight.Weapons.Hitscan.Components;
 using Content.Shared.Actions;
 using Content.Shared.Damage;

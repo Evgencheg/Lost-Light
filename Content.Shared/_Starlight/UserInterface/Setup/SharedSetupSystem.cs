@@ -1,4 +1,4 @@
-﻿using Content.Shared.Verbs;
+using Content.Shared.Verbs;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared._Starlight.UserInterface.Setup;

@@ -6,14 +6,14 @@
         "x": 32,
         "y": 32
     },
-  "states": [
-    {
-      "name": "icon",
-      "copyright": "Created by DogeyOT (Discord)."
-    },
-    {
-      "name": "equipped-MASK",
-      "directions": 4
-    }
-  ]
+    "states": [
+        {
+            "name": "icon",
+            "copyright": "Created by DogeyOT (Discord)."
+        },
+        {
+            "name": "equipped-MASK",
+            "directions": 4
+        }
+    ]
 }

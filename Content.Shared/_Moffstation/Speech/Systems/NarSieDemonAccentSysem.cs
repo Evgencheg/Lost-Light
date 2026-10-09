@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 using Content.Shared._Moffstation.Speech.Components;
 using Content.Shared.Speech;
 

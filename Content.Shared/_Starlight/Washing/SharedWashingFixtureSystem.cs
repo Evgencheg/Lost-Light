@@ -1,4 +1,4 @@
-﻿using Content.Shared.DoAfter;
+using Content.Shared.DoAfter;
 using Content.Shared.Glue;
 using Content.Shared.Lube;
 using Content.Shared.Nutrition.Components;

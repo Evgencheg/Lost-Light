@@ -1,4 +1,4 @@
-﻿using Content.Shared._Starlight.UserInterface.Setup;
+using Content.Shared._Starlight.UserInterface.Setup;
 
 namespace Content.Client._Starlight.UI.Setup;
 

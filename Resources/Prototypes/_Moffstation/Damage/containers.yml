@@ -1,4 +1,4 @@
-﻿- type: damageContainer
+- type: damageContainer
   id: MoffDemonBiological
   supportedGroups:
   - Brute

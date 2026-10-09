@@ -1,4 +1,4 @@
-﻿- type: utilityQuery
+- type: utilityQuery
   id: MoffNearbyCritMeleeTargets
   query:
   - !type:NearbyHostilesQuery

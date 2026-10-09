@@ -7,4 +7,3 @@
   - type: EmitSoundOnLand
     sound:
       path: /Audio/_Starlight/Items/Handling/component_drop.ogg
-

@@ -28,4 +28,3 @@
   - type: EmitSoundOnPickup
     sound:
       path: /Audio/_Starlight/Items/Handling/multitool_pickup.ogg
-

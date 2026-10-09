@@ -9,27 +9,27 @@
     "states": [
         {
             "name": "icon",
-			"copyright": "Made by Romero/Littlemen"
+            "copyright": "Made by Romero/Littlemen"
         },
         {
             "name": "inhand-left",
             "directions": 4,
-			"copyright": "Made by Romero/Littlemen"
+            "copyright": "Made by Romero/Littlemen"
         },
         {
             "name": "inhand-right",
             "directions": 4,
-			"copyright": "Made by Romero/Littlemen"
+            "copyright": "Made by Romero/Littlemen"
         },
         {
             "name": "equipped-BACKPACK",
             "directions": 4,
-			"copyright": "Made by Romero/Littlemen"
+            "copyright": "Made by Romero/Littlemen"
         },
         {
             "name": "equipped-SUITSTORAGE",
             "directions": 4,
-			"copyright": "Made by Romero/Littlemen"
+            "copyright": "Made by Romero/Littlemen"
         }
     ]
 }

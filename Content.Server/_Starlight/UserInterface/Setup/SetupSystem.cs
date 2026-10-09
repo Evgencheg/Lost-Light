@@ -1,4 +1,4 @@
-﻿using Content.Shared._Starlight.UserInterface.Setup;
+using Content.Shared._Starlight.UserInterface.Setup;
 using Robust.Server.GameObjects;
 
 namespace Content.Server._Starlight.UserInterface.Setup;

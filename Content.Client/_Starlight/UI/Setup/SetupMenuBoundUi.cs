@@ -1,4 +1,4 @@
-﻿using Content.Shared._Starlight.UserInterface.Setup;
+using Content.Shared._Starlight.UserInterface.Setup;
 using JetBrains.Annotations;
 using Robust.Client.UserInterface;
 

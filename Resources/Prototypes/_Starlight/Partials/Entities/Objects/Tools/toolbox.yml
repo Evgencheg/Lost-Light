@@ -4,4 +4,3 @@
   - type: EmitSoundOnPickup
     sound:
       path: /Audio/_Starlight/Items/Handling/toolbox_pickup.ogg
-

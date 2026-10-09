@@ -1,4 +1,4 @@
-﻿using Content.Server._Moffstation.Hellportal.Components;
+using Content.Server._Moffstation.Hellportal.Components;
 using Content.Shared.EntityTable;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Timing;
