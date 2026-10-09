@@ -12,6 +12,8 @@ command-description-ticker-toggletimeronend =
     Переключает, будет ли таймер перезапуска раунда автоматически запускаться в конце раунда. Автоматически сбрасывается на true при возврате в лобби.
 command-description-ticker-delaystart =
     Откладывает начало раунда на указанное число секунд или ставит на паузу, если 0 или не указано.
+command-description-ticker-changeshifttime =
+    Добавляет или убирает время до срабатывания системы окончания раунда (вызова эвакуационного шаттла).
 command-description-ticker-getrule =
     Получает ссылку на добавленную сущность игрового правила.
 command-description-ticker-getrules =

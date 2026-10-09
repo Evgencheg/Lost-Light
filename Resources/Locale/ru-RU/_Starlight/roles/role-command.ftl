@@ -14,3 +14,11 @@ command-description-role-rmrole =
     Удаляет роль из разума сущности из конвейера.
 command-description-role-doroleupdate =
     Принудительно воспроизводит сообщение об обновлении типа роли ещё раз для сущности из конвейера.
+command-description-role-has =
+    Возвращает true или false в зависимости от того, есть ли у переданной сущности указанная роль.
+command-description-role-with =
+    Фильтрует переданный список сущностей по наличию указанной роли.
+command-description-role-hasjob =
+    Возвращает true или false в зависимости от того, есть ли у переданной сущности указанная должность.
+command-description-role-withjob =
+    Фильтрует переданный список сущностей по наличию указанной должности.
