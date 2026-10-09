@@ -655,14 +655,14 @@ public abstract partial class SharedMeleeWeaponSystem : EntitySystem
 
         // Validate client
         entities.RemoveWhere(entity => TerminatingOrDeleted(entity) ||
-                                       !ArcRaySuccessful(entity,
-                                        userPos,
-                                        direction.ToWorldAngle(),
-                                        component.Angle,
-                                        distance,
-                                        userXform.MapID,
-                                        user,
-                                        session));
+                !ArcRaySuccessful(entity,
+                userPos,
+                direction.ToWorldAngle(),
+                component.Angle,
+                distance,
+                userXform.MapID,
+                user,
+                session));
 
         var targets = new HashSet<EntityUid>();
         var damageQuery = GetEntityQuery<DamageableComponent>();
