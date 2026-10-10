@@ -32,6 +32,8 @@ secure-terminal-countdown-label = Активация через { $minutes } м�
 
 secure-terminal-fee-note = Плата за обработку: { $fee }
 secure-terminal-salary-note = Изменения зарплат:
+secure-terminal-salary-source-everyone = Все
+secure-terminal-salary-source-interstellar-trade-guild = Межзвёздная торговая гильдия
 secure-terminal-delay-note = { $minutes ->
     [1] Расчётное время: 1 минута после авторизации.
     *[other] Расчётное время: { $minutes } мин. после авторизации.
