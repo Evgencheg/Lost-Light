@@ -99,8 +99,7 @@ public sealed partial class AirlockSystem : SharedAirlockSystem
                 ||  state == DoorState.Opening
                 ||  state == DoorState.Denying
                 || (state == DoorState.Open && comp.OpenUnlitVisible)
-                || (state == DoorState.Closed && hasClosedUnlit) // LP edit
-                || (_appearanceSystem.TryGetData<bool>(uid, DoorVisuals.ClosedLights, out var closedLights, args.Component) && closedLights))
+                || (state == DoorState.Closed && hasClosedUnlit)) // LP edit
                     && !boltedVisible && !emergencyLightsVisible;
         }
 
