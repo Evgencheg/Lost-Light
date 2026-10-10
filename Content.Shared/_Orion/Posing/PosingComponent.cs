@@ -45,12 +45,12 @@ public sealed partial class PosingComponent : Component
     /// Скорость смещения при зажатой клавише, тайлов в секунду.
     /// </summary>
     [DataField]
-    public float OffsetSpeed = 0.15f;
+    public float OffsetSpeed = 0.20f;
 
     /// <summary>
     /// Скорость поворота при зажатой клавише, градусов в секунду.
     /// </summary>
     [DataField]
-    public float AngleSpeed = 30f;
+    public float AngleSpeed = 45f;
     // LP edit end
 }
