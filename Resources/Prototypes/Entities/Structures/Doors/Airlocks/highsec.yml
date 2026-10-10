@@ -79,6 +79,12 @@
     fuel: 10
     time: 10
   - type: Airlock
+    # Orion-Start
+    forceOpenSound:
+      path: /Audio/_Orion/Machines/airlock_open_force.ogg
+    forceCloseSound:
+      path: /Audio/_Orion/Machines/airlock_close_force.ogg
+    # Orion-End
   - type: NavMapDoor
   - type: DoorBolt
   - type: AccessReader

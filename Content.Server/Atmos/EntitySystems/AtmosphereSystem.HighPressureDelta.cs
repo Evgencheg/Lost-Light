@@ -15,6 +15,9 @@ namespace Content.Server.Atmos.EntitySystems
 {
     public sealed partial class AtmosphereSystem
     {
+        [Dependency] private SharedTransformSystem _transformSystem = default!;
+
+        private const string _spaceWindProto = "SpaceWindVisual"; // Orion
         private static readonly ProtoId<SoundCollectionPrototype> DefaultSpaceWindSounds = "SpaceWind";
 
         private const int SpaceWindSoundCooldownCycles = 75;
@@ -117,6 +120,21 @@ namespace Content.Server.Atmos.EntitySystems
                     var coordinates = _mapSystem.ToCenterCoordinates(tile.GridIndex, tile.GridIndices);
                     _audio.PlayPvs(SpaceWindSound, coordinates, SpaceWindSound.Params.WithVolume(MathHelper.Clamp(tile.PressureDifference / 10, 10, 100)));
                 }
+
+                // Orion-Start | Space Wind Visuals
+                if (SpaceWindVisuals && _spaceWindSoundCooldown == 0)
+                {
+                    var location = _mapSystem.ToCenterCoordinates(tile.GridIndex, tile.GridIndices);
+                    var visualEnt = SpawnAtPosition(_spaceWindProto, location);
+                    var gridRot = _transformSystem.GetWorldRotation(gridAtmosphere);
+
+                    if (tile.PressureDirection != AtmosDirection.Invalid)
+                    {
+                        var angle = tile.PressureDirection.ToAngle() + gridRot - Angle.FromDegrees(90);
+                        _transformSystem.SetLocalRotation(visualEnt, angle);
+                    }
+                }
+                // Orion-End
             }
 
 
