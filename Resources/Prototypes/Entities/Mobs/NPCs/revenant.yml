@@ -103,4 +103,4 @@
     - KnockdownImmune
   - type: HandwritingFont # Funky
     fontId: HandwritingMessy
-    fontSize: 20
+    fontSize: 12

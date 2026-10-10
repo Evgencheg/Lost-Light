@@ -4,7 +4,7 @@ public static class HandwritingFontHelper
 {
     // if no handwriting component, defaults to this, which is just the same as casual
     private const string DefaultFontId = "HandwritingCasual";
-    private const int DefaultFontSize = 23; // LP edit
+    private const int DefaultFontSize = 14; // LP edit - под NotoSans 12 бумаги
 
     /// <summary>
     /// wraps text in a [hwfont] tag

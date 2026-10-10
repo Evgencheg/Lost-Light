@@ -15,7 +15,7 @@
       components:
         - type: HandwritingFont
           fontId: HandwritingCasual
-          fontSize: 23
+          fontSize: 14
 
 - type: trait
   id: HandwritingNeat
@@ -28,7 +28,7 @@
       components:
         - type: HandwritingFont
           fontId: HandwritingNeat
-          fontSize: 22
+          fontSize: 14
 
 - type: trait
   id: HandwritingMessy
@@ -41,4 +41,4 @@
       components:
         - type: HandwritingFont
           fontId: HandwritingMessy
-          fontSize: 22
+          fontSize: 12

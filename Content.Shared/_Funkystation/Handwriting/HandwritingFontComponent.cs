@@ -14,5 +14,5 @@ public sealed partial class HandwritingFontComponent : Component
 
     // size to render the font at
     [DataField("fontSize"), AutoNetworkedField]
-    public int FontSize = 23; // LP edit
+    public int FontSize = 14; // LP edit - под NotoSans 12 бумаги
 }
