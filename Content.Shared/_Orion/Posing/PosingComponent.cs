@@ -29,4 +29,28 @@ public sealed partial class PosingComponent : Component
 
     [DataField]
     public float DefaultAngle;
+
+    // LP edit start - непрерывное позирование при зажатой клавише
+    /// <summary>
+    /// Направление смещения и поворота от зажатых сейчас клавиш, двигает позу в Update.
+    /// Сетевое, чтобы при пересчёте предсказания откатывалось к серверному, иначе нажатия копятся и позу откидывает.
+    /// </summary>
+    [ViewVariables, AutoNetworkedField]
+    public Vector2 HeldOffset = Vector2.Zero;
+
+    [ViewVariables, AutoNetworkedField]
+    public float HeldAngle;
+
+    /// <summary>
+    /// Скорость смещения при зажатой клавише, тайлов в секунду.
+    /// </summary>
+    [DataField]
+    public float OffsetSpeed = 0.15f;
+
+    /// <summary>
+    /// Скорость поворота при зажатой клавише, градусов в секунду.
+    /// </summary>
+    [DataField]
+    public float AngleSpeed = 30f;
+    // LP edit end
 }

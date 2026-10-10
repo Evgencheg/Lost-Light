@@ -7,6 +7,7 @@ using Content.Shared.Movement.Events;
 using Content.Shared.Standing;
 using Content.Shared.Stunnable;
 using Robust.Shared.Input.Binding;
+using Robust.Shared.Player; // LP edit
 
 namespace Content.Shared._Orion.Posing;
 
@@ -31,48 +32,14 @@ public abstract partial class SharedPosingSystem : EntitySystem
                             TogglePosing(userUid);
                     },
                     handle: false))
-            .Bind(ContentKeyFunctions.PosingOffsetRight,
-                InputCmdHandler.FromDelegate(session =>
-                    {
-                        if (session?.AttachedEntity is { } userUid)
-                            TryAdjustPosingOffset(userUid, new(0.05f, 0f));
-                    },
-                    handle: false))
-            .Bind(ContentKeyFunctions.PosingOffsetLeft,
-                InputCmdHandler.FromDelegate(session =>
-                    {
-                        if (session?.AttachedEntity is { } userUid)
-                            TryAdjustPosingOffset(userUid, new(-0.05f, 0f));
-                    },
-                    handle: false))
-            .Bind(ContentKeyFunctions.PosingOffsetUp,
-                InputCmdHandler.FromDelegate(session =>
-                    {
-                        if (session?.AttachedEntity is { } userUid)
-                            TryAdjustPosingOffset(userUid, new(0f, 0.05f));
-                    },
-                    handle: false))
-            .Bind(ContentKeyFunctions.PosingOffsetDown,
-                InputCmdHandler.FromDelegate(session =>
-                    {
-                        if (session?.AttachedEntity is { } userUid)
-                            TryAdjustPosingOffset(userUid, new(0f, -0.05f));
-                    },
-                    handle: false))
-            .Bind(ContentKeyFunctions.PosingRotatePositive,
-                InputCmdHandler.FromDelegate(session =>
-                    {
-                        if (session?.AttachedEntity is { } userUid)
-                            TryAdjustPosingAngle(userUid, -5f);
-                    },
-                    handle: false))
-            .Bind(ContentKeyFunctions.PosingRotateNegative,
-                InputCmdHandler.FromDelegate(session =>
-                    {
-                        if (session?.AttachedEntity is { } userUid)
-                            TryAdjustPosingAngle(userUid, 5f);
-                    },
-                    handle: false))
+            // LP edit start
+            .Bind(ContentKeyFunctions.PosingOffsetRight, HeldHandler(new(1f, 0f), 0f))
+            .Bind(ContentKeyFunctions.PosingOffsetLeft, HeldHandler(new(-1f, 0f), 0f))
+            .Bind(ContentKeyFunctions.PosingOffsetUp, HeldHandler(new(0f, 1f), 0f))
+            .Bind(ContentKeyFunctions.PosingOffsetDown, HeldHandler(new(0f, -1f), 0f))
+            .Bind(ContentKeyFunctions.PosingRotatePositive, HeldHandler(Vector2.Zero, -1f))
+            .Bind(ContentKeyFunctions.PosingRotateNegative, HeldHandler(Vector2.Zero, 1f))
+            // LP edit end
             .Register<SharedPosingSystem>();
     }
 
@@ -81,6 +48,43 @@ public abstract partial class SharedPosingSystem : EntitySystem
         base.Shutdown();
         CommandBinds.Unregister<SharedPosingSystem>();
     }
+
+    // LP edit start
+    private InputCmdHandler HeldHandler(Vector2 offset, float angle)
+    {
+        return InputCmdHandler.FromDelegate(
+            enabled: session => AdjustHeld(session, offset, angle),
+            disabled: session => AdjustHeld(session, -offset, -angle),
+            handle: false);
+    }
+
+    private void AdjustHeld(ICommonSession? session, Vector2 offset, float angle)
+    {
+        if (session?.AttachedEntity is not { } userUid || !TryComp<PosingComponent>(userUid, out var posing))
+            return;
+
+        posing.HeldOffset += offset;
+        posing.HeldAngle += angle;
+        Dirty(userUid, posing);
+    }
+
+    public override void Update(float frameTime)
+    {
+        base.Update(frameTime);
+
+        var query = EntityQueryEnumerator<PosingComponent>();
+        while (query.MoveNext(out var uid, out var posing))
+        {
+            if (!posing.Posing)
+                continue;
+
+            if (posing.HeldOffset != Vector2.Zero)
+                TryAdjustPosingOffset(uid, posing.HeldOffset * posing.OffsetSpeed * frameTime, posing);
+            if (posing.HeldAngle != 0f)
+                TryAdjustPosingAngle(uid, posing.HeldAngle * posing.AngleSpeed * frameTime, posing);
+        }
+    }
+    // LP edit end
 
     private static void OnUpdateCanMove(EntityUid uid, PosingComponent component, UpdateCanMoveEvent args)
     {
@@ -110,6 +114,10 @@ public abstract partial class SharedPosingSystem : EntitySystem
 
         posingComp.CurrentAngle = Angle.Zero;
         posingComp.CurrentOffset = Vector2.Zero;
+        // LP edit start
+        posingComp.HeldOffset = Vector2.Zero;
+        posingComp.HeldAngle = 0f;
+        // LP edit end
 
         ClientTogglePosing(uid, posingComp);
         Dirty(uid, posingComp);
