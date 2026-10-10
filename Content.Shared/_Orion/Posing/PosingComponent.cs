@@ -30,7 +30,7 @@ public sealed partial class PosingComponent : Component
     [DataField]
     public float DefaultAngle;
 
-    // LP edit start - непрерывное позирование при зажатой клавише
+    // LP edit start
     /// <summary>
     /// Направление смещения и поворота от зажатых сейчас клавиш, двигает позу в Update.
     /// Сетевое, чтобы при пересчёте предсказания откатывалось к серверному, иначе нажатия копятся и позу откидывает.

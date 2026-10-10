@@ -37,7 +37,10 @@ public sealed partial class PosingSystem : SharedPosingSystem
     private void OnAfterHandleState(EntityUid uid, PosingComponent component, ref AfterAutoHandleStateEvent args)
     {
         if (_playerManager.LocalEntity == uid)
+        {
+            UpdateInputContext(component); // LP edit
             return;
+        }
 
         if (component.Posing)
             return;
@@ -50,10 +53,24 @@ public sealed partial class PosingSystem : SharedPosingSystem
     {
         base.ClientTogglePosing(uid, posing);
 
-        _input.Contexts.SetActiveContext(posing.Posing ? "posing" : posing.DefaultInputContext);
+        // LP edit start
+        if (_playerManager.LocalEntity == uid)
+            UpdateInputContext(posing);
+        // LP edit end
         _sprite.SetOffset(uid, posing.DefaultOffset);
         _sprite.SetRotation(uid, Angle.FromDegrees(posing.DefaultAngle));
     }
+
+    // LP edit start
+    private void UpdateInputContext(PosingComponent posing)
+    {
+        var active = _input.Contexts.ActiveContext.Name;
+        if (posing.Posing && active != "posing")
+            _input.Contexts.SetActiveContext("posing");
+        else if (!posing.Posing && active == "posing")
+            _input.Contexts.SetActiveContext(posing.DefaultInputContext);
+    }
+    // LP edit end
 
     public override void FrameUpdate(float frameTime)
     {

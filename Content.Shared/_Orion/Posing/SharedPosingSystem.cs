@@ -63,8 +63,9 @@ public abstract partial class SharedPosingSystem : EntitySystem
         if (session?.AttachedEntity is not { } userUid || !TryComp<PosingComponent>(userUid, out var posing))
             return;
 
-        posing.HeldOffset += offset;
-        posing.HeldAngle += angle;
+        // Ограничиваем, чтобы повторные Down без Up не разгоняли позу
+        posing.HeldOffset = Vector2.Clamp(posing.HeldOffset + offset, -Vector2.One, Vector2.One);
+        posing.HeldAngle = Math.Clamp(posing.HeldAngle + angle, -1f, 1f);
         Dirty(userUid, posing);
     }
 
