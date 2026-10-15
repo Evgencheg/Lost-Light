@@ -26,6 +26,7 @@ public sealed class ContrabandTest : GameTest
     private const string PrescriptionReagent = "ContrabandPrescriptionReagent";
     private static readonly ProtoId<JobPrototype> _chemistJob = "Chemist";
     private static readonly ProtoId<JobPrototype> _detectiveJob = "Detective";
+    private static readonly ProtoId<DepartmentPrototype> _securityDepartment = "Security"; // LP edit
 
     [TestPrototypes]
     private const string TestPrototypes = """
@@ -248,7 +249,7 @@ public sealed class ContrabandTest : GameTest
             Assert.That(reagentClassification, Does.Contain(loc.GetString("contraband-tier-2")));
             Assert.That(reagentClassification, Does.Contain(loc.GetString("contraband-type-magical")));
 
-            Assert.That(itemAuthorization, Does.Contain(loc.GetString(protoMan.Index<DepartmentPrototype>("Security").Name)));
+            Assert.That(itemAuthorization, Does.Contain(loc.GetString(protoMan.Index(_securityDepartment).Name)));
             Assert.That(itemAuthorization, Does.Contain(protoMan.Index(_detectiveJob).LocalizedName));
 
             Assert.That(prescriptionAuthorization, Does.Contain(loc.GetString("contraband-authorization-prescription-patients")));
