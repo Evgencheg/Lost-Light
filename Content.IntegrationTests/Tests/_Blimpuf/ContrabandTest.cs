@@ -9,6 +9,8 @@ using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Roles;
 using Content.Shared.Verbs;
 using Robust.Shared.GameObjects;
+using Robust.Shared.IoC;
+using Robust.Shared.Localization;
 using Robust.Shared.Maths;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
@@ -217,6 +219,8 @@ public sealed class ContrabandTest : GameTest
     {
         var client = Pair.Client;
         var systemManager = client.ResolveDependency<IEntitySystemManager>();
+        var protoMan = client.ResolveDependency<IPrototypeManager>(); // LP edit
+        var loc = client.ResolveDependency<ILocalizationManager>(); // LP edit
 
         await client.WaitAssertion(() =>
         {
@@ -237,18 +241,18 @@ public sealed class ContrabandTest : GameTest
                 ContrabandItemType.Reagent,
                 true);
 
-            Assert.That(itemClassification, Does.Contain("restricted tier 1 contraband"));
-            Assert.That(itemClassification, Does.Contain("piece"));
-            Assert.That(itemClassification, Does.Not.Contain("reagent"));
+            // LP edit start - тест не должен зависеть от языка
+            Assert.That(itemClassification, Does.Contain(loc.GetString("contraband-tier-1")));
+            Assert.That(itemClassification, Is.Not.EqualTo(contraband.GetClassificationMessage("Tier1", null, ContrabandItemType.Reagent)));
 
-            Assert.That(reagentClassification, Does.Contain("heavily regulated tier 2 magical contraband reagent"));
+            Assert.That(reagentClassification, Does.Contain(loc.GetString("contraband-tier-2")));
+            Assert.That(reagentClassification, Does.Contain(loc.GetString("contraband-type-magical")));
 
-            Assert.That(itemAuthorization, Does.Contain("This item is restricted"));
-            Assert.That(itemAuthorization, Does.Contain("Security"));
-            Assert.That(itemAuthorization, Does.Contain("Detective"));
+            Assert.That(itemAuthorization, Does.Contain(loc.GetString(protoMan.Index<DepartmentPrototype>("Security").Name)));
+            Assert.That(itemAuthorization, Does.Contain(protoMan.Index(_detectiveJob).LocalizedName));
 
-            Assert.That(prescriptionAuthorization, Does.Contain("This reagent is restricted"));
-            Assert.That(prescriptionAuthorization, Does.Contain("patients with a valid prescription"));
+            Assert.That(prescriptionAuthorization, Does.Contain(loc.GetString("contraband-authorization-prescription-patients")));
+            // LP edit end
         });
     }
 
@@ -273,8 +277,12 @@ public sealed class ContrabandTest : GameTest
             var expected = "Reagent contents";
             if (showsDescription)
             {
-                expected += "\nThis is a restricted tier 1 contraband reagent." +
-                            "\nThis reagent is restricted to patients with a valid prescription.";
+                // LP edit start - тест не должен зависеть от языка
+                expected += "\n" + FormattedMessage.FromMarkupPermissive(contraband.GetClassificationMessage(
+                                "Tier1", null, ContrabandItemType.Reagent)).ToString() +
+                            "\n" + FormattedMessage.FromMarkupPermissive(contraband.GetAuthorizationMessage(
+                                [], [], ContrabandItemType.Reagent, true)).ToString();
+                // LP edit end
             }
 
             Assert.That(message.ToString(), Is.EqualTo(expected));
@@ -329,13 +337,19 @@ public sealed class ContrabandTest : GameTest
             extraCategories: []);
         entMan.EventBus.RaiseLocalEvent(target, ev);
 
-        Assert.That(ev.Verbs.Count(verb => verb.Text == "Legality"), Is.EqualTo(1));
-        return ev.Verbs.Single(verb => verb.Text == "Legality");
+        // LP edit start - тест не должен зависеть от языка
+        var verbText = IoCManager.Resolve<ILocalizationManager>().GetString("contraband-examinable-verb-text");
+        Assert.That(ev.Verbs.Count(verb => verb.Text == verbText), Is.EqualTo(1));
+        return ev.Verbs.Single(verb => verb.Text == verbText);
+        // LP edit end
     }
 
     private static void AssertClearance(ExamineVerb verb, bool authorized)
     {
-        var expectedText = authorized ? "in the clear" : "avoid visibly carrying";
+        // LP edit start - тест не должен зависеть от языка
+        var expectedText = FormattedMessage.RemoveMarkupPermissive(IoCManager.Resolve<ILocalizationManager>()
+            .GetString(authorized ? "contraband-examine-text-in-the-clear" : "contraband-examine-text-avoid-carrying-around"));
+        // LP edit end
         var expectedIcon = authorized
             ? "/Textures/Interface/VerbIcons/unlock-green.svg.192dpi.png"
             : "/Textures/Interface/VerbIcons/lock-red.svg.192dpi.png";
