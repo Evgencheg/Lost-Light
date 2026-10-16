@@ -374,6 +374,7 @@
         children:
         - id: DrinkSpaceGlue
         - id: DrinkSpaceLube
+      - id: PhotoCamera #Corvax-WL-Changes
       # Rare Group
     - !type:GroupSelector
       weight: 2
@@ -393,6 +394,11 @@
       - id: WehpetInstrument
       - id: LidSalami
         weight: 0.05
+      #Corvax-WL-Changes-start
+      - id: PhotoFilterMonochrome
+      - id: PhotoFilterNightVision
+      - id: PhotoFilterGhost
+      #Corvax-WL-Changes-end
       - id: MakeshiftID # Starlight
       - id: Flash3Use # Starlight
         weight: 0.3 # Starlight

@@ -10,3 +10,11 @@
   id: EngineeringBoards
   recipes:
   - LPCryptoMinerCircuitboard
+
+# Фотоаппараты из Corvax WL
+- type: !PartialOnly entity
+  id: ServiceTechFab
+  components:
+  - type: Lathe
+    dynamicPacks:
+    - Photo
