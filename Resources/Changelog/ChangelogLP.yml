@@ -111,4 +111,18 @@ Entries:
   id: 16
   time: '2026-10-16T14:51:42.000000+00:00'
   url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/37
+- author: Evgencheg
+  changes:
+  - message: Добавлена возможность вставлять газовые баллоны в медицинские кровати и включать пациентам подачу воздуха.
+    type: Add
+  id: 17
+  time: '2026-10-16T19:03:16.000000+00:00'
+  url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/32
+- author: Evgencheg
+  changes:
+  - message: Добавлены переключаемая лампа и монитор жизненных показателей со звуками для операционных столов.
+    type: Add
+  id: 18
+  time: '2026-10-16T19:03:16.000000+00:00'
+  url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/32
 Order: -3
