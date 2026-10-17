@@ -103,3 +103,5 @@ ent-CentCommJanitorPDA = КПК уборщика ЦентКома
     .desc = Почему вы читаете это, а не моете полы?
 ent-SalvageMedicPDA = КПК медика утилизаторов
     .desc = Пахнет кровью и пеплом.
+ent-VeteranSalvageMedicPDA = КПК ветерана-медика утилизаторов
+    .desc = Пахнет кровью и пеплом.

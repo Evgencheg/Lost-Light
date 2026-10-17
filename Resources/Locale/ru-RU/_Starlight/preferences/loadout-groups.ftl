@@ -103,6 +103,9 @@ loadout-group-salvagelead-id = Глава утилизаторов, ID
 loadout-group-mining-id = Шахтёр, ID
 loadout-group-salvage-id = Утилизатор, ID
 loadout-group-salvage-lead-mantle = Глава утилизаторов, мантия
+loadout-group-salvage-medic-id = ID-карта медика утилизаторов
+loadout-group-salvage-medic-jumpsuit = Комбинезон медика утилизаторов
+loadout-group-salvage-medic-mantle = Мантия медика утилизаторов
 
 # Silicons
 loadout-group-borg-brain-type = Тип мозга киборга
