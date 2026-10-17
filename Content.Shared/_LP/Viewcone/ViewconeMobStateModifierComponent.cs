@@ -5,7 +5,8 @@ namespace Content.Shared._LP.Viewcone;
 
 /// <summary>
 /// Меняет угол конуса зрения (<see cref="Content.Shared._ES.Viewcone.Components.ESViewconeComponent"/>)
-/// в зависимости от состояния моба. Значения складываются с остальными модификаторами так же, как у одежды.
+/// в зависимости от состояния моба. Итоговая добавка - наименьшая из модификаторов одежды, статус-эффектов
+/// и состояния моба (они не складываются, см. <see cref="Content.Shared._ES.Viewcone.Components.ESViewconeGetAngleModifierEvent"/>).
 /// </summary>
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class ViewconeMobStateModifierComponent : Component

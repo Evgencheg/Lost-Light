@@ -145,8 +145,6 @@
       Hair: HEAD
   - type: ESViewconeModifier # Funky
     angleModifier: -35
-  - type: StainBlocker # Funky
-    slots: [ MASK ]
 
 #Bombsuit Helmet
 - type: entity
@@ -176,8 +174,6 @@
       Snout: HEAD
   - type: ESViewconeModifier # Funky
     angleModifier: -90
-  - type: StainBlocker # Funky
-    slots: [ MASK ]
 # Starlight
   - type: Tag
     tags:
@@ -267,8 +263,6 @@
       Hair: HEAD
   - type: ESViewconeModifier # Funky
     angleModifier: -90
-  - type: StainBlocker # Funky
-    slots: [ MASK ]
 
 #Thunderdome Helmet
 - type: entity
@@ -332,8 +326,6 @@
       Snout: HEAD
   - type: ESViewconeModifier # Funky
     angleModifier: -90
-  - type: StainBlocker # Funky
-    slots: [ MASK ]
 
 #Atmos Fire Helmet
 - type: entity
@@ -369,8 +361,6 @@
   - type: BreathMask
   - type: ESViewconeModifier # Funky
     angleModifier: -90
-  - type: StainBlocker # Funky
-    slots: [ MASK ]
   - type: PointLight # Starlight
     color: "#a1f7f7" # Starlight
 

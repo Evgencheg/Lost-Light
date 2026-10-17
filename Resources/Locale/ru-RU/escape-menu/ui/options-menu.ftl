@@ -367,10 +367,6 @@ ui-options-colorblind-friendly = Режим для дальтоников
 ui-options-reduced-motion = Снижение интенсивности визуальных эффектов
 ui-options-screen-shake-intensity = Интенсивность дрожания экрана
 
-# funky viewcone options
-ui-options-disable-viewcone-grain = Отключить эффект зернистости на затемнении вне конуса зрения
-ui-options-viewcone-occlusion-opacity = Сила затемнения вне конуса зрения
-
 ui-options-chat-window-opacity = Непрозрачность окна чата
 ui-options-speech-bubble-text-opacity = Непрозрачность текста речевого пузыря
 ui-options-speech-bubble-speaker-opacity = Непрозрачность диктора речевого пузыря

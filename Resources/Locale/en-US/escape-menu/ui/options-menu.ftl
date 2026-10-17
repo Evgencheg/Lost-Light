@@ -367,10 +367,6 @@ ui-options-colorblind-friendly = Colorblind friendly mode
 ui-options-reduced-motion = Reduce motion of visual effects
 ui-options-screen-shake-intensity = Screen shake intensity
 
-# funky viewcone options
-ui-options-disable-viewcone-grain = Disable the grain effect on the viewcone occlusion overlay
-ui-options-viewcone-occlusion-opacity = Viewcone occlusion strength
-
 ui-options-chat-window-opacity = Chat window opacity
 ui-options-speech-bubble-text-opacity = Speech bubble text opacity
 ui-options-speech-bubble-speaker-opacity = Speech bubble speaker opacity

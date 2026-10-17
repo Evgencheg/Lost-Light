@@ -331,7 +331,7 @@ public abstract partial class SharedMoverController : VirtualController
             // only applies in the non-weightless path
             {
                 var backwardsAngle = moveSpeedComponent?.BackwardsAngle ??
-                                     MovementSpeedModifierComponent.ESDefaultBackwardsAngle;
+                    MovementSpeedModifierComponent.ESDefaultBackwardsAngle;
                 var rotNorm = worldRot.ToWorldVec().Normalized();
                 var velNorm = velocity.Normalized();
                 var cosAngle = Vector2.Dot(velNorm, rotNorm);

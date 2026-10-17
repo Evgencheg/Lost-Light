@@ -2,6 +2,7 @@ using Content.Shared._Funkystation.CCVar;
 using Content.Shared.CombatMode;
 using Content.Shared._ES.Viewcone.Components;
 using Content.Shared.MouseRotator;
+using Content.Shared.Mind; // LP edit
 using Content.Shared.Movement.Components;
 using Robust.Shared.Configuration;
 using Robust.Shared.Network;
@@ -13,6 +14,8 @@ public sealed partial class ViewconeAlwaysFaceCursorSystem : EntitySystem
 {
     [Dependency] private IConfigurationManager _cfg = null!;
     [Dependency] private INetManager _net = null!;
+    [Dependency] private SharedCombatModeSystem _combat = null!; // LP edit
+    [Dependency] private SharedMindSystem _mind = null!; // LP edit
 
     private bool _enabled;
     private float _baseAngle;
@@ -66,6 +69,21 @@ public sealed partial class ViewconeAlwaysFaceCursorSystem : EntitySystem
                 Dirty(uid, combatMode);
             }
         }
+        // LP edit start
+        else
+        {
+            // ApplyToMob убрал повороты, возвращаем управление боевому режиму
+            var combatQuery = EntityQueryEnumerator<CombatModeComponent>();
+            while (combatQuery.MoveNext(out var uid, out var combatMode))
+            {
+                combatMode.ToggleMouseRotator = true;
+                Dirty(uid, combatMode);
+
+                if (combatMode.IsInCombatMode && _mind.TryGetMind(uid, out _, out _))
+                    _combat.SetMouseRotatorComponents(uid, true);
+            }
+        }
+        // LP edit end
     }
 
     private void ApplyToMob(EntityUid uid, bool enabled)

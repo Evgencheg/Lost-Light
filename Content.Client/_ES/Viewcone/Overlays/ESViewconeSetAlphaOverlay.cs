@@ -85,6 +85,7 @@ public sealed partial class ESViewconeSetAlphaOverlay : Overlay
         // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         var radConeAngle = MathHelper.DegreesToRadians(_angle.GetModifiedViewconeAngle((ent, cone)));
         var radConeFeather = MathHelper.DegreesToRadians(cone.ConeFeather);
+        var ignoreRadius = _angle.GetModifiedConeIgnoreRadius((ent, cone)); // LP edit
 
         _cone.CachedBaseAlphas.Clear();
         var occludables = _tree.QueryAabb(args.MapId, args.WorldBounds);
@@ -114,7 +115,7 @@ public sealed partial class ESViewconeSetAlphaOverlay : Overlay
 
             var baseAlpha = sprite.Color.A;
             var angleAlpha = (float) Math.Clamp((Math.Abs(angleDist.Theta) - (radConeAngle * 0.5f)) + (radConeFeather * 0.5f), 0f, radConeFeather) / radConeFeather;
-            var distAlpha = Math.Clamp((distLength - cone.ConeIgnoreRadius) + (cone.ConeIgnoreFeather * 0.5f), 0f, cone.ConeIgnoreFeather) / cone.ConeIgnoreFeather;
+            var distAlpha = Math.Clamp((distLength - ignoreRadius) + (cone.ConeIgnoreFeather * 0.5f), 0f, cone.ConeIgnoreFeather) / cone.ConeIgnoreFeather; // LP edit
             var targetAlpha = Math.Max(1f - angleAlpha, 1f - distAlpha);
 
             // save the results so we can use it in resetalpha overlay

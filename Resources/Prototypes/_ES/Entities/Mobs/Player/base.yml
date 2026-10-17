@@ -1,7 +1,0 @@
-# Base mob components that originate from ES.
-# ESViewcone и ESViewconeOccludable добавлены в BaseMob (Mobs/base.yml); ESPainFlash и GhostOnMove не портированы.
-- type: entity
-  id: ESBaseMob
-  abstract: true
-  components:
-  - type: ESHoldToFace

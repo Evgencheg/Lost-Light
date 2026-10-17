@@ -12,9 +12,9 @@
 - type: !PartialOnly entity
   id: ClosetBase
   components:
-  - !Remove type: ChildBlockVision
+  - type: !Remove ChildBlockVision
 
 - type: !PartialOnly entity
   id: CrateGeneric
   components:
-  - !Remove type: ChildBlockVision
+  - type: !Remove ChildBlockVision

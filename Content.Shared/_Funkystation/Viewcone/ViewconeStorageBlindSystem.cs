@@ -41,9 +41,14 @@ public sealed partial class ViewconeStorageBlindSystem : EntitySystem
     }
 
     // and removes marker when something leaves storage
-    private void OnRemoved(Entity<EntityStorageComponent> ent, ref EntRemovedFromContainerMessage _)
+    private void OnRemoved(Entity<EntityStorageComponent> ent, ref EntRemovedFromContainerMessage args)
     {
-        UnmarkBlindByContainer(ent);
+        // LP edit start - снимаем слепоту с вышедшей сущности, а не с оставшихся внутри
+        if (ent.Comp.Contents is not { } contents || args.Container.ID != contents.ID)
+            return;
+
+        UnmarkBlind(args.Entity);
+        // LP edit end
     }
 
     /// <summary>
@@ -65,7 +70,7 @@ public sealed partial class ViewconeStorageBlindSystem : EntitySystem
             RaiseLocalEvent(contained, new ViewconeStorageClosedEvent());
 
             comp.IsBlind = true;
-            comp.Reason &= ViewconeBlindnessReason.Storage;
+            comp.Reason |= ViewconeBlindnessReason.Storage; // LP edit
 
             // Dirty the component so AfterAutoHandleStateEvent is raised
             // when its state is applied on the client.
@@ -85,16 +90,23 @@ public sealed partial class ViewconeStorageBlindSystem : EntitySystem
 
         foreach (var contained in contents.ContainedEntities)
         {
-            if (!TryComp<ViewconeBlindnessComponent>(contained, out var comp))
-                continue;
-
-            // Client side prediction see above
-            RaiseLocalEvent(contained, new ViewconeStorageOpenedEvent());
-
-            comp.IsBlind = false;
-            comp.Reason &= ViewconeBlindnessReason.Storage;
-
-            Dirty(contained, comp);
+            UnmarkBlind(contained);
         }
     }
+
+    // LP edit start
+    private void UnmarkBlind(EntityUid contained)
+    {
+        if (!TryComp<ViewconeBlindnessComponent>(contained, out var comp))
+            return;
+
+        // Client side prediction see above
+        RaiseLocalEvent(contained, new ViewconeStorageOpenedEvent());
+
+        comp.Reason &= ~ViewconeBlindnessReason.Storage;
+        comp.IsBlind = comp.Reason != ViewconeBlindnessReason.None;
+
+        Dirty(contained, comp);
+    }
+    // LP edit end
 }
