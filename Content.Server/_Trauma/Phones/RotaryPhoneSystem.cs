@@ -1,5 +1,3 @@
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using Content.Server.Chat.Managers;
 using Content.Server._Starlight.TextToSpeech;
 using Content.Shared.Audio;
@@ -167,10 +165,10 @@ public sealed partial class RotaryPhoneSystem : SharedRotaryPhoneSystem
     private void OnListen(Entity<RotaryPhoneComponent> ent, ref ListenEvent args)
     {
         if (HasComp<RotaryPhoneComponent>(args.Source)
-           || args.Source == ent.Owner
-           || HasComp<RadioSpeakerComponent>(args.Source)
-           || ent.Comp.ConnectedPhone is not {} connected
-           || !TryComp(connected, out RotaryPhoneComponent? otherPhoneComponent))
+            || args.Source == ent.Owner
+            || HasComp<RadioSpeakerComponent>(args.Source)
+            || ent.Comp.ConnectedPhone is not {} connected
+            || !TryComp(connected, out RotaryPhoneComponent? otherPhoneComponent))
             return;
 
         var entityMeta = MetaData(args.Source);

@@ -50,7 +50,7 @@
 
 ## Происхождение
 
-- **Порт** - [Trauma Station](https://github.com/Trauma-Station/Trauma-Station), AGPLv3 или новее (SPDX-заголовки файлов). Автор - JohnJohn (JohnJJohn).
+- **Порт** - [Trauma Station](https://github.com/Trauma-Station/Trauma-Station), AGPLv3 или новее. Автор - JohnJohn (JohnJJohn).
   - PR 909 (сама фича), 954, 957, 972, 1008, 1019, 1038, 1055, 1087, 1473 (только иконка должности), 1904, 2249;
   - найденные дополнительно: 956 (звук звонка у телефона), правки Murphy Ibbs из PR 972 (дальность звонка), коммит `fix stuff` (`RemoveAllChildren` в окне книги), ключ локализации слота телефона (из PR 2935).
 - Звуки и спрайты - из RMC-14 (MIT, ассеты CC-BY-SA 3.0) и Goonstation (CC-BY-SA 3.0), оформлены в `attributions.yml` и `meta.json`.
