@@ -75,10 +75,6 @@
     - DawInstrumentMachineCircuitboard
     - MassMediaCircuitboard
     - JukeboxCircuitBoard
-    # WL-Changes-start
-    - PhotoCameraRecipe
-    - PhotoFilterPackFill
-    # WL-Changes-end
   radioChannels:
   - Service
 

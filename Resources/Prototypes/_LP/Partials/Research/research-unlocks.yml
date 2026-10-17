@@ -12,8 +12,21 @@
   - LPCryptoMinerCircuitboard
 
 # Фотоаппараты из Corvax WL
+- type: !PartialOnly technology
+  id: AdvancedEntertainment
+  recipeUnlocks:
+  - PhotoCameraRecipe
+  - PhotoFilterPackFill
+
 - type: !PartialOnly entity
   id: ServiceTechFab
+  components:
+  - type: Lathe
+    dynamicPacks:
+    - Photo
+
+- type: !PartialOnly entity
+  id: Protolathe
   components:
   - type: Lathe
     dynamicPacks:
