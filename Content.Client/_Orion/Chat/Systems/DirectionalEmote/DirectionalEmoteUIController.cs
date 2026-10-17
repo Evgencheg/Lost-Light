@@ -1,4 +1,5 @@
-using Content.Client.Chat.TypingIndicator;
+using Content.Client.Popups;
+using Content.Shared.Popups;
 using JetBrains.Annotations;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controllers;
@@ -9,7 +10,7 @@ namespace Content.Client._Orion.Chat.Systems.DirectionalEmote;
 public sealed class DirectionalEmoteUIController : UIController
 {
     [UISystemDependency] private DirectionalEmoteSystem _directionalEmoteSystem = default!;
-    [UISystemDependency] private TypingIndicatorSystem _typingIndicator = default!;
+    [UISystemDependency] private PopupSystem _popup = default!;
 
     private DirectionalEmoteWindow? _emoteWindow;
 
@@ -24,7 +25,6 @@ public sealed class DirectionalEmoteUIController : UIController
         _emoteWindow = CreateWindow(source, target);
         _emoteWindow.OpenCentered();
         _emoteWindow.MoveToFront();
-        _typingIndicator.ClientChangedWindowStatus(true);
     }
 
     private DirectionalEmoteWindow CreateWindow(NetEntity source, NetEntity target)
@@ -33,24 +33,19 @@ public sealed class DirectionalEmoteUIController : UIController
         window.Source = source;
         window.Target = target;
 
-        window.MessageChanged += () =>
-        {
-            _typingIndicator.ClientChangedChatText();
-            _typingIndicator.ClientChangedWindowStatus(true);
-        };
-
         window.AcceptPressed += () =>
         {
-            _typingIndicator.ClientSubmittedChatText();
-            _directionalEmoteSystem.ShowMessage(window.Source, window.Target, window.Text);
+            var error = _directionalEmoteSystem.ShowMessage(window.Source, window.Target, window.Text);
+            if (error != null)
+            {
+                _popup.PopupCursor(error, PopupType.SmallCaution);
+                return;
+            }
+
             window.Close();
         };
 
-        window.OnClose += () =>
-        {
-            _typingIndicator.ClientChangedWindowStatus(false);
-            _emoteWindow = null;
-        };
+        window.OnClose += () => _emoteWindow = null;
 
         return window;
     }

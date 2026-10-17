@@ -19,12 +19,20 @@ public sealed partial class DirectionalEmoteSystem : EntitySystem
         SubscribeLocalEvent<DirectionalEmoteTargetComponent, GetVerbsEvent<Verb>>(OnGetVerbs);
     }
 
-    public void ShowMessage(NetEntity source, NetEntity target, string text)
+    /// <summary>
+    ///     Отправляет эмоцию на сервер. Возвращает причину отказа или null, если всё в порядке.
+    /// </summary>
+    public string? ShowMessage(NetEntity source, NetEntity target, string text)
     {
-        if (string.IsNullOrEmpty(text) || text.Length > _cfg.GetCVar(CCVars.ChatMaxEmoteLength))
-            return;
+        if (string.IsNullOrEmpty(text))
+            return Loc.GetString("directional-emote-empty-popup");
+
+        var maxLength = _cfg.GetCVar(CCVars.ChatMaxEmoteLength);
+        if (text.Length > maxLength)
+            return Loc.GetString("directional-emote-length-popup", ("maxLength", maxLength));
 
         RaiseNetworkEvent(new SendDirectionalEmoteEvent(source, target, text));
+        return null;
     }
 
     private void OnGetVerbs(EntityUid uid, DirectionalEmoteTargetComponent component, GetVerbsEvent<Verb> args)
