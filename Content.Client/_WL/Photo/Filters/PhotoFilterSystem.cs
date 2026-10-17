@@ -110,4 +110,3 @@ public record struct TogglePhotoFilterEvent(bool State)
 {
     public bool State = State;
 }
-

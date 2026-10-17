@@ -20,4 +20,3 @@ public sealed partial class PhotoGhostFilterComponent : Component
     public TimeSpan UpdateTime = TimeSpan.FromSeconds(0.1f);
     public TimeSpan NextUpdateTime;
 }
-

@@ -18,15 +18,15 @@
                  TexturePath="/Textures/_WL/Interface/Misc/Photo/paper_on.png"
                  SetSize="460 320" />
     </PanelContainer>
-    
+
     <BoxContainer
         Margin="0 0"
         Orientation="Horizontal"
         HorizontalExpand="True"
         VerticalExpand="True">
-        
+
         <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
-          
+
             <!--Viewport Window-->
             <!-- LP edit -->
             <lpViewport:HudlessViewportContainer MinWidth="240" MinHeight="240" Margin="19.5 40 0 0" Name="CameraViewBox">
@@ -39,8 +39,8 @@
             <BoxContainer Orientation="Vertical" VerticalExpand="True">
                 <photo:TextureButton Margin="78 0 0 0" Name="PhotoButton" TextureScale="116 56"/>
             </BoxContainer>
-        
+
         </BoxContainer>
-    
+
     </BoxContainer>
 </photo:PhotoCameraWindow>
