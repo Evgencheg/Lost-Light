@@ -9,7 +9,7 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Server._LP.StationGoal
+namespace Content.Server._Corvax.StationGoal
 {
     /// <summary>
     ///     System to spawn paper with station goal.
@@ -58,7 +58,7 @@ namespace Content.Server._LP.StationGoal
                 }
 
                 if (selGoal is null)
-                    return;
+                    continue;
 
                 if (SendStationGoal(uid, selGoal))
                 {
