@@ -3,6 +3,7 @@ using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
 using Content.Server.EUI;
 using Content.Shared._WL.ScreenCapture;
+using Content.Shared.Administration;
 using Content.Shared.Database;
 using Robust.Shared.Enums;
 using Robust.Shared.Player;
@@ -24,6 +25,9 @@ public sealed partial class CaptureSystem : EntitySystem
     private const int MaxImageBytes = 8 * 1024 * 1024;
 
     private const int MaxImageSide = 8192;
+
+    // У админа картинка распаковывается в RGBA: 4096x4096 - это 64 МБ
+    private const int MaxImagePixels = 4096 * 4096;
 
     private static readonly TimeSpan RequestUpdateInterval = TimeSpan.FromSeconds(1);
     private static readonly TimeSpan RequestTimeout = TimeSpan.FromSeconds(20);
@@ -110,7 +114,7 @@ public sealed partial class CaptureSystem : EntitySystem
         var request = _requests[index];
         _requests.RemoveAt(index);
 
-        if (!_admin.IsAdmin(request.RequestBy))
+        if (!_admin.HasAdminFlag(request.RequestBy, AdminFlags.Moderator))
             return;
 
         if (ev.Image == null)
@@ -137,7 +141,8 @@ public sealed partial class CaptureSystem : EntitySystem
 
         return TryReadJpegSize(data, out var width, out var height)
             && width is > 0 and <= MaxImageSide
-            && height is > 0 and <= MaxImageSide;
+            && height is > 0 and <= MaxImageSide
+            && (long) width * height <= MaxImagePixels;
     }
 
     /// <summary>

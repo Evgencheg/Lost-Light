@@ -65,7 +65,7 @@ public abstract partial class SharedPhotoSystem : EntitySystem
 
     private void OnCameraExamined(EntityUid uid, PhotoCameraComponent component, ExaminedEvent args)
     {
-        int paperLeft = (int)MathF.Ceiling(_material.GetMaterialAmount(uid, component.CardMaterial) / component.CardCost);
+        int paperLeft = component.CardCost > 0 ? _material.GetMaterialAmount(uid, component.CardMaterial) / component.CardCost : 0; // LP edit
         string message = Loc.GetString("photo-camera-examined-paper-left", ("count", paperLeft));
 
         args.PushMarkup(message);
