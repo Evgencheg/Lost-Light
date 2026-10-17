@@ -25,6 +25,10 @@
       Snout: HEAD
       HeadTop: HEAD
       HeadSide: HEAD
+  - type: ESViewconeModifier # Funky
+    angleModifier: -90
+  - type: StainBlocker # Funky
+    slots: [ MASK ]
 
 - type: entity
   parent: ClothingHeadHatHoodBioGeneral
@@ -172,6 +176,10 @@
     - Snout
     - HeadTop
     - HeadSide
+  - type: ESViewconeModifier # Funky
+    angleModifier: -90
+  - type: StainBlocker # Funky
+    slots: [ MASK ]
 
 - type: entity
   parent: ClothingHeadBase
