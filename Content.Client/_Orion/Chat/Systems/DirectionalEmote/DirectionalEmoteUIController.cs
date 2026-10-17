@@ -15,7 +15,7 @@ public sealed class DirectionalEmoteUIController : UIController
 
     public void ToggleWindow(NetEntity source, NetEntity target)
     {
-        if (_emoteWindow is { Disposed: false })
+        if (_emoteWindow is { IsOpen: true })
         {
             _emoteWindow.Close();
             return;
@@ -46,7 +46,11 @@ public sealed class DirectionalEmoteUIController : UIController
             window.Close();
         };
 
-        window.OnClose += () => _typingIndicator.ClientChangedWindowStatus(false);
+        window.OnClose += () =>
+        {
+            _typingIndicator.ClientChangedWindowStatus(false);
+            _emoteWindow = null;
+        };
 
         return window;
     }
