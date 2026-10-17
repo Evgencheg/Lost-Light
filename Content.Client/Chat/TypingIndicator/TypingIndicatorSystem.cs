@@ -86,7 +86,7 @@ public sealed partial class TypingIndicatorSystem : SharedTypingIndicatorSystem
             return;
 
         var state = TypingIndicatorState.None;
-        if (_isClientChatFocused)
+        if (_isClientChatFocused || _isClientEmoteWindowActive) // Orion
             state = _isClientTyping ? TypingIndicatorState.Typing : TypingIndicatorState.Idle;
 
         // send a networked event to server
