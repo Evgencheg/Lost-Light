@@ -1,2 +1,2 @@
-chat-manager-entity-directional-emote-wrap-message = [BubbleHeader][italic][Name]{ $entityName }[/Name][/BubbleHeader], скрыто взаимодействует:[/italic]
+chat-manager-entity-directional-emote-wrap-message = [italic][BubbleHeader][Name]{ $entityName }[/Name][/BubbleHeader], скрыто взаимодействует:[/italic]
     { $message }

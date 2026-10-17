@@ -5,3 +5,5 @@ directional-emote-verb-name = Направленная эмоция
 
 directional-emote-range-error = [bolditalic]Для отправки направленной эмоции вы должны быть рядом с целью![/bolditalic]
 directional-emote-length-error = [bolditalic]Ваше сообщение не должно превышать { $maxLength } символов![/bolditalic]
+directional-emote-empty-popup = Введите текст эмоции!
+directional-emote-length-popup = Сообщение не должно превышать { $maxLength } символов!
