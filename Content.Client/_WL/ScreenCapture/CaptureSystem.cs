@@ -8,9 +8,6 @@ using SixLabors.ImageSharp.PixelFormats;
 
 namespace Content.Client._WL.ScreenCapture;
 
-/// <summary>
-/// Скринграб. Снимается итоговый кадр без каких-либо фильтров, чтобы были видны читы.
-/// </summary>
 public sealed partial class CaptureSystem : EntitySystem
 {
     [Dependency] private IClyde _clyde = default!;

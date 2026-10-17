@@ -10,8 +10,7 @@ using Robust.Shared.Timing;
 namespace Content.Client._LP.Viewport;
 
 /// <summary>
-/// Скрывает худы смотрящего во вложенном вьюпорте камеры: на время отрисовки детей
-/// оверлеи убираются из менеджера и сразу возвращаются. Основной экран это не затрагивает.
+/// Скрывает худы во вложенном вьюпорте камеры, основной экран не затрагивается.
 /// </summary>
 public sealed partial class HudlessViewportContainer : Control
 {

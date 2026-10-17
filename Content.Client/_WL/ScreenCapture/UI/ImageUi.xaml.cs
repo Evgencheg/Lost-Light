@@ -25,7 +25,6 @@ public sealed partial class ImageUi : DefaultWindow
 
         try
         {
-            // ImageSharp сам определяет формат, JPEG тоже читается
             using var stream = new MemoryStream(imageData);
             ImageDislay.Texture = Texture.LoadFromPNGStream(stream);
         }

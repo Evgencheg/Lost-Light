@@ -28,8 +28,7 @@
     - id: LPCryptoMinerChipOverclocked
       weight: 0.5
 
-# Фотоаппараты из Corvax WL: техи. Веса групп повторяют шансы WL
-# (фотоаппарат был в группе необычного лута, фильтры - в группе редкого)
+# Фотоаппараты из Corvax WL
 - type: !PartialOnly entityTable
   id: MaintToolsTable
   table:
