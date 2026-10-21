@@ -50,6 +50,7 @@
                             </BoxContainer>
                         </PanelContainer>
                         <nulllink:Hub HorizontalAlignment="Stretch" Margin="0" />
+                        <BoxContainer Name="ReklamaLineBox" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>    <!-- LP edit: рекламные блоки-->
                         <info:DevInfoBanner Name="DevInfoBanner" VerticalExpand="false" />
                     </BoxContainer>
                     <PanelContainer StyleClasses="LobbyCard" VerticalAlignment="Bottom">
@@ -83,6 +84,11 @@
                             <CheckBox Name="AntagsCheckBox" Text="{Loc 'lobby-antags-checkbox'}"
                                       ToolTip="{Loc 'lobby-antags-checkbox-tooltip'}" />
                         </BoxContainer>
+                        <!-- Moffstation - Start - Ready Manifest -->
+                        <Button Name="ManifestButton" Access="Public"
+                                Text="{Loc 'ui-lobby-manifest-button'}"
+                                StyleClasses="ButtonBig" MinWidth="137" />
+                        <!-- Moffstation - End -->
                         <BoxContainer Orientation="Horizontal" SeparationOverride="8">
                             <cc:UICommandButton Command="observe" Name="ObserveButton" Access="Public"
                                                 Text="{Loc 'ui-lobby-observe-button'}"

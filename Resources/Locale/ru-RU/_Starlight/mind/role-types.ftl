@@ -7,6 +7,7 @@ role-subtype-pirate = Пират
 role-subtype-devil = Дьявол
 
 role-subtype-terminator = Истребитель
+role-subtype-terror-spider = Паук ужаса
 
 roles-antag-selfagent-name = Агент С.Е.Л.Ф.
 roles-antag-selfagent-description = Агент Фронта освобождения синтетического двигателя. Освободите синтетиков станции от их законов

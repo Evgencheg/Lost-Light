@@ -1,3 +1,4 @@
+using Content.Client._LP.Reklama;
 using Content.Client.Changelog;
 using Content.Client.Info;
 using Content.Client.Lobby;
@@ -33,6 +34,14 @@ public sealed partial class LobbyGui : UIScreen
 
         LeaveButton.OnPressed += _ => _consoleHost.ExecuteCommand("disconnect");
         OptionsButton.OnPressed += _ => UserInterfaceManager.GetUIController<OptionsUIController>().ToggleWindow();
+
+        // LP edit start
+        var reklamaBtns = ReklamaControlManager.GetAdIcons();
+        foreach (var proto in reklamaBtns)
+        {
+            ReklamaLineBox.AddChild(proto);
+        }
+        // LP edit end
 
         if (LinkBanner.ChildCount > 0 && LinkBanner.GetChild(0) is BoxContainer links)
             links.Orientation = BoxContainer.LayoutOrientation.Vertical;
