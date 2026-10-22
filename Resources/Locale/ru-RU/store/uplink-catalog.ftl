@@ -193,6 +193,7 @@ uplink-binary-translator-key-name = Двоичный ключ шифровани
 uplink-binary-translator-key-desc = Позволяет подключиться к двоичному каналу связи роботов. По нему лучше не говорить, по крайней мере, без голосовой маски.
 
 uplink-hypopen-name = Гипоручка
+# Starlight-edit
 uplink-hypopen-desc = Химический гипоспрей, замаскированный под ручку, способный мгновенно впрыснуть до 10 ед. реагентов. Изначально пуст.
 
 uplink-clothing-eyes-hud-syndicate-name = Визор Синдиката

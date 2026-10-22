@@ -67,6 +67,7 @@ loadout-group-dutyofficer-belt = Дежурный офицер, пояс
 loadout-group-k9-variant = К9, пальто
 loadout-group-k9-outerclothing = К9, броня
 loadout-group-k9-eyes = К9, очки
+loadout-group-k9-collar = K9, ошейник
 
 loadout-group-detective-lethal = Детектив, летальное личное оружие
 

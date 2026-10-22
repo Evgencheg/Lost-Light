@@ -16,7 +16,7 @@ lobby-character-preview-panel-no-high-job = Нет профессии с выс�
 
 job-priorities-window-title = Приоритеты профессий
 job-priorities-window-search = Поиск профессий
-job-priorities-window-hint = Нажмите, чтобы повысить приоритет, правый клик - чтобы понизить. Высокий приоритет может быть только у одной профессии.
+job-priorities-window-hint = Нажмите, чтобы повысить приоритет, правый клик — чтобы понизить. Высокий приоритет может быть только у одной профессии.
 job-priorities-window-filter-all = Все
 job-priorities-window-filter-selected = Выбранные
 job-priorities-window-selected = Выбрано: { $count }
