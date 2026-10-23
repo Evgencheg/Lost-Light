@@ -167,4 +167,11 @@ Entries:
   id: 24
   time: '2026-10-23T14:57:59.000000+00:00'
   url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/50
+- author: Evgencheg
+  changes:
+  - message: Добавлены праздничный декор, русские праздники и подарки каждой профессии в день праздника.
+    type: Add
+  id: 25
+  time: '2026-10-23T14:58:03.000000+00:00'
+  url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/54
 Order: -3
