@@ -77,7 +77,8 @@ public abstract partial class SharedRotaryPhoneSystem : EntitySystem
 
     private void OnPhoneRemoveHolder(Entity<RotaryPhoneHolderComponent> ent, ref EntRemovedFromContainerMessage args)
     {
-        if (Deleted(ent.Owner)
+        if (!HasComp<RotaryPhoneComponent>(args.Entity) // LP edit
+            || Deleted(ent.Owner)
             || Terminating(ent.Owner)
             || Deleted(args.Entity)
             || Terminating(args.Entity))
