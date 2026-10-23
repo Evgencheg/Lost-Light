@@ -83,10 +83,25 @@
         whitelist:
           components:
           - RotaryPhone
+      # LP edit start
+      answering_machine:
+        name: item-slot-name-answering-machine
+        whitelist:
+          components:
+          - AnsweringMachine
+      # LP edit end
   - type: ContainerFill
     containers:
       phone:
       - RotaryPhone
+  # LP edit start - индикатор новых сообщений автоответчика
+  - type: AnsweringMachineStand
+  - type: PointLight
+    enabled: false
+    radius: 1.2
+    energy: 0.6
+    color: "#ff3030"
+  # LP edit end
   - type: Appearance
   - type: GenericVisualizer
     visuals:
@@ -208,6 +223,7 @@
   components:
   - type: RotaryPhone
     category: Hidden
+    requiresExchange: false # LP edit
 
 # Stands
 

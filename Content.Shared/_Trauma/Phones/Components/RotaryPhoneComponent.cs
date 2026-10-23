@@ -60,6 +60,20 @@ public sealed partial class RotaryPhoneComponent : Component
     [DataField, AutoNetworkedField]
     public EntityUid? ConnectedPhone;
 
+    // LP edit start
+    /// <summary>
+    /// How long an outgoing call rings before it is dropped if nobody picks up
+    /// </summary>
+    [DataField]
+    public TimeSpan RingTimeout = TimeSpan.FromSeconds(30);
+
+    /// <summary>
+    /// The phone only works while a powered, unsabotaged telephone exchange is present on its map
+    /// </summary>
+    [DataField]
+    public bool RequiresExchange = true;
+    // LP edit end
+
     /// <summary>
     /// What player is holding the other phone
     /// </summary>

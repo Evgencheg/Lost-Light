@@ -1,8 +1,10 @@
 using Content.Server.Chat.Managers;
+using Content.Server._LP.Phones;
 using Content.Server._Starlight.TextToSpeech;
 using Content.Shared.Audio;
 using Content.Shared.Chat;
 using Content.Shared.Physics;
+using Content.Shared.Popups;
 using Content.Shared.Radio.Components;
 using Content.Shared.Speech;
 using Content.Shared._Starlight.Language.Systems;
@@ -17,6 +19,7 @@ using Robust.Shared.Containers;
 using Robust.Shared.Map;
 using Robust.Shared.Physics;
 using Robust.Shared.Player;
+using Robust.Shared.Utility;
 
 namespace Content.Server._Trauma.Phones;
 
@@ -28,6 +31,7 @@ public sealed partial class RotaryPhoneSystem : SharedRotaryPhoneSystem
     [Dependency] private UserInterfaceSystem _ui = default!;
     [Dependency] private SharedLanguageSystem _language = default!;
     [Dependency] private TTSSystem _tts = default!;
+    [Dependency] private SharedPopupSystem _popup = default!; // LP edit
 
     public override void Initialize()
     {
@@ -42,6 +46,7 @@ public sealed partial class RotaryPhoneSystem : SharedRotaryPhoneSystem
         SubscribeLocalEvent<RotaryPhoneComponent, BoundUIOpenedEvent>(OnOpen);
         SubscribeLocalEvent<RotaryPhoneComponent, PhoneHungUpEvent>(OnGotHungUp);
         SubscribeLocalEvent<RotaryPhoneHolderComponent, EntInsertedIntoContainerMessage>(OnPhoneInsertHolder);
+        InitializeRingTimeout(); // LP edit
     }
 
     private void OnGotHungUp(Entity<RotaryPhoneComponent> ent, ref PhoneHungUpEvent args)
@@ -156,6 +161,14 @@ public sealed partial class RotaryPhoneSystem : SharedRotaryPhoneSystem
         {
             if (ent.Comp.DialedNumber == phoneComp.PhoneNumber && phone != ent.Owner)
             {
+                // LP edit start
+                if (!IsLineWorking(ent, phone, phoneComp))
+                {
+                    RefuseCall(ent);
+                    break;
+                }
+                // LP edit end
+
                 DoCallLogic(phoneComp, ent, phone);
                 break;
             }
@@ -171,7 +184,19 @@ public sealed partial class RotaryPhoneSystem : SharedRotaryPhoneSystem
             || !TryComp(connected, out RotaryPhoneComponent? otherPhoneComponent))
             return;
 
-        var entityMeta = MetaData(args.Source);
+        // LP edit start - имя говорящего с учётом голосовой маски
+        var nameEv = new TransformSpeakerNameEvent(args.Source, Name(args.Source));
+        RaiseLocalEvent(args.Source, nameEv);
+        var speakerName = nameEv.VoiceName;
+        // LP edit end
+
+        // LP edit start
+        _bug.RecordRotary(ent, args.Source, args.Message);
+        _bug.RecordRotary(connected, args.Source, args.Message);
+
+        if (_answering.TryRecord(ent, args.Source, speakerName, args.Message))
+            return;
+        // LP edit end
 
         if (otherPhoneComponent.SpeakerPhone)
         {
@@ -181,7 +206,7 @@ public sealed partial class RotaryPhoneSystem : SharedRotaryPhoneSystem
                 InGameICChatType.Speak,
                 ChatTransmitRange.HideChat,
                 hideLog: true,
-                nameOverride: entityMeta.EntityName,
+                nameOverride: speakerName, // LP edit
                 checkRadioPrefix: false,
                 languageOverride: args.Language);
             _tts.PlayRelayedSpeech(connected, args.Source, args.Message, args.Language, false, TTSEffect.Phone);
@@ -201,7 +226,7 @@ public sealed partial class RotaryPhoneSystem : SharedRotaryPhoneSystem
         if (args.Language is { } language && !_language.CanUnderstand(otherPhoneComponent.ConnectedPlayer.Value, language.ID))
             text = _language.ObfuscateSpeech(text, language);
 
-        var message = Loc.GetString("phone-speak", ("name", entityMeta.EntityName), ("message", text));
+        var message = Loc.GetString("phone-speak", ("name", FormattedMessage.EscapeText(speakerName)), ("message", text)); // LP edit
 
         _chatManager.ChatMessageToOne(ChatChannel.Local, message, message, otherPhoneComponent.ConnectedPlayer.Value, false, actor.PlayerSession.Channel, Color.FromHex("#9956D3"), true, soundPath, -12, hidePopup: true);
     }
@@ -215,6 +240,7 @@ public sealed partial class RotaryPhoneSystem : SharedRotaryPhoneSystem
             ent.Comp.ConnectedPhone = phone;
             ent.Comp.SoundEntity = _audio.PlayPredicted(ent.Comp.RingingSound, ent.Owner, ent.Owner, AudioParams.Default.WithLoop(true).WithMaxDistance(2.5f))?.Entity;
             RaiseDeviceNetworkEvent(ent.Comp.ConnectedPhoneStand, ent.Comp.OutGoingPort);
+            StartRingTimeout(ent); // LP edit
 
             var ev = new PhoneRingEvent(ent);
 

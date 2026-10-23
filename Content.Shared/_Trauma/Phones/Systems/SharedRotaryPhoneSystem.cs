@@ -270,7 +270,7 @@ public abstract partial class SharedRotaryPhoneSystem : EntitySystem
         Dirty(uid, thisPhone);
     }
 
-    private void DisconnectPhones(RotaryPhoneComponent thisPhone)
+    protected void DisconnectPhones(RotaryPhoneComponent thisPhone) // LP edit
     {
         if (thisPhone.ConnectedPhone != null)
         {
