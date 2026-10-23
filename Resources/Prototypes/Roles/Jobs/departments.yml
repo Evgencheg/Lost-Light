@@ -30,7 +30,7 @@
   - Reporter
   - Visitor
   - ServiceWorker
-  - PhoneMerchant # Trauma
+  # LP edit - убрано: PhoneMerchant
   # Starlight start
   - AssistantManager
   - Performer

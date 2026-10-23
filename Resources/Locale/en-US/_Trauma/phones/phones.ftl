@@ -42,5 +42,3 @@ signal-port-name-phone-hangup = On phone hangup
 signal-port-description-phone-hangup = Called whenever someone hands up the phone.
 
 item-slot-name-phone = phone
-
-job-name-phonemerchant = Phone Merchant

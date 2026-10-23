@@ -42,5 +42,3 @@ signal-port-name-phone-hangup = Трубка положена
 signal-port-description-phone-hangup = Срабатывает, когда кто-то кладёт трубку.
 
 item-slot-name-phone = телефон
-
-job-name-phonemerchant = Торговец телефонами

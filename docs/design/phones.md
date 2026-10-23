@@ -20,7 +20,7 @@
 - Звонок слышно у вызываемого, поднятие трубки соединяет, положить трубку - завершить. Занятый телефон отвечает сигналом «занято».
 - Трубка на верёвке до 3 тайлов, тянуть её нельзя. Речь в 2 тайлах от трубки уходит собеседнику личным сообщением; глагол «Переключить громкую связь» произносит её вслух.
 - Отвёрткой задают название и категорию. Подставка разрушается при 200 урона.
-- Карго: ящик из 5 упаковок, 2500 кр. Должность «Торговец телефонами» доступна пока только админам.
+- Карго: ящик из 5 упаковок, 2500 кр.
 
 **Таймаут.** Звонок без ответа сбрасывается через 30 с (`ringTimeout`): вызываемый замолкает, звонящий слышит отбой и может набрать снова.
 
@@ -49,11 +49,10 @@
 |---|---|
 | Код порта | `Content.*/_Trauma/Phones/`, `Content.Shared/_Trauma/PullBlocker/` |
 | Наш код | `Content.Server/_LP/Phones/`, `Content.Shared/_LP/Phones/`, `Content.Shared/_LP/TapeRecorder/` (запись на кассету из кода) |
-| Правки чужих файлов | порт Trauma: `RotaryPhoneComponent.cs`, `SharedRotaryPhoneSystem.cs`, `RotaryPhoneSystem.cs`, `phones.yml` (`LP edit`); Starlight: `TelephoneSystem.cs`, `TelephoneComponent.cs`; чат: `MsgChatMessage.cs`, `IChatManager.cs`, `ChatManager.cs`, `ChatUIController.cs` (флаг `hidePopup`, пометка `Trauma phones`); `departments.yml` (`# Trauma`) |
-| Прототипы | `Resources/Prototypes/_Trauma/` (телефоны, каталог, должность), `Resources/Prototypes/_LP/Phones/` (АТС, автоответчик, жучок), `Resources/Prototypes/_RMC14/Audio/` |
+| Правки чужих файлов | порт Trauma: `RotaryPhoneComponent.cs`, `SharedRotaryPhoneSystem.cs`, `RotaryPhoneSystem.cs`, `phones.yml` (`LP edit`); Starlight: `TelephoneSystem.cs`, `TelephoneComponent.cs`; чат: `MsgChatMessage.cs`, `IChatManager.cs`, `ChatManager.cs`, `ChatUIController.cs` (флаг `hidePopup`, пометка `Trauma phones`) |
+| Прототипы | `Resources/Prototypes/_Trauma/` (телефоны, каталог), `Resources/Prototypes/_LP/Phones/` (АТС, автоответчик, жучок), `Resources/Prototypes/_RMC14/Audio/` |
 | Спрайты и звуки | `_RMC14` и `_Trauma` из порта. Заглушки: АТС - `server.rsi`, автоответчик - `tape_recorder.rsi`, жучок - `camera_bug.rsi`, детектор - `spectrallocator.rsi` |
 | Локализация | `ru-RU/_Trauma/phones/`, `ru-RU/_LP/phones/`, `ru-RU/_LP/wires/`, `ss14-ru/prototypes/_lp/phones/` |
-| Тесты | `Content.IntegrationTests/Tests/_LP/` (`RotaryPhoneRingTimeoutTest`, `TelephoneExchangeTest`, `AnsweringMachineTest`, `TelephoneBugTest`) |
 | Карты | не затрагиваются |
 
 ## Происхождение
@@ -84,13 +83,12 @@ CVar-ов нет, всё - поля компонентов и прототипо
 - автоответчик, жучок, детектор: убрать их товары из карго и аплинка.
 
 **Удалить:**
-1. Порт: `Content.*/_Trauma/Phones/`, `Content.Shared/_Trauma/PullBlocker/`, файлы телефонов в `Resources/Prototypes/_Trauma/` и `_RMC14/`, текстуры и звук порта, локали `_Trauma`; откатить правки по поиску `Trauma phones` и строку `PhoneMerchant` в `departments.yml`.
+1. Порт: `Content.*/_Trauma/Phones/`, `Content.Shared/_Trauma/PullBlocker/`, файлы телефонов в `Resources/Prototypes/_Trauma/` и `_RMC14/`, текстуры и звук порта, локали `_Trauma`; откатить правки по поиску `Trauma phones`.
 2. Наше: `Content.*/_LP/Phones/`, `Content.Shared/_LP/TapeRecorder/`, `Resources/Prototypes/_LP/Phones/`, ftl и тесты из таблицы выше; откатить `LP edit` в файлах порта и Starlight.
 3. Прогнать `localize.py --all`, YAML-линтер, убедиться, что на картах нет телефонов.
 
 ## Открытые вопросы
 
-- Должность «Торговец телефонами» в источнике попадает в раунд событием, которого у нас нет: добавить событие или убрать должность.
 - Телефонов и АТС нет на картах; пока АТС нет, дисковые телефоны не звонят. Расстановка - отдельная задача.
 - Спрайты вместо заглушек: АТС, автоответчик и его индикатор, жучок, детектор.
 - Автоответчик есть только у дисковых телефонов. У личного режима нет озвучки TTS.
