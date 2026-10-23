@@ -9,9 +9,6 @@ namespace Content.Server._LP.Phones;
 [RegisterComponent, AutoGenerateComponentPause]
 public sealed partial class RotaryPhoneCallingComponent : Component
 {
-    /// <summary>
-    /// Когда вызов сбрасывается, если трубку так и не взяли.
-    /// </summary>
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoPausedField]
     public TimeSpan EndTime;
 }

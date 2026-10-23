@@ -30,7 +30,7 @@
       enum.TapeRecorderUIKey.Key:
         type: TapeRecorderBoundUserInterface
 
-# Placeholder sprite: reused tape recorder, see docs/design/phones-answering-machine.md
+# Placeholder sprite: reused tape recorder
 - type: entity
   parent: LPTapeRecorderFed
   id: LPAnsweringMachine

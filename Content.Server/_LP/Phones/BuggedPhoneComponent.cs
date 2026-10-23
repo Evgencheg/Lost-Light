@@ -9,7 +9,6 @@ namespace Content.Server._LP.Phones;
 [RegisterComponent, Access(typeof(TelephoneBugSystem))]
 public sealed partial class BuggedPhoneComponent : Component
 {
-    /// <summary>Предмет-жучок, лежит в контейнере корпуса.</summary>
     [DataField]
     public EntityUid? Bug;
 }

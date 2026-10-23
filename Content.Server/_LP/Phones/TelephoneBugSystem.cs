@@ -25,15 +25,13 @@ namespace Content.Server._LP.Phones;
 /// Жучок на телефонной линии: всё, что говорят в разговоре через телефон, дублируется на кассету жучка.
 /// Имя и голос записываются так, как их слышит собеседник (с учётом голосовой маски).
 /// </summary>
-public sealed class TelephoneBugSystem : EntitySystem
+public sealed partial class TelephoneBugSystem : EntitySystem
 {
     private static readonly ProtoId<ToolQualityPrototype> ScrewingQuality = "Screwing";
     private const string ContainerId = "lp_telephone_bug";
 
-    /// <summary>Сколько секунд кассета продолжает идти после последней реплики.</summary>
     private static readonly TimeSpan IdleStop = TimeSpan.FromSeconds(5);
 
-    /// <summary>Сколько занимает полный разбор телефона.</summary>
     private static readonly TimeSpan DisassembleTime = TimeSpan.FromSeconds(6);
 
     [Dependency] private SharedDoAfterSystem _doAfter = default!;

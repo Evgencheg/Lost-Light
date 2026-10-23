@@ -1,4 +1,4 @@
-# Placeholder sprites: reused camera bug and spectral locator, see docs/design/phones-bug.md
+# Placeholder sprites: reused camera bug and spectral locator
 - type: entity
   parent: BaseItem
   id: LPTelephoneBugCassette

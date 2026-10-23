@@ -8,9 +8,6 @@ namespace Content.Shared._LP.Phones;
 [RegisterComponent]
 public sealed partial class TelephoneExchangeComponent : Component
 {
-    /// <summary>
-    /// Связь оборвана саботажем: провод АТС перерезан.
-    /// </summary>
     [DataField]
     public bool Sabotaged;
 }

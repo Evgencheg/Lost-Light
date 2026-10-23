@@ -10,9 +10,6 @@ namespace Content.Shared._LP.Phones;
 [RegisterComponent]
 public sealed partial class AnsweringMachineComponent : Component
 {
-    /// <summary>
-    /// Приветствие, которое записал владелец. Если не задано, играет <see cref="DefaultGreeting"/>.
-    /// </summary>
     [DataField]
     public string? Greeting;
 
@@ -22,21 +19,12 @@ public sealed partial class AnsweringMachineComponent : Component
     [DataField]
     public int MaxGreetingLength = 200;
 
-    /// <summary>
-    /// Дольше одного сообщения автоответчик не слушает.
-    /// </summary>
     [DataField]
     public TimeSpan MaxMessageLength = TimeSpan.FromSeconds(60);
 
-    /// <summary>
-    /// Сколько тишины после последней реплики звонящего завершает сообщение.
-    /// </summary>
     [DataField]
     public TimeSpan SilenceTimeout = TimeSpan.FromSeconds(10);
 
-    /// <summary>
-    /// На кассете есть сообщения, которые ещё не слушали. Сбрасывается, когда диктофон вынимают из подставки.
-    /// </summary>
     [ViewVariables]
     public bool NewMessages;
 }

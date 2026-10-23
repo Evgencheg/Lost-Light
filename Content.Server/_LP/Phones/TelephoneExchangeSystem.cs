@@ -15,7 +15,7 @@ namespace Content.Server._LP.Phones;
 /// Телефоны с <c>RequiresExchange</c> звонят через ближайшую АТС на своей карте. Нет АТС, нет питания
 /// или она саботирована - линия не отвечает, а уже идущие звонки обрываются.
 /// </summary>
-public sealed class TelephoneExchangeSystem : EntitySystem
+public sealed partial class TelephoneExchangeSystem : EntitySystem
 {
     [Dependency] private SharedTransformSystem _transform = default!;
     [Dependency] private SharedPopupSystem _popup = default!;

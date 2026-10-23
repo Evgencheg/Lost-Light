@@ -8,10 +8,8 @@ namespace Content.Server._LP.Phones;
 [RegisterComponent, AutoGenerateComponentPause]
 public sealed partial class AnsweringMachineSessionComponent : Component
 {
-    /// <summary>Диктофон-автоответчик, на который идёт запись.</summary>
     public EntityUid Machine;
 
-    /// <summary>Трубка вызываемого телефона, которая звонила.</summary>
     public EntityUid Callee;
 
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoPausedField]
@@ -20,6 +18,5 @@ public sealed partial class AnsweringMachineSessionComponent : Component
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoPausedField]
     public TimeSpan LastSpeech;
 
-    /// <summary>Сколько реплик записано.</summary>
     public int Recorded;
 }

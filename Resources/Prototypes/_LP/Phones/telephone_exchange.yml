@@ -12,7 +12,7 @@
   name: telephone exchange
   description: Connects the station's phones. Without power or with a cut line, nobody gets through.
   components:
-  # Placeholder sprite: reused server rack, see docs/design/phones-exchange.md
+  # Placeholder sprite: reused server rack
   - type: Sprite
     sprite: Structures/Machines/server.rsi
     snapCardinals: true

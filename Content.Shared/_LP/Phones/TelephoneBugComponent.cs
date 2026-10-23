@@ -10,9 +10,6 @@ namespace Content.Shared._LP.Phones;
 [RegisterComponent]
 public sealed partial class TelephoneBugComponent : Component
 {
-    /// <summary>
-    /// Сколько времени занимает установка жучка.
-    /// </summary>
     [DataField]
     public TimeSpan InstallTime = TimeSpan.FromSeconds(4);
 }
@@ -23,9 +20,6 @@ public sealed partial class TelephoneBugComponent : Component
 [RegisterComponent]
 public sealed partial class TelephoneBugDetectorComponent : Component
 {
-    /// <summary>
-    /// Дальность обнаружения, тайлов.
-    /// </summary>
     [DataField]
     public float Range = 6f;
 }

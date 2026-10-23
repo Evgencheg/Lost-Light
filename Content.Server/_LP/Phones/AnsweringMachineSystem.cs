@@ -26,9 +26,8 @@ namespace Content.Server._LP.Phones;
 /// Автоответчик на диктофоне: если на звонок не ответили, звонящему играет приветствие,
 /// а то, что он скажет, записывается на кассету диктофона. Прослушивают запись обычным воспроизведением.
 /// </summary>
-public sealed class AnsweringMachineSystem : EntitySystem
+public sealed partial class AnsweringMachineSystem : EntitySystem
 {
-    /// <summary>Слот подставки телефона, куда вставляют диктофон-автоответчик.</summary>
     public const string SlotId = "answering_machine";
 
     [Dependency] private ItemSlotsSystem _slots = default!;

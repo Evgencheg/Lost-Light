@@ -9,7 +9,7 @@ namespace Content.Server._LP.Phones;
 /// Детектор жучков: пока включён, ищет ближайший телефон с жучком в радиусе и пищит тем чаще, чем он ближе.
 /// Телефоны с жучками есть только на сервере, поэтому поиск не в общем коде.
 /// </summary>
-public sealed class TelephoneBugDetectorSystem : EntitySystem
+public sealed partial class TelephoneBugDetectorSystem : EntitySystem
 {
     private const float UpdateInterval = 1f;
 
