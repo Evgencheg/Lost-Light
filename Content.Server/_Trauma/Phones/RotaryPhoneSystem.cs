@@ -9,6 +9,7 @@ using Content.Shared.Radio.Components;
 using Content.Shared.Speech;
 using Content.Shared._Starlight.Language.Systems;
 using Content.Shared._Starlight.TextToSpeech;
+using Content.Shared._Trauma.Phones;
 using Content.Shared._Trauma.Phones.Components;
 using Content.Shared._Trauma.Phones.Events;
 using Content.Shared._Trauma.Phones.Systems;
@@ -19,6 +20,7 @@ using Robust.Shared.Containers;
 using Robust.Shared.Map;
 using Robust.Shared.Physics;
 using Robust.Shared.Player;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
 namespace Content.Server._Trauma.Phones;
@@ -32,6 +34,9 @@ public sealed partial class RotaryPhoneSystem : SharedRotaryPhoneSystem
     [Dependency] private SharedLanguageSystem _language = default!;
     [Dependency] private TTSSystem _tts = default!;
     [Dependency] private SharedPopupSystem _popup = default!; // LP edit
+    [Dependency] private IPrototypeManager _proto = default!; // LP edit
+
+    private const int PhoneNameMaxLength = 32; // LP edit
 
     public override void Initialize()
     {
@@ -70,12 +75,17 @@ public sealed partial class RotaryPhoneSystem : SharedRotaryPhoneSystem
         if (Deleted(ent.Owner) || Terminating(ent.Owner))
             return;
 
+        // LP edit start - в слот подставки вставляют и автоответчик, обрабатываем только трубку
+        if (!TryComp<RotaryPhoneComponent>(args.Entity, out var phone))
+            return;
+        // LP edit end
+
         RemComp<JointVisualsComponent>(ent.Owner);
         RemComp<JointComponent>(ent.Owner);
         Dirty(ent);
 
         // Basically on map init set the phones name to whatever the holders name is so it can be changed in mapping
-        if (!TryComp<RotaryPhoneComponent>(args.Entity, out var phone) || phone.Name != null)
+        if (phone.Name != null || ent.Comp.Name == null) // LP edit
             return;
 
         phone.Name = ent.Comp.Name;
@@ -83,12 +93,28 @@ public sealed partial class RotaryPhoneSystem : SharedRotaryPhoneSystem
 
     private void OnPhoneCategoryChanged(Entity<RotaryPhoneComponent> ent, ref PhoneCategoryChangedMessage args)
     {
+        // LP edit start - клиенту не доверяем: только окно переименования и существующая категория
+        if (!args.UiKey.Equals(PhoneUiKey.NameChange) || !_proto.HasIndex<PhoneCategoryPrototype>(args.Value))
+            return;
+        // LP edit end
+
         ent.Comp.Category = args.Value;
+        Dirty(ent); // LP edit
     }
 
     private void OnPhoneNameChanged(Entity<RotaryPhoneComponent> ent, ref PhoneNameChangedMessage args)
     {
-        ent.Comp.Name = args.Value;
+        // LP edit start
+        if (!args.UiKey.Equals(PhoneUiKey.NameChange))
+            return;
+
+        var name = args.Value.Trim();
+        if (name.Length > PhoneNameMaxLength)
+            name = name[..PhoneNameMaxLength];
+
+        ent.Comp.Name = string.IsNullOrEmpty(name) ? null : name;
+        Dirty(ent);
+        // LP edit end
     }
 
     private void OnOpen(Entity<RotaryPhoneComponent> ent, ref BoundUIOpenedEvent args)
@@ -110,6 +136,11 @@ public sealed partial class RotaryPhoneSystem : SharedRotaryPhoneSystem
             if (phoneComp.PhoneNumber is not {} number|| phoneComp.Category is not {} category)
                 continue;
 
+            // LP edit start - скрытые категории клиентам не отправляем
+            if (!_proto.TryIndex(category, out var categoryProto) || categoryProto.HideInPhonebook)
+                continue;
+            // LP edit end
+
             var phones = new PhoneData(phoneComp.Name ?? Loc.GetString("phone-number-unknown"), category, number);
 
             data.Add(phones);
@@ -126,11 +157,17 @@ public sealed partial class RotaryPhoneSystem : SharedRotaryPhoneSystem
 
     private void OnKeyPadPressed(Entity<RotaryPhoneComponent> ent, ref PhoneKeypadMessage args)
     {
-        if (ent.Comp.DialedNumber > PhoneNumberMax)
+        // LP edit start - только цифра 0-9 и не больше пяти цифр
+        if (args.Value is < 0 or > 9)
             return;
 
+        var dialed = (ent.Comp.DialedNumber ?? 0) * 10 + args.Value;
+        if (dialed > PhoneNumberMax)
+            return;
+        // LP edit end
+
         PlayPhoneSound(ent.AsNullable(), args.Value);
-        ent.Comp.DialedNumber = (ent.Comp.DialedNumber ?? 0) * 10 + args.Value;
+        ent.Comp.DialedNumber = dialed; // LP edit
         Dirty(ent);
     }
 
@@ -190,12 +227,15 @@ public sealed partial class RotaryPhoneSystem : SharedRotaryPhoneSystem
         var speakerName = nameEv.VoiceName;
         // LP edit end
 
-        // LP edit start
-        _bug.RecordRotary(ent, args.Source, args.Message);
-        _bug.RecordRotary(connected, args.Source, args.Message);
-
+        // LP edit start - автоответчик слушает ещё не принятый вызов, остальное только во время разговора
         if (_answering.TryRecord(ent, args.Source, speakerName, args.Message))
             return;
+
+        if (!ent.Comp.Connected || !otherPhoneComponent.Connected)
+            return;
+
+        _bug.RecordRotary(ent, args.Source, args.Message);
+        _bug.RecordRotary(connected, args.Source, args.Message);
         // LP edit end
 
         if (otherPhoneComponent.SpeakerPhone)
@@ -226,7 +266,7 @@ public sealed partial class RotaryPhoneSystem : SharedRotaryPhoneSystem
         if (args.Language is { } language && !_language.CanUnderstand(otherPhoneComponent.ConnectedPlayer.Value, language.ID))
             text = _language.ObfuscateSpeech(text, language);
 
-        var message = Loc.GetString("phone-speak", ("name", FormattedMessage.EscapeText(speakerName)), ("message", text)); // LP edit
+        var message = Loc.GetString("phone-speak", ("name", FormattedMessage.EscapeText(speakerName)), ("message", FormattedMessage.EscapeText(text))); // LP edit
 
         _chatManager.ChatMessageToOne(ChatChannel.Local, message, message, otherPhoneComponent.ConnectedPlayer.Value, false, actor.PlayerSession.Channel, Color.FromHex("#9956D3"), true, soundPath, -12, hidePopup: true);
     }
