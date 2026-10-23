@@ -174,4 +174,11 @@ Entries:
   id: 25
   time: '2026-10-23T14:58:03.000000+00:00'
   url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/54
+- author: Evgencheg
+  changes:
+  - message: Добавлены ДНК замки на скафандрах Синдиката ОБР и т.д.
+    type: Add
+  id: 26
+  time: '2026-10-23T15:26:30.000000+00:00'
+  url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/52
 Order: -3
