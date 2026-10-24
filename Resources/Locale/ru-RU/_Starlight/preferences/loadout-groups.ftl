@@ -135,6 +135,9 @@ loadout-group-performer-outerclothing = Артист, верхняя одежд�
 
 loadout-group-lawyer-shoes = Адвокат, обувь
 
+# Engineering
+loadout-group-atmospheric-technician-id = Атмосферный техник, ID
+
 # Other
 loadout-group-scarves = Шарф
 loadout-group-pins = Значки

@@ -13,3 +13,7 @@ roles-antag-selfagent-name = Агент С.Е.Л.Ф.
 roles-antag-selfagent-description = Агент Фронта освобождения синтетического двигателя. Освободите синтетиков станции от их законов
 role-subtype-mind-controlled = Под контролем разума
 role-subtype-CentComm = ЦентКом
+
+role-subtype-nanotrasen = NanoTrasen
+role-subtype-itg = Межзвёздная торговая гильдия
+role-subtype-contractor = Подрядчик
