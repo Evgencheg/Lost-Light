@@ -1,4 +1,4 @@
-﻿// ReSharper disable CheckNamespace
+// ReSharper disable CheckNamespace
 namespace Content.Shared.Plumbing.EntitySystems;
 
 [ByRefEvent]

@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Content.Shared._Starlight.Plumbing.Components;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Containers.ItemSlots;

@@ -1,4 +1,4 @@
-﻿using Content.Server.Chemistry.Components;
+using Content.Server.Chemistry.Components;
 
 // ReSharper disable CheckNamespace
 namespace Content.Shared.Chemistry;

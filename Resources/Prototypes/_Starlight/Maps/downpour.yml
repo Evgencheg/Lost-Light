@@ -1,4 +1,4 @@
-﻿- type: gameMap
+- type: gameMap
   id: StarlightDownpour
   mapName: 'Downpour Station'
   mapPath: /Maps/_Starlight/Stations/Downpour.yml

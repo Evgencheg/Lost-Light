@@ -246,4 +246,3 @@ public sealed class ChemMasterSetTransferAmountMessage(ChemMasterReagentAmount a
 {
     public ChemMasterReagentAmount Amount = amount;
 }
-

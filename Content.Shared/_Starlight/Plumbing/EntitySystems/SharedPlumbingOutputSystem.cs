@@ -1,4 +1,4 @@
-﻿using Content.Shared._Starlight.Plumbing.Components;
+using Content.Shared._Starlight.Plumbing.Components;
 
 // ReSharper disable CheckNamespace
 namespace Content.Shared.Plumbing.EntitySystems;
