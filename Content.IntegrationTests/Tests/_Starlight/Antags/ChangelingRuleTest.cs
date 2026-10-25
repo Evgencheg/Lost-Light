@@ -64,7 +64,7 @@ public sealed class ChangelingRuleTest : GameTest
             Assert.That(offers.ObjectiveOptions, Has.Count.EqualTo(4));
             // LP edit start - заголовки локализованы (ru-RU), цель высокой ценности определяем по пулу, а не по тексту
             bool IsHighValue(NetEntity id) =>
-                SEntMan.TryGetComponent(SEntMan.GetEntity(id), out PickRandomPersonComponent? pick)
+                SEntMan.TryGetComponent<PickRandomPersonComponent>(SEntMan.GetEntity(id), out var pick)
                 && pick.Pool is HighValueTargetsPool;
             // LP edit end
             Assert.That(offers.ObjectiveOptions.Keys.Count(IsHighValue), Is.EqualTo(2)); // LP edit
