@@ -4,6 +4,8 @@
   id: !type:CreateVariants
     values:
     - MobArachnidSprites
+    - MobCatMothSprites
+    - MobRodentiaSprites
     - MobDionaSprites
     - MobHumanSprites
     - MobMothSprites
@@ -73,18 +75,6 @@
     - MobShadekinMarkingLimits
     - MobThavenMarkingLimits
   points:
-    UndergarmentTop: !Remove
-    UndergarmentBottom: !Remove
-
-- type: !PartialOnly speciesBaseSprites
-  id: MobRodentiaSprites
-  sprites:
-    UndergarmentBottom: !Remove
-    UndergarmentTop: !Remove
-
-- type: !PartialOnly speciesBaseSprites
-  id: MobCatMothSprites
-  sprites:
     UndergarmentTop: !Remove
     UndergarmentBottom: !Remove
 

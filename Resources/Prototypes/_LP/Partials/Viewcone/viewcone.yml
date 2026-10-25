@@ -10,11 +10,9 @@
 
 # Шкафы и ящики: вместо слепоты Starlight (ChildBlockVision) работает сужение конуса зрения Funky (ViewconeStorageBlindSystem)
 - type: !PartialOnly entity
-  id: ClosetBase
-  components:
-  - type: !Remove ChildBlockVision
-
-- type: !PartialOnly entity
-  id: CrateGeneric
+  id: !type:CreateVariants
+    values:
+    - ClosetBase
+    - CrateGeneric
   components:
   - type: !Remove ChildBlockVision
