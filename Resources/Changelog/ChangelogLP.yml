@@ -195,4 +195,18 @@ Entries:
   id: 28
   time: '2026-10-25T15:17:10.000000+00:00'
   url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/40
+- author: Evgencheg
+  changes:
+  - message: Добавлены фотоаппараты и фильтры!
+    type: Add
+  id: 29
+  time: '2026-10-25T15:17:12.000000+00:00'
+  url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/38
+- author: Evgencheg
+  changes:
+  - message: Добавлена возможность фотографировать с камер!
+    type: Add
+  id: 30
+  time: '2026-10-25T15:17:12.000000+00:00'
+  url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/38
 Order: -3
