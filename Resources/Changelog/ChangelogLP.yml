@@ -209,4 +209,25 @@ Entries:
   id: 30
   time: '2026-10-25T15:17:12.000000+00:00'
   url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/38
+- author: MegaDaimond
+  changes:
+  - message: Портирована одежда и элементы экипировки.
+    type: Add
+  id: 31
+  time: '2026-10-25T15:37:27.000000+00:00'
+  url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/51
+- author: MegaDaimond
+  changes:
+  - message: Портированы торгоматы.
+    type: Add
+  id: 32
+  time: '2026-10-25T15:37:27.000000+00:00'
+  url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/51
+- author: MegaDaimond
+  changes:
+  - message: Портированы звуки.
+    type: Add
+  id: 33
+  time: '2026-10-25T15:37:27.000000+00:00'
+  url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/51
 Order: -3
