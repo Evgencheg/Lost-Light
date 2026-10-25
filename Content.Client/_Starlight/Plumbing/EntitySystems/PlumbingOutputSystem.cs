@@ -1,4 +1,4 @@
-﻿using Content.Shared.Plumbing.EntitySystems;
+using Content.Shared.Plumbing.EntitySystems;
 using JetBrains.Annotations;
 
 // ReSharper disable CheckNamespace

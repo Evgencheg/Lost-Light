@@ -1,4 +1,4 @@
-﻿// ReSharper disable CheckNamespace
+// ReSharper disable CheckNamespace
 
 using Content.Shared._Starlight.Storage;
 using Content.Shared.Storage.Components;

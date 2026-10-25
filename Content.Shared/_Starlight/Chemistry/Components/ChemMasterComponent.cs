@@ -1,4 +1,4 @@
-﻿using Content.Shared.Chemistry.EntitySystems;
+using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
