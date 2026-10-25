@@ -31,6 +31,7 @@
 | `_DEN` | [The Den](https://github.com/TheDenSS14/TheDen) |
 | `_Orion` | [Orion Station](https://github.com/AtaraxiaSpaceFoundation/Orion-Station-14) |
 | `_Trauma` | [Trauma Station](https://github.com/Trauma-Station/Trauma-Station) |
+| `_WL` | [Corvax WL](https://github.com/corvax-team/ss14-wl) |
 
 **MIT**
 
