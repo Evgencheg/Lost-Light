@@ -90,6 +90,9 @@ public sealed partial class TTSSystem : EntitySystem
             || args.SuppressTTS)
             return;
 
+        if (!TryUseSpeechCooldown(args.Source, radio: true)) // LP edit - лимит частоты озвучки сущности
+            return;
+
         await Task.Yield();
         try
         {
@@ -165,6 +168,9 @@ public sealed partial class TTSSystem : EntitySystem
             || args.Message.Tts.Length > MaxChars
             || (!args.Language.Speech.RequireSpeech && !args.Language.Speech.RequireSound)
             )
+            return;
+
+        if (!TryUseSpeechCooldown(uid)) // LP edit - лимит частоты озвучки сущности
             return;
 
         await Task.Yield();

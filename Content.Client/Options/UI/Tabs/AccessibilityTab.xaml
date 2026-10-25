@@ -12,7 +12,7 @@
                         <CheckBox Name="ReducedMotionCheckBox" Text="{Loc 'ui-options-reduced-motion'}" />
                         <!-- funky viewcone options -->
                         <CheckBox Name="DisableViewconeGrainCheckBox" Text="{Loc 'ui-options-disable-viewcone-grain'}" />
-                        <ui:OptionSlider Name="ViewconeOcclusionOpacitySlider" Title="{Loc 'ui-options-viewcone-occlusion-opacity'}" />
+                        <slui:OptionSlider Name="ViewconeOcclusionOpacitySlider" Title="{Loc 'ui-options-viewcone-occlusion-opacity'}" /> <!-- LP edit - OptionSlider в Starlight-пространстве имён -->
                         <CheckBox Name="EnableColorNameCheckBox" Text="{Loc 'ui-options-enable-color-name'}" />
                         <CheckBox Name="ColorblindFriendlyCheckBox" Text="{Loc 'ui-options-colorblind-friendly'}" />
                         <slui:OptionSlider Name="ScreenShakeIntensitySlider" Title="{Loc 'ui-options-screen-shake-intensity'}" />
