@@ -427,6 +427,9 @@ uplink-soap-desc = Не вызывающий доверия кусок мыла.
 uplink-ultrabright-lantern-name = Сверхъяркий светильник
 uplink-ultrabright-lantern-desc = Этот сверхъяркий фонарь можно использовать для ослепления людей, подобно вспышке.
 
+uplink-travel-camera-name = Туристическая камера
+uplink-travel-camera-desc = Оглушайте людей своим талантом фотографа и вполне легальной вспышкой камеры. Делает вас похожим на туриста.
+
 uplink-combat-medkit-name = Боевая аптечка
 uplink-combat-medkit-desc = Аптечка, предназначенная для лечения боевых ранений.
 

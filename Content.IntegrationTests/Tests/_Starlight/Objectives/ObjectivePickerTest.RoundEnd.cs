@@ -31,7 +31,10 @@ public sealed partial class ObjectivePickerTest
             Assert.That(end.Text, Does.Contain("Picker participant"));
             Assert.That(end.Text, Does.Contain(Loc.GetString(agent)));
             Assert.That(end.Text, Does.Contain("Incomplete test goal"));
-            Assert.That(end.Text, Does.Contain("Selected Difficulty: 3. Completed Difficulty: 0 (0%)."));
+            // LP edit start - строка локализована (ru-RU), сверяем с переводом, а не с английским текстом
+            Assert.That(end.Text, Does.Contain(Loc.GetString("objectives-round-end-difficulty",
+                ("selected", "3"), ("completed", "0"), ("percentage", "0"))));
+            // LP edit end
             Assert.That(end.Text, Does.Not.Contain("NUMBER").And.Not.Contain("$percentage"));
 
             // Active-rule collection and picker fallback must not duplicate the same mind.

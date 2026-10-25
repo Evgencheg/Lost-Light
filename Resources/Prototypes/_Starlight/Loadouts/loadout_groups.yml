@@ -721,13 +721,6 @@
   loadouts:
     - MiningSpecialistJumpsuit
     - MiningSpecialistJumpskirt
-#LP edit start
-    - LPPSalvageNTMiner
-    - LPPSalvageHephMiner
-    - LPPMinerJumpsuit
-    - LPPMinerJumpskirt
-    - LPPMinerJumpsuitOveralls
-#LP edit end
 
 - type: loadoutGroup
   id: MiningSpecialistPDA
@@ -1202,12 +1195,6 @@
   - SalvageSpecialistJumpskirt
   - SalvageSpecialistJumpsuitFormal
   - SalvageSpecialistJumpskirtFormal
-#LP edit end
-  - LPPSalvageSpecialistUniform
-  - LPPSalvageExplorerAlternative
-  - LPPSalvageExplorer
-  - LPPSalvageMilitary
-#LP edit end
 
 - type: loadoutGroup
   id: CaptainEyewear

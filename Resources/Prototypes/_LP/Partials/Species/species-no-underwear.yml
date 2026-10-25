@@ -81,3 +81,35 @@
   sprites:
     UndergarmentBottom: !Remove
     UndergarmentTop: !Remove
+
+- type: !PartialOnly speciesBaseSprites
+  id: MobCatMothSprites
+  sprites:
+    UndergarmentTop: !Remove
+    UndergarmentBottom: !Remove
+
+- type: !PartialOnly entity
+  id: AppearanceAvali
+  components:
+    - type: HumanoidAppearance
+      undergarmentTop: !Remove
+      undergarmentBottom: !Remove
+
+- type: !PartialOnly entity
+  id: !type:CreateVariants
+    values:
+    - AppearanceReptilian
+    - BaseMobReptilian
+  components:
+  - type: HumanoidAppearance
+    undergarmentBottom: !Remove
+
+- type: !PartialOnly entity
+  id: !type:CreateVariants
+    values:
+    - AppearanceVox
+    - AppearanceRodentia
+  components:
+  - type: HumanoidAppearance
+    undergarmentTop: !Remove
+    undergarmentBottom: !Remove

@@ -62,11 +62,16 @@ public sealed class ChangelingRuleTest : GameTest
             var offers = SEntMan.GetComponent<PotentialObjectivesComponent>(mind);
             Assert.That(offers.MinimumDifficulty, Is.Zero);
             Assert.That(offers.ObjectiveOptions, Has.Count.EqualTo(4));
-            Assert.That(offers.ObjectiveOptions.Values.Count(info => info.Title.Contains("high value")), Is.EqualTo(2));
+            // LP edit start - заголовки локализованы (ru-RU), цель высокой ценности определяем по пулу, а не по тексту
+            bool IsHighValue(NetEntity id) =>
+                SEntMan.TryGetComponent(SEntMan.GetEntity(id), out PickRandomPersonComponent? pick)
+                && pick.Pool is HighValueTargetsPool;
+            // LP edit end
+            Assert.That(offers.ObjectiveOptions.Keys.Count(IsHighValue), Is.EqualTo(2)); // LP edit
             foreach (var id in offers.ObjectiveOptions.Keys)
             {
                 Assert.That(SEntMan.GetComponent<TargetObjectiveComponent>(SEntMan.GetEntity(id)).Target, Is.Null);
-                if (offers.ObjectiveOptions[id].Title.Contains("high value"))
+                if (IsHighValue(id)) // LP edit
                     Assert.That(SEntMan.GetComponent<PickRandomPersonComponent>(SEntMan.GetEntity(id)).Pool,
                         Is.TypeOf<HighValueTargetsPool>());
             }
