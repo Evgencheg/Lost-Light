@@ -1,1 +1,1 @@
-﻿chat-channel-humanized-mentor = MENTOR
+chat-channel-humanized-mentor = MENTOR
