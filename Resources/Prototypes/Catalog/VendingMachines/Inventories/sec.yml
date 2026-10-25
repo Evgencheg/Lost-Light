@@ -21,6 +21,7 @@
     RiotBulletShield: 2
     RadioHandheldSecurity: 5
     Bola: 6
+    ClothingBeltBandolier: 5 #LP edit
   # security officers need to follow a diet regimen!
   contrabandInventory:
     WeaponMeleeNeedle: 2
