@@ -22,3 +22,6 @@ ent-MobSnouse = Снауз
 ent-ImmortalRoach = закалённый таракан
     .desc = С чрезвычайно прочным панцирем это мерзкое создание считается почти неуязвимым. Рекомендуется выбросить в космос.
     .suffix = { ent-MobCockroach.suffix }
+ent-MobBombroach = бомботаракамоль
+    .desc = На ней что, бомба?
+    .suffix = { ent-MobMothroach.suffix }

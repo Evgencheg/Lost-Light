@@ -1,6 +1,8 @@
 autolog-discord-footer = Сервер: { $server } | Раунд: #{ $round } | Тип раунда: { $roundtype } | Время раунда: { $time }
 
 autolog-forcedprototype = Создан персонаж: { $character } с ForcedPrototype: { $prototype }
+autolog-forcedprototype-attempt = Попытка клиента задать ForcedPrototype `{ $prototype }` для слота персонажа { $slot }. Заблокировано; в слоте остаётся { $kept }. ID пользователя: { $userId }
+autolog-forcedprototype-none = нет принудительного прототипа
 autolog-admin-mouse = Стал админской мышью
 autolog-mentor-mouse = Стал мышью ментора
 
