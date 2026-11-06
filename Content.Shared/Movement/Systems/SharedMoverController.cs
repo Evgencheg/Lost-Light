@@ -35,6 +35,8 @@ using Content.Shared.Body.Components;
 using Content.Shared.Charges.Systems;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Serialization.Manager.Exceptions;
+using Content.Shared.Body.Part;
+using Content.Shared.Body.Systems;
 
 namespace Content.Shared.Movement.Systems;
 
@@ -671,14 +673,40 @@ public abstract partial class SharedMoverController : VirtualController
             sound = outerModifier.FootstepSoundCollection;
             return sound != null;
         }
-        // STARLIGHT END
 
-        if (_inventory.TryGetSlotEntity(uid, "shoes", out var shoes) &&
-            FootstepModifierQuery.TryComp(shoes, out var modifier))
+        if (_inventory.TryGetSlotEntity(uid, "shoes", out var shoes))
         {
-            sound = modifier.FootstepSoundCollection;
-            return sound != null;
+            if(FootstepModifierQuery.TryComp(shoes, out var modifier))
+            {
+                sound = modifier.FootstepSoundCollection;
+                return sound != null;
+            }
         }
+        // STARLIGHT: Check feet after shoes for special sounds when barefoot, but only when there are no shoes equipped
+        else if ( body != null && body.RequiredLegs >= 0)
+        {
+            foreach (var legEntity in body.LegEntities)
+            {
+                if(!TryComp(legEntity, out BodyPartComponent? partComp) || partComp == null)
+                    continue;
+
+                foreach (var slotId in partComp.Children.Keys)
+                {
+                    if (slotId is null) continue;
+                    var slotFullId = SharedBodySystem.GetPartSlotContainerId(slotId);
+                    var child = _container.GetContainer(legEntity, slotFullId);
+
+                    foreach (var footEntity in child.ContainedEntities)
+                    {
+                    if (!TryComp<FootstepModifierComponent>(footEntity, out var footFootstep))
+                        continue;
+                    sound = footFootstep.FootstepSoundCollection;
+                    return sound != null;
+                    }
+                }
+            }
+        }
+        // STARLIGHT END
 
         surfaceSound = true; // Starlight-edit
         return TryGetFootstepSound(uid, xform, shoes != null, out sound, tileDef: tileDef);
