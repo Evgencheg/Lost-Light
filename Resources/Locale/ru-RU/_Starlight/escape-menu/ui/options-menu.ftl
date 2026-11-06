@@ -1,6 +1,7 @@
 ui-options-function-open-m-help = Открыть помощь ментора
 ui-options-function-jump = Прыжок
 ui-options-function-latch-struggle = Вырываться (когда в вас вцепились)
+ui-options-function-hotbar-remove = Убрать с хотбара
 ui-escape-connect-discord = Привязать Discord
 server-info-connect-discord-button = Привязать Discord
 ui-escape-connect-steam = Привязать Steam
@@ -192,3 +193,5 @@ ui-options-handling-volume = Подбор и экипировка:
 ui-options-combat-volume = Оружие и бой:
 ui-options-voice-volume = Голоса и эмоции:
 ui-options-announcement-volume = Объявления и тревоги:
+ui-options-admin-sounds-volume = Админские звуки:
+ui-options-show-tippy = Показывать Типпи

@@ -68,9 +68,10 @@
             ]
         },
         {
-            "name": "crit"},
-    {
-      "name": "crit-unshaded"
+            "name": "crit"
+        },
+        {
+            "name": "crit-unshaded"
         },
         {
             "name": "dead"

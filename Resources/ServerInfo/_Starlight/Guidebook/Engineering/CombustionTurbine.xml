@@ -1,72 +1,72 @@
 <Document>
-  # Combustion Turbine
+  # Газовая турбина
 
-  The combustion turbine makes power by pulling hot, high-pressure gas out of a burn chamber and letting it expand through its blades into a low-pressure exhaust.
-  The denser the gas it draws and the bigger the drop in pressure to the exhaust, the faster the rotor spins and the more power it puts into the [color=orange]HV[/color] network.
+  Газовая турбина вырабатывает энергию, забирая горячий газ под высоким давлением из камеры сгорания и давая ему расшириться через лопатки в выхлоп с низким давлением.
+  Чем плотнее забираемый газ и чем сильнее перепад давления до выхлопа, тем быстрее крутится ротор и тем больше энергии уходит в [color=orange]ВВ[/color]-сеть.
 
   <Box>
-    <GuideEntityEmbed Entity="CombustionTurbineCompressor" Caption="inlet compressor"/>
-    <GuideEntityEmbed Entity="CombustionTurbineRotor" Caption="core rotor"/>
-    <GuideEntityEmbed Entity="CombustionTurbineOutlet" Caption="turbine outlet"/>
+    <GuideEntityEmbed Entity="CombustionTurbineCompressor" Caption="входной компрессор"/>
+    <GuideEntityEmbed Entity="CombustionTurbineRotor" Caption="центральный ротор"/>
+    <GuideEntityEmbed Entity="CombustionTurbineOutlet" Caption="выходной узел турбины"/>
   </Box>
   <Box>
-    <GuideEntityEmbed Entity="ComputerCombustionTurbine" Caption="control computer"/>
-    <GuideEntityEmbed Entity="IgniterFloor" Caption="igniter"/>
+    <GuideEntityEmbed Entity="ComputerCombustionTurbine" Caption="компьютер управления"/>
+    <GuideEntityEmbed Entity="IgniterFloor" Caption="воспламенитель"/>
   </Box>
 
-  ## Getting one
+  ## Где взять
 
-  Cargo sells a [color=#a4885c]combustion turbine crate[/color] with all three sections flatpacked, tier 1 parts already installed, and the control computer.
-  To build more, research [color=#a4885c]Combustion turbines[/color] (Industrial). The section boards are expensive to print (plasma and gold), and each section takes plasteel and plasma sheets to build. Sections built from boards come without parts: print tier 1 parts at the [color=#a4885c]engineering techfab[/color].
+  Карго продаёт [color=#a4885c]ящик с газовой турбиной[/color]: в нём все три секции в упаковках с уже установленными деталями уровня 1 и компьютер управления.
+  Чтобы построить ещё, изучите [color=#a4885c]Газовые турбины[/color] (Промышленность). Печатать платы секций дорого (плазма и золото), а на постройку каждой секции уходят пласталь и листы плазмы. Секции, собранные из плат, идут без деталей: детали уровня 1 печатаются в [color=#a4885c]инженерном техфабе[/color].
 
-  ## Assembly
+  ## Сборка
 
-  The turbine is three machines in a row, all [color=#a4885c]facing the same way[/color]. Gas flows through them in that direction, and together they act as an airtight wall:
-  - The [color=#a4885c]inlet compressor[/color] draws gas from the tile behind it, which should be the burn chamber.
-  - The [color=#a4885c]core rotor[/color] sits in the middle. It holds the generator, outputs over an [color=orange]HV wire[/color] under it and needs [color=green]APC power[/color] for its starter motor.
-  - The [color=#a4885c]turbine outlet[/color] vents the spent gas onto the tile in front of it, which should lead to space or into an exhaust pipe.
+  Турбина - это три машины в ряд, и все [color=#a4885c]смотрят в одну сторону[/color]. Газ проходит через них в этом направлении, а вместе они работают как герметичная стена:
+  - [color=#a4885c]Входной компрессор[/color] забирает газ с тайла позади себя - там должна быть камера сгорания.
+  - [color=#a4885c]Центральный ротор[/color] стоит посередине. В нём генератор, он отдаёт энергию в [color=orange]ВВ-кабель[/color] под собой, а для стартера ему нужно [color=green]питание от ЛКП[/color].
+  - [color=#a4885c]Выходной узел турбины[/color] выпускает отработанный газ на тайл перед собой - он должен вести в космос или в выхлопную трубу.
 
-  Examine any section to check that the turbine is assembled. Link the [color=#a4885c]control computer[/color] to the core rotor with a [color=#a4885c]multitool[/color].
+  Осмотрите любую секцию, чтобы убедиться, что турбина собрана. Свяжите [color=#a4885c]компьютер управления[/color] с центральным ротором [color=#a4885c]мультитулом[/color].
 
-  ## Running it
+  ## Запуск
 
-  1. Fill the burn chamber with a burn mix of about 3-5 parts oxygen to 1 part plasma. The more pressure, the more power.
-  2. Make sure the exhaust side is open to space. Venting into a room at normal pressure leaves almost no pressure drop, and the turbine stalls.
-  3. Light the mix with the [color=#a4885c]igniter[/color] in the chamber. Link it to a button, or toggle it by hand.
-  4. Turn the turbine on from the computer. The starter motor spins the rotor up, the compressor starts drawing gas, and the burn takes it from there.
+  1. Заполните камеру сгорания горючей смесью примерно 3-5 частей кислорода на 1 часть плазмы. Чем выше давление, тем больше энергии.
+  2. Убедитесь, что выхлоп открыт в космос. Если выпускать газ в комнату с обычным давлением, перепада почти не будет, и турбина заглохнет.
+  3. Подожгите смесь [color=#a4885c]воспламенителем[/color] в камере. Подключите его к кнопке или переключайте вручную.
+  4. Включите турбину с компьютера. Стартер раскрутит ротор, компрессор начнёт забирать газ, а дальше всё сделает горение.
 
-  The [color=#a4885c]intake regulator[/color] on the computer sets how many litres per second the compressor draws (800 L/s with a tier 1 compressor part). The same volume holds more gas at higher pressure, so a denser chamber gives more power for the same setting.
-  The turbine is hungry: at 1 MPa it draws around 30 mol/s, at 2 MPa around 60 mol/s, and a fully upgraded turbine at 3 MPa takes well over 100 mol/s, so keep feeding the chamber.
+  [color=#a4885c]Регулятор забора[/color] на компьютере задаёт, сколько литров в секунду забирает компрессор (800 л/с с деталью компрессора уровня 1). В том же объёме при большем давлении больше газа, поэтому плотная камера даёт больше энергии при той же настройке.
+  Турбина прожорлива: при 1 МПа она забирает около 30 моль/с, при 2 МПа - около 60 моль/с, а полностью улучшенная турбина при 3 МПа берёт далеко за 100 моль/с, так что не забывайте подпитывать камеру.
 
-  Cold gas barely turns the rotor, however much pressure is behind it. You only get real power from burning.
-  The blades take only part of the heat out of the gas, so the exhaust is still very hot, often well over 1000 K. Unburnt fuel passes straight through, so a filter on the exhaust can collect it to burn again.
+  Холодный газ почти не крутит ротор, какое бы давление за ним ни стояло. Настоящая энергия получается только от горения.
+  Лопатки забирают у газа лишь часть тепла, поэтому выхлоп всё ещё очень горячий, часто намного выше 1000 K. Несгоревшее топливо проходит насквозь, так что фильтр на выхлопе может собрать его, чтобы сжечь снова.
 
-  If gas sits in the chamber too long, the plasma burns away and the oxygen-rich leftovers (over about 32:1) start making tritium, which burns much hotter.
+  Если газ слишком долго стоит в камере, плазма выгорает, а остатки с избытком кислорода (больше примерно 32:1) начинают давать тритий, который горит намного жарче.
 
-  ## Speed governor
+  ## Регулятор скорости
 
-  The rotor never spins past its rated speed. As it gets close, a governor closes the intake on its own, so a very high-pressure chamber does not overspeed the turbine or waste fuel; it just holds the rated speed and maximum output.
-  The computer shows when the governor is holding the rotor back. If it is holding back a lot, upgrading the parts will get you more power.
+  Ротор никогда не раскручивается выше номинальной скорости. Когда он к ней приближается, регулятор сам прикрывает забор, так что камера с очень высоким давлением не разгонит турбину сверх нормы и не пережжёт топливо зря - турбина просто держит номинальную скорость и максимальную мощность.
+  Компьютер показывает, когда регулятор сдерживает ротор. Если сдерживает сильно, улучшение деталей даст больше энергии.
 
-  ## Parts and upgrades
+  ## Детали и улучшения
 
-  Every section holds one part: a [color=#a4885c]compressor part[/color], a [color=#a4885c]rotor part[/color] or a [color=#a4885c]stator part[/color]. The turbine will not run with a part missing.
-  Sections from the cargo crate come with tier 1 parts installed; tier 1 parts for sections built from boards, and spares, are printed at the engineering techfab. To reach a higher tier, use the material listed when you examine the part on it while holding it.
+  В каждой секции стоит одна деталь: [color=#a4885c]деталь компрессора[/color], [color=#a4885c]деталь ротора[/color] или [color=#a4885c]деталь статора[/color]. Без любой из них турбина не заработает.
+  В секциях из ящика карго уже стоят детали уровня 1; детали уровня 1 для секций из плат и запасные печатаются в инженерном техфабе. Чтобы поднять уровень, возьмите деталь в руку и примените на неё материал, указанный при её осмотре.
 
   <Table Columns="3">
     <ColorBox>
       <Box>
-        Tier
+        Уровень
       </Box>
     </ColorBox>
     <ColorBox>
       <Box>
-        Compressor and rotor part
+        Деталь компрессора и ротора
       </Box>
     </ColorBox>
     <ColorBox>
       <Box>
-        Stator part
+        Деталь статора
       </Box>
     </ColorBox>
     <ColorBox>
@@ -76,12 +76,12 @@
     </ColorBox>
     <ColorBox>
       <Box>
-        10 plasteel
+        10 пластали
       </Box>
     </ColorBox>
     <ColorBox>
       <Box>
-        15 plasteel
+        15 пластали
       </Box>
     </ColorBox>
     <ColorBox>
@@ -91,12 +91,12 @@
     </ColorBox>
     <ColorBox>
       <Box>
-        10 uranium
+        10 урана
       </Box>
     </ColorBox>
     <ColorBox>
       <Box>
-        15 uranium
+        15 урана
       </Box>
     </ColorBox>
     <ColorBox>
@@ -106,26 +106,26 @@
     </ColorBox>
     <ColorBox>
       <Box>
-        5 diamonds
+        5 алмазов
       </Box>
     </ColorBox>
     <ColorBox>
       <Box>
-        8 diamonds
+        8 алмазов
       </Box>
     </ColorBox>
   </Table>
 
-  Each tier raises the speed and the intake temperature the part is rated for. The turbine is rated for the [color=#a4885c]average[/color] of its three parts.
-  On top of that, a better compressor part draws more gas, a better rotor part loses less power to friction, and a better stator part catches more of the gas's energy.
-  A tier 1 turbine tops out at about [color=orange]300 kW[/color] once the chamber holds around 1.5-2 MPa of burning gas; a fully upgraded one can make about [color=orange]1.5 MW[/color] from a 3 MPa burn.
+  Каждый уровень повышает скорость и температуру забора, на которые рассчитана деталь. Номинал турбины - [color=#a4885c]среднее[/color] по трём её деталям.
+  Кроме того, лучшая деталь компрессора забирает больше газа, лучшая деталь ротора меньше теряет на трении, а лучшая деталь статора улавливает больше энергии газа.
+  Турбина уровня 1 выходит на предел около [color=orange]300 кВт[/color], когда в камере примерно 1,5-2 МПа горящего газа; полностью улучшенная может давать около [color=orange]1,5 МВт[/color] при горении на 3 МПа.
 
-  To swap a part, turn the turbine off and wait for the rotor to stop. Open the section's panel with a [color=#a4885c]screwdriver[/color], pry the part out with a [color=#a4885c]crowbar[/color], put the new part in and close the panel. Prying again with no part inside takes the machine apart.
+  Чтобы заменить деталь, выключите турбину и дождитесь остановки ротора. Откройте панель секции [color=#a4885c]отвёрткой[/color], выньте деталь [color=#a4885c]монтировкой[/color], вставьте новую и закройте панель. Если поддеть монтировкой ещё раз, когда детали внутри нет, машина разберётся.
 
-  ## Damage
+  ## Повреждения
 
-  The only thing that damages the turbine is gas that is too hot: if the intake gas is hotter than the parts are rated for (shown on the computer), the rotor loses integrity, and engineering is warned over the radio once it drops.
-  Integrity slowly recovers while the gas is back within the rating.
-  [color=red]If integrity reaches zero, the rotor fails and explodes.[/color] The faster it was spinning, the bigger the explosion.
-  If the computer reports overheating, cool the burn down: feed less fuel, mix in a buffer gas such as nitrogen, or upgrade the parts.
+  Турбину повреждает только слишком горячий газ: если газ на заборе горячее, чем рассчитаны детали (это видно на компьютере), ротор теряет целостность, а когда она падает, инженеров предупреждают по радио.
+  Пока газ снова в пределах нормы, целостность понемногу восстанавливается.
+  [color=red]Если целостность упадёт до нуля, ротор разрушится и взорвётся.[/color] Чем быстрее он крутился, тем сильнее взрыв.
+  Если компьютер сообщает о перегреве, охладите горение: подавайте меньше топлива, подмешайте буферный газ, например азот, или улучшите детали.
 </Document>

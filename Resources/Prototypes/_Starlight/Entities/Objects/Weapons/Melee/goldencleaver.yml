@@ -14,4 +14,3 @@
     damage:
       types:
         Slash: 13.1 # Extra 0.1 damage a swing is… basically cosmetic.
-

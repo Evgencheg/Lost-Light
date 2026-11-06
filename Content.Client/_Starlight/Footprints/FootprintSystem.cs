@@ -1,4 +1,4 @@
-﻿using Content.Shared._Funkystation.Footprints;
+using Content.Shared._Funkystation.Footprints;
 using Robust.Client.GameObjects;
 using Robust.Shared.Utility;
 

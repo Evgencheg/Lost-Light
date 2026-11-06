@@ -10,52 +10,52 @@
         {
             "name": "hollow_head",
             "directions": 4,
-    		"copyright": "PipeToadCouncil"
+            "copyright": "PipeToadCouncil"
         },
         {
             "name": "hollow_l_arm",
             "directions": 4,
-    		"copyright": "PipeToadCouncil"
+            "copyright": "PipeToadCouncil"
         },
         {
             "name": "hollow_l_foot",
             "directions": 4,
-    		"copyright": "PipeToadCouncil"
+            "copyright": "PipeToadCouncil"
         },
         {
             "name": "hollow_l_hand",
             "directions": 4,
-    		"copyright": "PipeToadCouncil"
+            "copyright": "PipeToadCouncil"
         },
         {
             "name": "hollow_l_leg",
             "directions": 4,
-    		"copyright": "PipeToadCouncil"
+            "copyright": "PipeToadCouncil"
         },
         {
             "name": "hollow_r_arm",
             "directions": 4,
-    		"copyright": "PipeToadCouncil"
+            "copyright": "PipeToadCouncil"
         },
         {
             "name": "hollow_r_foot",
             "directions": 4,
-    		"copyright": "PipeToadCouncil"
+            "copyright": "PipeToadCouncil"
         },
         {
             "name": "hollow_r_hand",
             "directions": 4,
-    		"copyright": "PipeToadCouncil"
+            "copyright": "PipeToadCouncil"
         },
         {
             "name": "hollow_r_leg",
             "directions": 4,
-    		"copyright": "PipeToadCouncil"
+            "copyright": "PipeToadCouncil"
         },
         {
             "name": "hollow_torso",
             "directions": 4,
-    		"copyright": "PipeToadCouncil"
+            "copyright": "PipeToadCouncil"
         }
     ]
 }

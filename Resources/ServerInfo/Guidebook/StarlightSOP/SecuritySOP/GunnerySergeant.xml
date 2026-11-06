@@ -1,10 +1,9 @@
 <Document>
-# Gunnery Sergeant
+# Артиллерийский сержант
 
-<GuideEntityEmbed Entity="ToyFigurineSecurity" Caption="Gunnery Sergeant"/>
+<GuideEntityEmbed Entity="ToyFigurineSecurity" Caption="Артиллерийский сержант"/>
 
-### §1.
-Standard [color=#00a933]Code Green[/color] equipment is:
+### §1 Стандартное снаряжение при [color=#00a933]коде «Зелёный»[/color]
 
 <Box>
 	<GuideEntityEmbed Entity="WeaponDisabler"/>
@@ -18,7 +17,7 @@ Standard [color=#00a933]Code Green[/color] equipment is:
 </Box>
 <Box>
 	<GuideEntityEmbed Entity="CombatKnife"/>
-	in
+	в
 	<GuideEntityEmbed Entity="ClothingShoesBootsJack"/>
 </Box>
 <Box>
@@ -27,39 +26,39 @@ Standard [color=#00a933]Code Green[/color] equipment is:
 </Box>
 <Box>
 	<GuideEntityEmbed Entity="Handcuffs"/>
-	or
+	или
 	<GuideEntityEmbed Entity="Zipties"/>
 </Box>
 
-### §2 Leader of Security's Policing Wing
+### §2 Руководитель патрульного крыла СБ
 - 1.\n
-The Gunnery Sergeant is responsible for organizing and coordinating the regular policing duties of Security, including but not limited to:\n\n
+Артиллерийский сержант отвечает за организацию и координацию повседневной патрульной работы СБ, в том числе:\n\n
 1.1\n
-[bold]Patrolling[/bold] - Ensuring adequate Security presence across the station.\n\n
+[bold]Патрулирование[/bold] - достаточное присутствие СБ по всей станции.\n\n
 1.2\n
-[bold]Investigation[/bold] - Ensuring that reported crimes are followed up on in a timely manner.\n\n
+[bold]Расследование[/bold] - своевременная проверка сообщений о преступлениях.\n\n
 1.3\n
-[bold]Enforcement[/bold] - Ensuring that criminals are dealt with swiftly and in accordance with SOP and Corporate Law.\n
+[bold]Пресечение[/bold] - быстрое задержание преступников по СОП и Корпоративному праву.\n
 - 2.\n
-The Gunnery Sergeant is responsible for organizing, equipping and leading squads to combat hostiles on the station.\n
+Артиллерийский сержант отвечает за сбор, снаряжение и командование отрядами для борьбы с враждебными силами на станции.\n
 - 3.\n
-The Gunnery Sergeant is responsible for the education and allocation of cadets.\n
+Артиллерийский сержант отвечает за обучение и распределение кадетов.\n
 - 4.\n
-The Gunnery Sergeant is responsible for taking over Security in the absence of its Head.\n
+Артиллерийский сержант принимает командование СБ в отсутствие её главы.\n
 - 5.\n
-The Gunnery Sergeant is cleared for sentencing on par with a Security Officer.
+Артиллерийский сержант вправе выносить приговоры наравне с офицером СБ.
 
-### §3 Security Quartermaster
+### §3 Интендант СБ
 - 1.\n
-The Gunnery Sergeant is responsible for ensuring that security officers are equipped in a manner befitting the threat level.\n\n
+Артиллерийский сержант следит, чтобы офицеры СБ были снаряжены сообразно уровню угрозы.\n\n
 1.1\n
-To this end, the Gunnery Sergeant is cleared to file and approve permits for the issuing of armory equipment on [color=#2a6099]Code Blue[/color].\n\n
+Для этого артиллерийский сержант вправе оформлять и одобрять разрешения на выдачу снаряжения оружейной при [color=#2a6099]коде «Синий»[/color].\n\n
 1.2\n
-The Gunnery Sergeant may hand out armory equipment freely on [color=#ff0000]Code Red[/color].\n
+Артиллерийский сержант может свободно раздавать снаряжение оружейной при [color=#ff0000]коде «Красный»[/color].\n
 - 2.\n
-The Gunnery Sergeant is responsible for ensuring that the armory is accessible when mandated by alert SOP.\n
+Артиллерийский сержант следит, чтобы оружейная была доступна, когда этого требует СОП уровней тревоги.\n
 - 3.\n
-The Gunnery Sergeant is responsible for ensuring that equipment loaned during raised alerts is eventually returned to the armory.\n
+Артиллерийский сержант следит, чтобы снаряжение, выданное при повышенной тревоге, в итоге вернулось в оружейную.\n
 - 4.\n
-The Gunnery Sergeant is responsible for the proper storage of contraband seized by Security Officers, via use of their armory access.
+Артиллерийский сержант отвечает за надлежащее хранение контрабанды, изъятой офицерами СБ, пользуясь своим доступом в оружейную.
 </Document>

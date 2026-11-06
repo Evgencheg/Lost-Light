@@ -42,4 +42,3 @@ pollen-mushroom-t2-desc = Connect your mind to the spores, allowing you to commu
 
 pollen-mushroom-t3-name = Spore Cloud
 pollen-mushroom-t3-desc = Release a dense cloud of spores that sends non-Dionas into an intense hallucinogenic stupor.
-
