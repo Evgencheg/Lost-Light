@@ -37,7 +37,7 @@ public sealed class ForcedPrototypeTest : GameTest
         var user = clientNet.ServerChannel!.UserId;
 
         // Tampered client, nothing set by an admin.
-        await SaveFromClient("Alpha Test", ClientSet);
+        await SaveFromClient("Альфа Тест", ClientSet); // LP edit - имена только кириллицей
         await server.WaitAssertion(() => Assert.That(ServerSlot().ForcedPrototype, Is.Empty));
         await WaitForClientCopy(string.Empty);
 
@@ -46,12 +46,12 @@ public sealed class ForcedPrototypeTest : GameTest
         await WaitForClientCopy(AdminSet);
 
         // A save sent without the admin's value, e.g. before the resend arrived.
-        await SaveFromClient("Bravo Test", string.Empty);
+        await SaveFromClient("Браво Тест", string.Empty); // LP edit
         await server.WaitAssertion(() => Assert.That(ServerSlot().ForcedPrototype, Is.EqualTo(AdminSet)));
         await WaitForClientCopy(AdminSet);
 
         // Tampered client over an admin value.
-        await SaveFromClient("Charlie Test", ClientSet);
+        await SaveFromClient("Чарли Тест", ClientSet); // LP edit
         await server.WaitAssertion(() => Assert.That(ServerSlot().ForcedPrototype, Is.EqualTo(AdminSet)));
         await WaitForClientCopy(AdminSet);
 

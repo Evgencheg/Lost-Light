@@ -24,6 +24,7 @@ using Content.Shared.Station.Components;
 using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
 using Robust.Shared.GameObjects;
+using Robust.Shared.Localization;
 using Robust.Shared.Map;
 using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
@@ -305,7 +306,12 @@ public sealed partial class MindTests
             var mind = entMan.GetComponent<MindComponent>(mindId);
             Assert.That(entMan.System<GhostSystem>().OnGhostAttempt(mindId, true, viaCommand: true, mind: mind),
                 Is.True);
-            Assert.That(announcements.LastMessage, Does.Contain("has shut down"));
+            // LP edit start - сверяем с локализованной строкой, а не с английским текстом
+            var expected = Loc.GetString("station-ai-deathrattle-shutdown",
+                ("ai", entMan.GetComponent<MetaDataComponent>(ai).EntityName),
+                ("position", position));
+            Assert.That(announcements.LastMessage, Does.Contain(expected));
+            // LP edit end
             Assert.That(announcements.LastMessage, Does.Contain(position));
         });
     }

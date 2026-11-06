@@ -13,13 +13,13 @@ game-ticker-get-info-text = Добро пожаловать в [color=white]Spac
                             Игроков: [color=white]{ $playerCount }[/color]
                             Карта: [color=white]{ $mapName }[/color]
                             Режим: [color=white]{ $gmTitle }[/color]
-                            [color=yellow]{ $desc }[/color]
+                            >[color=yellow]{ $desc }[/color]
 game-ticker-get-info-preround-text = Добро пожаловать в [color=white]Space Station 14![/color]
     Раунд: [color=white]#{ $roundId }[/color]
     Игроков: [color=white]{ $playerCount }[/color] (готово: [color=white]{ $readyCount }[/color])
     Карта: [color=white]{ $mapName }[/color]
     Режим: [color=white]{ $gmTitle }[/color]
-    [color=yellow]{ $desc }[/color]
+    >[color=yellow]{ $desc }[/color]
 game-ticker-no-map-selected = [color=red]Карта ещё не выбрана![/color]
 game-ticker-player-no-jobs-available-when-joining = При попытке присоединиться к игре ни одной роли не было доступно.
 game-ticker-player-no-character-for-job-available-when-joining = При попытке войти в игру не оказалось подходящих персонажей для выбранной должности { $job }.
