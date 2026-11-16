@@ -10,9 +10,9 @@ modularhud-verb-remove-modules-error-no-modules-to-remove = { $hud } уже пу
 
 # Examine
 modularhud-examine-capacity = Всего вмещает { $capacity ->
-  [one] [bold]{ $capacity }[/bold] модуль
-  [few] [bold]{ $capacity }[/bold] модуля
- *[other] [bold]{ $capacity }[/bold] модулей
+    [one] [bold]{ $capacity }[/bold] модуль
+    [few] [bold]{ $capacity }[/bold] модуля
+    *[other] [bold]{ $capacity }[/bold] модулей
 }.
 modularhud-examine-no-modules = Модулей внутри нет.
 modularhud-examine-modules-header = Внутри находятся:

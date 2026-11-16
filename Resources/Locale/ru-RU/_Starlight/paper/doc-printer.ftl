@@ -1327,9 +1327,9 @@ doc-text-printer-borgification-consent-form =
    ⠀                      [italic]Место для печатей и/или подписей[/italic]
 
 doc-text-printer-illegal-implant-removal-form =
-                             [head=3]Услуги консорциума NT-CC[/head]
+                             [head=3]Услуги консорциума NT-CC[/head]
 
-                   [center][color=#1f75bb][italic][bold]   ОФИЦИАЛЬНАЯ ДОКУМЕНТАЦИЯ ЦЕНТКОМА[/bold][/italic][/color][/center]
+                   [center][color=#1f75bb][italic][bold]   ОФИЦИАЛЬНАЯ ДОКУМЕНТАЦИЯ ЦЕНТКОМА[/bold][/italic][/color][/center]
     ────────────────────────────────────────
     ⠀⠀             [bold]РАЗРЕШЕНИЕ НА УДАЛЕНИЕ НЕЗАКОННЫХ ИМПЛАНТОВ[/bold]
     ────────────────────────────────────────
@@ -1362,9 +1362,9 @@ doc-text-printer-illegal-implant-removal-form =
    ⠀                      [italic]Место для печатей и/или подписей[/italic]
 
 doc-text-printer-mind-control-removal-form =
-                             [head=3]Услуги консорциума NT-CC[/head]
+                             [head=3]Услуги консорциума NT-CC[/head]
 
-                   [center][color=#1f75bb][italic][bold]   ОФИЦИАЛЬНАЯ ДОКУМЕНТАЦИЯ ЦЕНТКОМА[/bold][/italic][/color][/center]
+                   [center][color=#1f75bb][italic][bold]   ОФИЦИАЛЬНАЯ ДОКУМЕНТАЦИЯ ЦЕНТКОМА[/bold][/italic][/color][/center]
     ────────────────────────────────────────
     ⠀⠀             [bold]РАЗРЕШЕНИЕ НА СНЯТИЕ КОНТРОЛЯ НАД РАЗУМОМ[/bold]
     ────────────────────────────────────────
@@ -1395,9 +1395,9 @@ doc-text-printer-mind-control-removal-form =
    ⠀                      [italic]Место для печатей и/или подписей[/italic]
 
 doc-text-printer-probing-mindshield-form =
-                             [head=3]Услуги консорциума NT-CC[/head]
+                             [head=3]Услуги консорциума NT-CC[/head]
 
-                   [center][color=#1f75bb][italic][bold]   ОФИЦИАЛЬНАЯ ДОКУМЕНТАЦИЯ ЦЕНТКОМА[/bold][/italic][/color][/center]
+                   [center][color=#1f75bb][italic][bold]   ОФИЦИАЛЬНАЯ ДОКУМЕНТАЦИЯ ЦЕНТКОМА[/bold][/italic][/color][/center]
     ────────────────────────────────────────
     ⠀⠀             [bold]РАЗРЕШЕНИЕ НА ПРОВЕРКУ ЗАЩИТЫ РАЗУМА[/bold]
     ────────────────────────────────────────
@@ -1431,9 +1431,9 @@ doc-text-printer-probing-mindshield-form =
    ⠀                      [italic]Место для печатей и/или подписей[/italic]
 
 doc-text-printer-compulsory-tracking-form =
-                             [head=3]Услуги консорциума NT-CC[/head]
+                             [head=3]Услуги консорциума NT-CC[/head]
 
-                   [center][color=#1f75bb][italic][bold]   ОФИЦИАЛЬНАЯ ДОКУМЕНТАЦИЯ ЦЕНТКОМА[/bold][/italic][/color][/center]
+                   [center][color=#1f75bb][italic][bold]   ОФИЦИАЛЬНАЯ ДОКУМЕНТАЦИЯ ЦЕНТКОМА[/bold][/italic][/color][/center]
     ────────────────────────────────────────
     ⠀⠀             [bold]РАЗРЕШЕНИЕ НА ПРИНУДИТЕЛЬНОЕ ОТСЛЕЖИВАНИЕ[/bold]
     ────────────────────────────────────────
@@ -1462,9 +1462,9 @@ doc-text-printer-compulsory-tracking-form =
    ⠀                      [italic]Место для печатей и/или подписей[/italic]
 
 doc-text-printer-explorative-surgery-form =
-                             [head=3]Услуги консорциума NT-CC[/head]
+                             [head=3]Услуги консорциума NT-CC[/head]
 
-                   [center][color=#1f75bb][italic][bold]   ОФИЦИАЛЬНАЯ ДОКУМЕНТАЦИЯ ЦЕНТКОМА[/bold][/italic][/color][/center]
+                   [center][color=#1f75bb][italic][bold]   ОФИЦИАЛЬНАЯ ДОКУМЕНТАЦИЯ ЦЕНТКОМА[/bold][/italic][/color][/center]
     ────────────────────────────────────────
     ⠀⠀             [bold]РАЗРЕШЕНИЕ НА ИССЛЕДОВАТЕЛЬНУЮ ОПЕРАЦИЮ[/bold]
     ────────────────────────────────────────

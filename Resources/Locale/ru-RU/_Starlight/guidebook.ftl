@@ -270,6 +270,7 @@ guidebook-search-keywords-security-sop-parole = СОП условно-досро
 guidebook-search-keywords-security-sop-permitacquisition = получение разрешений; СОП разрешений; разрешения на огнестрел
 guidebook-search-keywords-security-sop-specialsituations = особые ситуации СБ; экстренные процедуры СБ
 guidebook-search-keywords-security-sop-enemy-of-corporation = враг корпорации; враждебные сущности
+guidebook-search-keywords-security-sop-induced-mutiny = спровоцированный мятеж; мятеж; подтверждённая революция; революция;
 guidebook-search-keywords-security-sop-hostage-situations = заложники; реагирование на захват заложников; переговоры с террористами
 guidebook-search-keywords-security-sop-criminal-status = СОП криминального статуса; статус розыска; статус ареста
 guidebook-search-keywords-security-sop-k9 = собака; полицейская собака; служебная собака СБ; процедуры K9

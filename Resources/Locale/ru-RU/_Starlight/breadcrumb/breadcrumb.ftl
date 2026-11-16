@@ -1,3 +1,4 @@
+
 # Glowstone Bag specific locale keys
 glowstone-bag-toggle-empty = Дозатор пуст!
 glowstone-bag-toggle-on = Вы открываете мешочек, готовые рассыпать светящиеся камни на ходу.

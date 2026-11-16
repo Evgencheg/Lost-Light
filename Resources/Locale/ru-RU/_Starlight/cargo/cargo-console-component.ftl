@@ -4,6 +4,5 @@ cargo-console-menu-barcode-description = Распечатайте этикетк
 cargo-console-menu-barcode-account-label = [bold]Отдел:[/bold]
 cargo-console-menu-barcode-print-button = Распечатать штрихкод
 
-cargo-barcode-label-content = [head=2]Штрихкод продажи[/head]
-    { "[bold]Отдел:[/bold]" } { $account }
+cargo-barcode-label-content = [head=2]Штрихкод продажи[/head] { "[bold]Отдел:[/bold]" } { $account }
     { "[italic]Используйте эту этикетку на предмете со слотом для этикетки, чтобы перенаправить выручку от продажи.[/italic]" }
