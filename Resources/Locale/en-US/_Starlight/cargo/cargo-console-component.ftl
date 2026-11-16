@@ -1,4 +1,4 @@
-﻿cargo-console-menu-tab-title-barcode = Barcode
+cargo-console-menu-tab-title-barcode = Barcode
 
 cargo-console-menu-barcode-description = Print a barcode label that can be attached to items with a label slot. When the item is sold, the proceeds will go to the selected department.
 cargo-console-menu-barcode-account-label = [bold]Department:[/bold]

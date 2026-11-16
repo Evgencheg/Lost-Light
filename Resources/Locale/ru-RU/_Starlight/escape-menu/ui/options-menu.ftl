@@ -160,6 +160,12 @@ ui-options-hud-theme-mpurp = М-Пурп
 # Graphics
 ui-options-show-stains = Показывать пятна на одежде
 
+ui-options-footprint-visibility = Следы:
+ui-options-footprint-visibility-all = Все
+ui-options-footprint-visibility-half = Половина
+ui-options-footprint-visibility-none = Нет
+ui-options-footprint-visibility-tooltip = Определяет, сколько следов ног и следов волочения отображается.
+
 # Technically this is a more general Sprite Effects option, but right now it's literally only used for weather, so I'm just going to label it that for now
 ui-options-sprite-quality = Качество погоды:
 ui-options-sprite-quality-low = Низкое
@@ -195,3 +201,31 @@ ui-options-voice-volume = Голоса и эмоции:
 ui-options-announcement-volume = Объявления и тревоги:
 ui-options-admin-sounds-volume = Админские звуки:
 ui-options-show-tippy = Показывать Типпи
+
+ui-options-atmosphere-label = Освещение и атмосфера
+ui-options-screen-brightness = Яркость экрана
+ui-options-screen-brightness-desc = Осветляет тусклые участки изображения. Абсолютная темнота остаётся чёрной.
+ui-options-light-boost = Яркость источников света
+ui-options-light-boost-desc = Делает каждую лампу чуть ярче и заставляет её светить чуть дальше.
+ui-options-light-tonemap = Мягкий свет
+ui-options-light-tonemap-tooltip = Сглаживает яркие пятна в местах наложения источников света, чтобы спрайты не выгорали.
+ui-options-gi = Отражение света (экспериментально)
+ui-options-gi-tooltip = Освещённые стены отбрасывают часть своего света на окружающий пол, а свет проникает за углы и через дверные проёмы. Нагружает видеокарту.
+ui-options-gi-rays = Качество отражения света
+ui-options-gi-rays-desc = Количество лучей на пиксель. Больше лучей даёт более плавный результат, но работает медленнее.
+ui-options-night-vision = Ночное зрение
+ui-options-night-vision-tooltip = Плохо освещённые участки теряют цвет и становятся холодно-синими, как при человеческом зрении в темноте.
+ui-options-vignette = Виньетирование
+ui-options-vignette-tooltip = Затемняет края изображения.
+ui-options-bloom = Свечение (bloom)
+ui-options-bloom-tooltip = Экраны, лампы и другие светящиеся объекты излучают свет вокруг себя, особенно в темноте. Снижает производительность.
+ui-options-film-grain = Плёночное зерно
+ui-options-film-grain-tooltip = Накладывает на изображение лёгкое плёночное зерно.
+ui-options-night-vision-strength = Сила ночного зрения
+ui-options-vignette-strength = Сила виньетирования
+ui-options-bloom-strength = Сила свечения
+ui-options-bloom-threshold = Порог свечения
+ui-options-bloom-threshold-desc = Насколько пиксель должен быть ярче своего освещения, чтобы начать светиться. Чем ниже значение, тем больше объектов светится.
+ui-options-bloom-radius = Радиус свечения
+ui-options-bloom-radius-desc = Насколько далеко распространяется свечение.
+ui-options-film-grain-strength = Сила плёночного зерна

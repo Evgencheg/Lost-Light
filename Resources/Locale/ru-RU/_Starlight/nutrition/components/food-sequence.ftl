@@ -6,6 +6,7 @@ food-sequence-cotton-burger-content-plushie-borb = борб
 food-sequence-cotton-burger-content-plushie-borg = законопослушный
 food-sequence-cotton-burger-content-plushie-cow-squishims = корова
 food-sequence-cotton-burger-content-plushie-creature = УРАА
+food-sequence-cotton-burger-content-plushie-flox = флокс
 food-sequence-cotton-burger-content-plushie-frog-squishims = лягушонок
 food-sequence-cotton-burger-content-plushie-goat = мягкий
 food-sequence-cotton-burger-content-plushie-gnome = фубери

@@ -138,4 +138,3 @@ public enum ExpendableLightVisualLayers : byte
     Glow = 1,
     Overlay = 2,
 }
-

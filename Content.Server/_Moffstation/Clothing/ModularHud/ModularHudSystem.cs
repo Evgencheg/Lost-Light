@@ -1,4 +1,4 @@
-﻿using Content.Shared._Moffstation.Clothing.ModularHud.Systems;
+using Content.Shared._Moffstation.Clothing.ModularHud.Systems;
 
 namespace Content.Server._Moffstation.Clothing.ModularHud;
 

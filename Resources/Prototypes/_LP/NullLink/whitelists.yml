@@ -1,6 +1,3 @@
-# Вайтлист маппинг-сервера (whitelist.prototype_list = "LPMappingWhitelist" в его конфиге).
-# Пускает по ролям Discord через NullLink и тех, кого добавили вручную (whitelistadd). Админы из базы проходят всегда.
-
 - type: playerConnectionWhitelist
   id: LPMappingWhitelist
   conditions:

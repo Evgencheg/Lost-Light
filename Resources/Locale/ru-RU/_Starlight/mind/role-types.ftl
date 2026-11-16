@@ -1,6 +1,10 @@
 role-type-harmless-antagonist-name = Безобидный антагонист
 role-type-harmless-antagonist-color = #ff8800
 
+role-type-survivor-aligned-name = Выживший
+role-type-survivor-aligned-desc = Тот, кто прошёл через множество испытаний и невзгод, чтобы оказаться там, где находится сейчас. Делайте всё необходимое, чтобы продолжать жить.
+role-type-survivor-aligned-colour = #A52A2A
+
 role-subtype-abductor = Похититель
 role-subtype-pirate = Пират
 
