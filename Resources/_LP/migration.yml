@@ -40,3 +40,6 @@ LPPSpawnPointSecurityEngineer: SpawnPointSecurityOfficer
 LPPWeaponRevolverFieldEngineer: null
 LPPClothingHeadHelmetBasic: ClothingHeadHelmetBasic
 ComputerShuttleMiningLavaland: ComputerBroken
+
+# Реворк фотика
+PhotoFilterPackFill: null
