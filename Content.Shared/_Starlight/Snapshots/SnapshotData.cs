@@ -263,10 +263,6 @@ public sealed class SnapshotHumanoid
 
     public float Height = 1f;
 
-    public ProtoId<MarkingPrototype>? UndergarmentTop;
-
-    public ProtoId<MarkingPrototype>? UndergarmentBottom;
-
     public Dictionary<string, SnapshotItem> Worn = [];
 
     public Dictionary<string, SnapshotItem> Held = [];

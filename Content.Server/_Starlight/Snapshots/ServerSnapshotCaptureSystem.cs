@@ -688,8 +688,6 @@ public sealed partial class ServerSnapshotCaptureSystem : SnapshotCaptureSystem
             EyeGlowing = appearance.EyeGlowing,
             Width = appearance.Width,
             Height = appearance.Height,
-            UndergarmentTop = appearance.UndergarmentTop,
-            UndergarmentBottom = appearance.UndergarmentBottom,
             Standing = !_standingQuery.TryGetComponent(uid, out var standing) || standing.Standing,
         };
 
