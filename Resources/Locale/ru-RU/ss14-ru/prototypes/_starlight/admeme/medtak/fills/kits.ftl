@@ -10,3 +10,6 @@ ent-MedkitCombatMedTakFilledBorg = { ent-MedkitCombatMedTak }
 ent-BottleCaseMedTakFilled = { ent-BottleCaseMedTak }
     .desc = { ent-BottleCaseMedTak.desc }
     .suffix = Заполнено, медик
+ent-SurgicalKitMedTakFilled = { ent-SurgicalKitMedTak }
+    .desc = { ent-SurgicalKitMedTak.desc }
+    .suffix = Заполнено

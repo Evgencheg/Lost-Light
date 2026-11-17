@@ -229,3 +229,6 @@ ui-options-bloom-threshold-desc = Насколько пиксель должен
 ui-options-bloom-radius = Радиус свечения
 ui-options-bloom-radius-desc = Насколько далеко распространяется свечение.
 ui-options-film-grain-strength = Сила плёночного зерна
+
+## Controls sections
+ui-options-function-sl-interact-with-other-hand = Взаимодействовать с другой рукой

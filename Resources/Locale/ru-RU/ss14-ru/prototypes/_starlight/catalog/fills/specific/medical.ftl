@@ -19,3 +19,6 @@ ent-PenPackSecurityFilled = { ent-PenPackSecurity }
 ent-MedkitRoboticFilled = { ent-MedkitRobotic }
     .desc = { ent-MedkitRobotic.desc }
     .suffix = Заполнен
+ent-NukeOpRobotkit = { ent-RoboticNukeMedkit }
+    .desc = { ent-RoboticNukeMedkit.desc }
+    .suffix = Заполнено
