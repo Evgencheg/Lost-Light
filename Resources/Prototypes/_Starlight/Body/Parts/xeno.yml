@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   id: PartXeno
   parent: [BaseItem, BasePart]
   name: "xeno body part"
