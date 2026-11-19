@@ -19544,7 +19544,6 @@ entities:
     components:
     - type: Transform
       parent: 2
-      rot: 3.141592653589793 rad
       pos: -1.5,-62.5
     - type: DeviceLinkSource
       linkedPorts:
@@ -74318,7 +74317,6 @@ entities:
     components:
     - type: Transform
       parent: 2
-      rot: 3.141592653589793 rad
       pos: -0.5,-62.5
     - type: DeviceLinkSource
       linkedPorts:
@@ -172384,7 +172382,6 @@ entities:
     components:
     - type: Transform
       parent: 2
-      rot: 3.141592653589793 rad
       pos: 1.5,-58.5
     - type: DeviceLinkSource
       linkedPorts:

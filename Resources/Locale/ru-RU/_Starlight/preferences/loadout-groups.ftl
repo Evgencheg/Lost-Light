@@ -9,7 +9,6 @@ loadout-group-roboticist-shoes = Робототехник, обувь
 loadout-group-roboticist-neck = Робототехник, шея
 
 # Civilian
-loadout-group-assistant-glasses = Ассистент, очки
 loadout-group-assistant-head = Ассистент, голова
 loadout-group-assistant-backpack = Ассистент, рюкзак
 
@@ -162,3 +161,4 @@ loadout-group-NanotrasenCareerTrainer-eyewear = Карьерный коуч На
 
 # Security
 loadout-group-warden-neck = Смотритель, шея
+loadout-group-bartender-eyewear = Бармен, очки

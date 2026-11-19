@@ -26,9 +26,9 @@ guide-entry-sl-rule-15 = Правило 15
 guide-entry-sl-rule-16 = Правило 16
 guide-entry-sl-metashield = Метащит
 
-guide-entry-sl-silicon-1 = Правило Sil. 1
-guide-entry-sl-silicon-2 = Правило Sil. 2
-guide-entry-sl-silicon-3 = Правило Sil. 3
+guide-entry-sl-silicon-1 = Правило синтетиков 1
+guide-entry-sl-silicon-2 = Правило синтетиков 2
+guide-entry-sl-silicon-3 = Правило синтетиков 3
 
 guide-entry-sl-clarification-1 = Пояснение 1
 
@@ -92,6 +92,7 @@ guide-entry-sl-security-sop-permitacquisition = Получение разреш�
 guide-entry-sl-security-sop-permitacquisition-examples = Примеры разрешений
 guide-entry-sl-security-sop-specialsituations = Особые ситуации
 guide-entry-sl-security-sop-enemy-of-corporation = Враги корпорации
+guide-entry-sl-security-sop-induced-mutiny = Спровоцированный мятеж
 guide-entry-sl-security-sop-hostage-situations = Ситуации с заложниками
 guide-entry-sl-security-sop-criminal-status = Криминальный статус
 guide-entry-sl-security-ammo-types = Типы боеприпасов

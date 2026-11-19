@@ -3,4 +3,4 @@ ent-SMESBlue = гипер-продвинутый СМЭС
     .suffix = Гипер-продвинутый, 64 МДж
 ent-SMESBlueEmpty = { ent-SMESBlue }
     .desc = { ent-SMESBlue.desc }
-    .suffix = Пусто
+    .suffix = Пустой

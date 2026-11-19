@@ -1,5 +1,0 @@
-- type: !PartialOnly entity
-  id: AdminObserver
-  components:
-  - type: MovementSpeedModifier
-    baseWalkSpeed: 30

@@ -189,8 +189,17 @@ namespace Content.Shared.Interaction
             _uiQuery.TryComp(ev.Target, out var aUiComp);
 
             var slottedPAI = IsSlottedPAI(ev.Actor, ev.Target);  // Starlight-edit: PAI's can be slotted into and use console BUIs.
+            // Starlight - start
+            var interactionActor = slottedPAI
+                ? ev.Actor
+                : GetPAIRemoteUiInteractionActor(
+                    ev.Actor,
+                    ev.Target,
+                    ev.UiKey,
+                    ev.Message is OpenBoundInterfaceMessage);
+            // Starlight - end
 
-            if (!_actionBlockerSystem.CanInteract(ev.Actor, ev.Target) && !slottedPAI) // Starlight-edit: PAI's can be slotted into and use console BUIs.
+            if (!_actionBlockerSystem.CanInteract(interactionActor, ev.Target) && !slottedPAI) // Starlight-edit: PAI's can be slotted into and use console BUIs.
             {
                 // We permit ghosts to open uis unless explicitly blocked
                 if (ev.Message is not OpenBoundInterfaceMessage
@@ -229,7 +238,11 @@ namespace Content.Shared.Interaction
             }
             // Starlight - end
 
-            if (range <= 0 && !IsAccessible(ev.Actor, ev.Target))
+            // Starlight - start
+            if (range <= 0
+                && !IsAccessible(ev.Actor, ev.Target)
+                && (interactionActor == ev.Actor || !IsAccessible(interactionActor, ev.Target)))
+            // Starlight - end
             {
                 ev.Cancel();
                 return;
@@ -244,7 +257,7 @@ namespace Content.Shared.Interaction
                 return;
             }
 
-            if (aUiComp.RequiresComplex && !_actionBlockerSystem.CanComplexInteract(ev.Actor) && !slottedPAI)
+            if (aUiComp.RequiresComplex && !_actionBlockerSystem.CanComplexInteract(interactionActor) && !slottedPAI) // Starlight
                 ev.Cancel();
         }
 
