@@ -1,4 +1,4 @@
-﻿using Content.Server._Starlight.Achievement;
+using Content.Server._Starlight.Achievement;
 using Content.Shared.Chat.Prototypes;
 using Content.Shared.Humanoid;
 using Content.Shared.Speech.Components;

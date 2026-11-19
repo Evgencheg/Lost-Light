@@ -1,4 +1,4 @@
-﻿using System.Numerics;
+using System.Numerics;
 using Content.Shared.Throwing;
 
 // ReSharper disable once CheckNamespace
