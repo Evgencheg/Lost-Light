@@ -1,5 +1,8 @@
 ent-AirlockCycler = контроллер шлюза
     .desc = Управляет циклом шлюзовой камеры. Показывает давление за каждой дверью и направление, в котором идёт перекачка.
+ent-AirlockCyclerBoltOpen = { ent-AirlockCycler }
+    .desc = { ent-AirlockCycler.desc }
+    .suffix = Болты открыты
 ent-AirlockCyclerButton = кнопка цикла шлюза
     .desc = Запрашивает у контроллера шлюза цикл в эту сторону. Зелёный означает готовность, красный означает, что цикл идёт сюда.
 ent-AirlockCyclerAssembly = каркас контроллера шлюза

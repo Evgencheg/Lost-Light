@@ -1,4 +1,5 @@
 comms-console-announcement-title-tsf = Альянс Независимых Систем
+comms-console-announcement-title-medtak = МедТак
 
 comms-console-announcement-title-command = Командование
 comms-console-announcement-title-eng = Инженерия
