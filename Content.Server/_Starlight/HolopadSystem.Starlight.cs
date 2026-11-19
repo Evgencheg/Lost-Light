@@ -1,4 +1,4 @@
-﻿using Content.Shared.Holopad;
+using Content.Shared.Holopad;
 using Content.Shared.Labels.Components;
 using Content.Shared.Silicons.StationAi;
 using Content.Shared.Telephone;

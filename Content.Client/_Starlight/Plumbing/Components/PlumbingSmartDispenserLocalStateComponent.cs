@@ -1,4 +1,4 @@
-﻿using Content.Shared.Chemistry;
+using Content.Shared.Chemistry;
 
 namespace Content.Client._Starlight.Plumbing.Components;
 

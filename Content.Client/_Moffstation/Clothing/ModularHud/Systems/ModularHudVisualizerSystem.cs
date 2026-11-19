@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Content.Shared._Moffstation.Clothing.ModularHud.Components;
 using Content.Shared.Clothing;
 using Content.Shared.Clothing.Components;
