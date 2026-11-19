@@ -1,12 +1,12 @@
 # Verbs
 modularhud-verb-insert-module = Вставить модуль
 modularhud-verb-insert-module-message = Вставляет { $module } в { $hud }.
-modularhud-verb-insert-module-error-fails-requirements = Модуль { $module } несовместим с этим устройством.
-modularhud-verb-insert-module-error-slots-full = Свободных слотов нет.
+modularhud-verb-insert-module-error-fails-requirements = { CAPITALIZE($module) } нельзя установить в { $hud }.
+modularhud-verb-insert-module-error-slots-full = { CAPITALIZE($hud) }: свободных слотов нет.
 modularhud-verb-remove-modules = Извлечь модули
 modularhud-verb-remove-modules-message = Извлекает модули из { $hud }.
 modularhud-verb-remove-modules-error-missing-tool-quality = Для этого нужен инструмент с качеством «{ $quality }».
-modularhud-verb-remove-modules-error-no-modules-to-remove = Модулей внутри нет.
+modularhud-verb-remove-modules-error-no-modules-to-remove = { CAPITALIZE($hud) }: модулей внутри нет.
 
 # Examine
 modularhud-examine-capacity = Всего вмещает { $capacity ->

@@ -181,7 +181,7 @@ achievement-defib-mouse-description = Вы же знаете, что это вр
 achievement-bird-medic-name = Птичий медик
 achievement-bird-medic-description = Ах да, вы забыли про два других препарата от кровопотери.
 
-achievement-sci-exploded-name = Наука - дело грязное
+achievement-sci-exploded-name = Наука — дело грязное
 achievement-sci-exploded-description = Что там было написано?
 
 achievement-hamster-fax-name = Хомяка не существует
@@ -206,7 +206,7 @@ achievement-personal-liberties-name = Личные свободы
 achievement-personal-liberties-description = Просто подержу это «на хранении».
 
 achievement-imperfect-protection-name = Неидеальная защита
-achievement-imperfect-protection-description = 99% сопротивления - это меньше, чем 100%.
+achievement-imperfect-protection-description = 99% сопротивления — это меньше, чем 100%.
 
 achievement-vox-moment-name = Момент вокса
 achievement-vox-moment-description = СКРИИИИИ!!!!
@@ -215,7 +215,7 @@ achievement-changeling-defib-name = Ну да, так тоже можно
 achievement-changeling-defib-description = Всё равно не хотелось впадать в стазис.
 
 achievement-uplink-balloon-name = Поездка в Синдиленд
-achievement-uplink-balloon-description = И всё, что я получил, - этот дурацкий шарик.
+achievement-uplink-balloon-description = И всё, что я получил, — этот дурацкий шарик.
 
 achievement-no-room-hell-name = В аду больше нет мест
 achievement-no-room-hell-description = Будучи нулевым пациентом, вы превратили большую часть станции в ходячих мертвецов!
