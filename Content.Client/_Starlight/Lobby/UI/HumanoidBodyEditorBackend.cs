@@ -30,11 +30,11 @@ public sealed class HumanoidBodyEditorBackend : IBodyEditorBackend
     private static readonly PartDef _body = new("torso", "body-editor-part-torso",
         [
             HumanoidVisualLayers.Chest, HumanoidVisualLayers.Tail, HumanoidVisualLayers.TailExtras, HumanoidVisualLayers.TailOverlay,
-            HumanoidVisualLayers.UndergarmentTop, HumanoidVisualLayers.UndergarmentBottom, HumanoidVisualLayers.BodyCover, HumanoidVisualLayers.BodyCoverCover
+            HumanoidVisualLayers.BodyCover, HumanoidVisualLayers.BodyCoverCover
         ],
         [
-            MarkingCategories.Chest, MarkingCategories.Tail, MarkingCategories.TailExtras, MarkingCategories.UndergarmentTop,
-            MarkingCategories.UndergarmentBottom, MarkingCategories.BodyCover, MarkingCategories.BodyCoverCover, MarkingCategories.Overlay
+            MarkingCategories.Chest, MarkingCategories.Tail, MarkingCategories.TailExtras,
+            MarkingCategories.BodyCover, MarkingCategories.BodyCoverCover, MarkingCategories.Overlay
         ],
         [
             new("head", "body-editor-part-head",

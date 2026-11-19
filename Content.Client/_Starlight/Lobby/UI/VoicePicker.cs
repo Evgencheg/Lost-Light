@@ -90,7 +90,7 @@ public sealed class VoicePicker : BoxContainer
             {
                 Text = tag.ToDisplayName(IoCManager.Resolve<ILocalizationManager>()),
                 ToggleMode = true,
-                StyleClasses = { StyleClass.ButtonSmall },
+                // LP edit - убран StyleClass.ButtonSmall: у нас тегов-игр много, мелкие чипы нечитаемы
             };
             button.OnPressed += _ =>
             {
@@ -106,7 +106,7 @@ public sealed class VoicePicker : BoxContainer
         AddChild(new ScrollContainer
         {
             HScrollEnabled = false,
-            SetHeight = 64,
+            SetHeight = 68, // LP edit - ровно две строки тегов обычного размера
             Visible = _tagButtons.Count > 0,
             Children = { _tagFilter },
         });
