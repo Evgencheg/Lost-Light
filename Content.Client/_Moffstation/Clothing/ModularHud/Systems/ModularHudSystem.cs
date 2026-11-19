@@ -1,4 +1,4 @@
-﻿using Content.Client.Guidebook.Components;
+using Content.Client.Guidebook.Components;
 using Content.Shared._Moffstation.Clothing.ModularHud.Systems;
 using Content.Shared.Verbs;
 

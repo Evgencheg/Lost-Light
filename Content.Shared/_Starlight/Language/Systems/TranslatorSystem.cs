@@ -85,8 +85,8 @@ public sealed partial class TranslatorSystem : EntitySystem
 
     private void OnTranslatorParentChanged(Entity<HandheldTranslatorComponent> ent, ref EntParentChangedMessage args)
     {
-        if (_timing.ApplyingState 
-            || !HasComp<HoldsTranslatorComponent>(args.OldParent) 
+        if (_timing.ApplyingState
+            || !HasComp<HoldsTranslatorComponent>(args.OldParent)
             || TerminatingOrDeleted(args.OldParent.Value))
             return;
 

@@ -1,4 +1,4 @@
-﻿using Content.Shared._Moffstation.Clothing.ModularHud.Systems;
+using Content.Shared._Moffstation.Clothing.ModularHud.Systems;
 using Content.Shared.Whitelist;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;

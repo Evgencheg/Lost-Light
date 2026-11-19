@@ -9,21 +9,21 @@
     "states": [
         {
             "name": "icon",
-			"copyright": "Made by Conflee for Starlight"
+            "copyright": "Made by Conflee for Starlight"
         },
         {
             "name": "icon_open",
-			"copyright": "Made by Conflee for Starlight"
+            "copyright": "Made by Conflee for Starlight"
         },
         {
             "name": "inhand-left",
             "directions": 4,
-			"copyright": "Made by Conflee for Starlight"
+            "copyright": "Made by Conflee for Starlight"
         },
         {
             "name": "inhand-right",
             "directions": 4,
-			"copyright": "Made by Conflee for Starlight"
+            "copyright": "Made by Conflee for Starlight"
         }
     ]
 }

@@ -1,4 +1,4 @@
-﻿using Content.Shared.Cargo.Components;
+using Content.Shared.Cargo.Components;
 using Content.Shared.Cargo.Prototypes;
 using Robust.Shared.Prototypes;
 

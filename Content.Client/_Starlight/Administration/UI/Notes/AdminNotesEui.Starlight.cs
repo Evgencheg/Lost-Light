@@ -1,4 +1,4 @@
-﻿using Content.Shared.Eui;
+using Content.Shared.Eui;
 using Robust.Client.UserInterface.CustomControls;
 
 // ReSharper disable CheckNamespace

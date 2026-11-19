@@ -1,4 +1,4 @@
-﻿using Content.Shared.Cargo.Prototypes;
+using Content.Shared.Cargo.Prototypes;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 
