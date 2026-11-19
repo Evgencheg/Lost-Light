@@ -1,4 +1,4 @@
-using Content.Shared._Moffstation.Clothing.ModularHud.Systems;
+﻿using Content.Shared._Moffstation.Clothing.ModularHud.Systems;
 using Content.Shared.Foldable;
 using Content.Shared.Inventory;
 using Robust.Shared.GameStates;

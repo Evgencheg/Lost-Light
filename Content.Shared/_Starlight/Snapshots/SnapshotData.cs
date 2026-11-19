@@ -263,6 +263,8 @@ public sealed class SnapshotHumanoid
 
     public float Height = 1f;
 
+    // LP edit - убрано UndergarmentTop/UndergarmentBottom (нижнее бельё)
+
     public Dictionary<string, SnapshotItem> Worn = [];
 
     public Dictionary<string, SnapshotItem> Held = [];

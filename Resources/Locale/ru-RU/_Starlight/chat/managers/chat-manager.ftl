@@ -42,4 +42,4 @@ chat-speech-verb-name-pause = Пауза
 chat-speech-verb-pause = делает паузу
 
 chat-manager-send-mentor-chat-wrap-message = { $mentorChannelName }: [bold]{ $playerName }:[/bold] { $message }
-chat-manager-mentor-channel-name = МЕНТОР
+chat-manager-mentor-channel-name = НАСТАВНИК

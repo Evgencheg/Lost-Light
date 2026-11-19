@@ -1,4 +1,4 @@
-using System.Numerics;
+﻿using System.Numerics;
 using Content.Shared._Funkystation.Footprints;
 using Content.Shared._Starlight.CCVar;
 using Robust.Client.GameObjects;

@@ -30,3 +30,4 @@ public sealed class SnapshotViewDataEvent(NetEntity snapshot, SnapshotData data)
     public readonly NetEntity Snapshot = snapshot;
     public readonly SnapshotData Data = data;
 }
+

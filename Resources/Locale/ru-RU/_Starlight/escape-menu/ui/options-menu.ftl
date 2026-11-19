@@ -58,8 +58,8 @@ ui-options-style-accent-theme = Из темы
 ui-options-viewport-label = Игровое окно
 ui-options-lobby-label = Лобби
 ui-options-lobby-background = Арт лобби
-ui-options-lobby-background-server = Выбор сервера
-ui-options-lobby-opacity = Прозрачность панели
+ui-options-lobby-background-server = На усмотрение сервера
+ui-options-lobby-opacity = Непрозрачность панели
 ui-options-lobby-ready-position = Кнопка готовности
 ui-options-lobby-ready-position-bottom = Под чатом
 ui-options-lobby-ready-position-top = Над чатом
@@ -118,6 +118,10 @@ ui-starlight = Lost Paradise
 ui-options-auto-punctuate = Автоматически ставить знаки препинания в игровых сообщениях
 ui-options-general-ghost-themes = Темы призрака
 ui-options-general-ghost-themes-force-tester = Принудительно показывать вкладку тестера в меню тем призрака
+ui-options-chat-stacking = Объединять повторяющиеся сообщения чата
+ui-options-chat-stacking-tooltip = Сворачивать одинаковые недавние сообщения чата в одну строку со счётчиком повторов.
+ui-options-chat-stacking-history = Глубина объединения сообщений
+ui-options-chat-stacking-disabled = Выключено
 
 ## Admin
 
@@ -231,4 +235,4 @@ ui-options-bloom-radius-desc = Насколько далеко распрост�
 ui-options-film-grain-strength = Сила плёночного зерна
 
 ## Controls sections
-ui-options-function-sl-interact-with-other-hand = Взаимодействовать с другой рукой
+ui-options-function-sl-interact-with-other-hand = Взаимодействовать другой рукой

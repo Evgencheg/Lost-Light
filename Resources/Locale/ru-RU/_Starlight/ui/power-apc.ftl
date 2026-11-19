@@ -2,7 +2,7 @@ apc-menu-lighting-label = Освещение
 apc-menu-lighting-auto = Авто
 apc-menu-lighting-day = День
 apc-menu-lighting-night = Ночь
-apc-menu-lighting-auto-tooltip = Ночное освещение во время ночной смены или пока АПЦ работает от аккумулятора.
+apc-menu-lighting-auto-tooltip = Ночное освещение во время ночной смены или пока ЛКП работает от аккумулятора.
 
 apc-menu-lighting-state-day = Дневное освещение
 apc-menu-lighting-state-night-manual = Ночное освещение

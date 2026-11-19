@@ -1,4 +1,4 @@
 ent-ActionObserverShowRadar = Интерфейс сканера массы
     .desc = Просмотр интерфейса сканера массы.
-ent-ActionToggleOwnGhostSprite = Скрыть моего призрака
+ent-ActionToggleOwnGhostSprite = Скрыть своего призрака
     .desc = Скрывает спрайт вашего призрака на вашем экране. Остальные по-прежнему его видят.

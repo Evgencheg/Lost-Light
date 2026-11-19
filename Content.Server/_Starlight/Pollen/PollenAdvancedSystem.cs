@@ -234,3 +234,4 @@ public sealed partial class PollenAdvancedSystem : EntitySystem
         _appearance.SetData(uid, PollenAdvancedPollenVisuals.Fading, true);
     }
 }
+

@@ -4,8 +4,8 @@ thick-scales-injector-blocked = { $injector } не может пробить т�
 thick-scales-syringe-slow = Вы с трудом проталкиваете иглу между чешуйками { $target }...
 thick-scales-remote-blocked-self = Это отскакивает от вашей толстой чешуи.
 thick-scales-remote-blocked-attacker = Это не может пробить толстую чешую { $target }!
-thick-scales-examine = У { $target } [color=#8fbc8f]толстая чешуя[/color], сквозь которую быстрая игла не пройдёт.
-thick-scales-examine-port-installed = { CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } [color=#8fbc8f]плотную чешую[/color], но также { CONJUGATE-HAVE($target) } установленный [color=#9dc6cf]инъекционный порт[/color].
+thick-scales-examine = { CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } [color=#8fbc8f]толстую чешую[/color], которую быстрой игле не пробить.
+thick-scales-examine-port-installed = { CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } [color=#8fbc8f]толстую чешую[/color], но также { CONJUGATE-HAVE($target) } установленный [color=#9dc6cf]инъекционный порт[/color].
 
 ## Fire breath
 

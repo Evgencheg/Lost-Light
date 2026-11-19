@@ -1,12 +1,12 @@
 # Verbs
 modularhud-verb-insert-module = Вставить модуль
 modularhud-verb-insert-module-message = Вставляет { $module } в { $hud }.
-modularhud-verb-insert-module-error-fails-requirements = { $module } несовместим с { $hud }.
-modularhud-verb-insert-module-error-slots-full = { $hud } уже заполнен.
+modularhud-verb-insert-module-error-fails-requirements = Модуль { $module } несовместим с этим устройством.
+modularhud-verb-insert-module-error-slots-full = Свободных слотов нет.
 modularhud-verb-remove-modules = Извлечь модули
 modularhud-verb-remove-modules-message = Извлекает модули из { $hud }.
-modularhud-verb-remove-modules-error-missing-tool-quality = Для этого вам нужно что-то, способное { $quality }.
-modularhud-verb-remove-modules-error-no-modules-to-remove = { $hud } уже пуст.
+modularhud-verb-remove-modules-error-missing-tool-quality = Для этого нужен инструмент с качеством «{ $quality }».
+modularhud-verb-remove-modules-error-no-modules-to-remove = Модулей внутри нет.
 
 # Examine
 modularhud-examine-capacity = Всего вмещает { $capacity ->
@@ -35,18 +35,18 @@ modular-hud-requirement-full-coverage = Требуются очки, полно�
 
 # Loadout name overrides
 moff-loadout-admin-sunglasses = административные очки
-moff-loadout-admin-hud = административный худ
+moff-loadout-admin-hud = административный визор
 moff-loadout-noir-sunglasses = нуар-тех солнцезащитные очки
 moff-loadout-security-sunglasses = охранные солнцезащитные очки
 moff-loadout-security-patch = охранная глазная повязка
-moff-loadout-security-hud = охранный худ
+moff-loadout-security-hud = охранный визор
 moff-loadout-engineering-glasses = инженерные солнцезащитные очки
 moff-loadout-engineering-goggles = инженерные очки
 moff-loadout-chemistry-goggles = очки химического анализа
 moff-loadout-medical-glasses = медицинские солнцезащитные очки
-moff-loadout-diagnostic-hud = диагностический худ
+moff-loadout-diagnostic-hud = диагностический визор
 moff-loadout-diagnostic-patch = диагностическая повязка
-moff-loadout-beer-hud = пивной худ
+moff-loadout-beer-hud = пивной визор
 moff-loadout-beer-patch = пивная повязка
-moff-loadout-medical-hud = медицинский худ
+moff-loadout-medical-hud = медицинский визор
 moff-loadout-medical-patch = медицинская повязка

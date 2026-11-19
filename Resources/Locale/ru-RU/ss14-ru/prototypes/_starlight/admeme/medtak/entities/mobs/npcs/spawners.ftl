@@ -1,2 +1,2 @@
-ent-SpawnMobMedTakCleanBot = спавнер уборщик-бот МедТак
+ent-SpawnMobMedTakCleanBot = спавнер штурмовой чистобот МедТак
     .desc = { ent-MarkerBase.desc }

@@ -32,6 +32,8 @@
     Hair: MobHumanoidAnyMarking
     FacialHair: MobHumanoidAnyMarking
     Chest: MobLagomorphTorso
+    UndergarmentBottom: MobHumanoidAnyMarking
+    UndergarmentTop: MobHumanoidAnyMarking
     Eyes: MobLagomorphEyes
     HeadTop: MobHumanoidAnyMarking
     LArm: MobLagomorphLArm

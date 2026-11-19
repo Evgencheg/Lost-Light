@@ -26,9 +26,9 @@ guide-entry-sl-rule-15 = Правило 15
 guide-entry-sl-rule-16 = Правило 16
 guide-entry-sl-metashield = Метащит
 
-guide-entry-sl-silicon-1 = Правило Боргов 1
-guide-entry-sl-silicon-2 = Правило Боргов 2
-guide-entry-sl-silicon-3 = Правило Боргов 3
+guide-entry-sl-silicon-1 = Правило синтетиков 1
+guide-entry-sl-silicon-2 = Правило синтетиков 2
+guide-entry-sl-silicon-3 = Правило синтетиков 3
 
 guide-entry-sl-clarification-1 = Пояснение 1
 

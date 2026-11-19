@@ -7,4 +7,4 @@ ent-DoormatWelcome = { ent-BaseDoormat }
     .suffix = Добро пожаловать
 ent-DoormatBless = { ent-BaseDoormat }
     .desc = { ent-BaseDoormat.desc }
-    .suffix = Благослови этот спейс
+    .suffix = Благослови этот космос

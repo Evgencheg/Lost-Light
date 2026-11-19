@@ -22,6 +22,8 @@
   components:
     - type: HumanoidAppearance
       species: Avali
+      undergarmentTop: UndergarmentTopTanktopAvali
+      undergarmentBottom: UndergarmentBottomBoxersAvali
 
 - type: entity
   parent: [BaseSpeciesDummy, BaseInventoryCyclorite]
@@ -122,6 +124,7 @@
     - Snout
     - HeadTop
     - HeadSide
+    undergarmentBottom: UndergarmentBottomBoxersReptilian
 
 - type: entity
   parent: [BaseSpeciesDummy, BaseInventoryResomi]
@@ -181,6 +184,8 @@
   components:
   - type: HumanoidAppearance
     species: Vox
+    undergarmentTop: UndergarmentTopTanktopVox
+    undergarmentBottom: UndergarmentBottomBoxersVox
     markingsDisplacement:
       Hair:
         sizeMaps:
@@ -219,6 +224,8 @@
   components:
   - type: HumanoidAppearance
     species: Rodentia
+    undergarmentTop: UndergarmentTopTanktopRodentia
+    undergarmentBottom: UndergarmentBottomBoxersRodentia
     hideLayersOnEquip:
     - Hair
     - HeadTop

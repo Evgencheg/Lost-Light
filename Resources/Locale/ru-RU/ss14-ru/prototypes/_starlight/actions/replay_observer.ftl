@@ -9,6 +9,6 @@ ent-ActionReplayToggleWeather = переключить погоду
 ent-ReplayObserverStatusHud = { "" }
     .desc = { "" }
 ent-ActionReplayToggleFactionIcons = Переключить иконки фракций
-    .desc = Показывает в этом реплее иконки фракций, например ядерных оперативников и революционеров.
+    .desc = Показывает в этом повторе иконки фракций, например ядерных оперативников и революционеров.
 ent-ReplayObserverFactionHud = { "" }
     .desc = { "" }

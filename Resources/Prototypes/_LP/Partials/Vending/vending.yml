@@ -1,3 +1,13 @@
+# Цены на рестоки одежды и костюмов
+
+- type: !PartialOnly cargoProduct
+  id: CrateVendingMachineRestockClothes
+  cost: 8300
+
+- type: !PartialOnly cargoProduct
+  id: CrateVendingMachineRestockAutoDrobe
+  cost: 5000
+
 # Одежда LP в ClothesMate
 
 - type: !PartialOnly vendingMachineInventory
@@ -105,3 +115,70 @@
     LPPClothingNeckShemagBrown: 5
     LPPClothingNeckShemagBlue: 5
     LPPClothingNeckShemagPurple: 5
+
+# Одежда LP в SalvageVend
+
+- type: !PartialOnly vendingMachineInventory
+  id: SalvageEquipmentInventory
+  startingInventory:
+    LPPClothingHeadHelmetSalvager: 3
+    LPPClothingOuterVestSalvager: 3
+    ClothingBeltSalvageWebbing: 1
+
+# Снаряжение LP в SecTech
+
+- type: !PartialOnly vendingMachineInventory
+  id: SecTechInventory
+  startingInventory:
+    ClothingBeltBandolier: 5
+
+# Одежда LP в SecDrobe
+
+- type: !PartialOnly vendingMachineInventory
+  id: SecDrobeInventory
+  startingInventory:
+    LPPClothingMaskPGWrittenOff: 3
+    LPPClothingBalaclavawide: 3
+    LPPClothingHeadSecurityHatCamo: 3
+    LPPClothingUniformJumpsuitSecCamo: 3
+    LPPClothingNeckShemagRed: 3
+    LPPClothingHandsGlovesTacticalFingerless: 3
+    ClothingUniformJumpsuitSecSummer: 3
+    LPPClothingOuterVestDareDevil: 3
+    ClothingOuterArmorDuraVest: 3
+    ClothingOuterArmorPlateCarrier: 3
+
+# Одежда LP в SyndieDrobe
+
+- type: !PartialOnly vendingMachineInventory
+  id: SyndieDrobeInventory
+  startingInventory:
+    ClothingUniformJumpsuitParamedicSyndie: 2
+    ClothingUniformJumpsuitRecruitSyndie: 2
+    ClothingUniformJumpsuitRepairmanSyndie: 2
+    ClothingUniformJumpsuitChiefEngineerSyndie: 2
+
+# Одежда LP в WinterDrobe
+
+- type: !PartialOnly vendingMachineInventory
+  id: WinterDrobeInventory
+  startingInventory:
+    ClothingOuterVest: 2
+    ClothingOuterCoatExpensive: 1
+    ClothingOuterCoatSpaceAsshole: 1
+    ClothingOuterWinterCoatLong: 3
+    ClothingOuterCoatHyenhSweater: 2
+    ClothingOuterCoatJensen: 2
+    LPPClothingOuterCoatBomber1: 2
+    LPPClothingOuterCoatBomber2: 2
+    LPPClothingOuterCoatBomber3: 2
+    LPPClothingOuterCoatBomber4: 2
+    LPPClothingOuterCoatBomber5: 2
+    LPPClothingOuterCoatPajamsSharkPink: 2
+    LPPClothingOuterCoatPajamsSharkGray: 2
+    LPPClothingOuterCoatPajamsSharkBlue: 2
+    LPPClothingHeadHatGreenBeanie: 3
+    LPPClothingHeadHatRedBeanie: 3
+    LPPClothingHeadHatBlackBeanie: 3
+    LPPClothingHeadHatBlueBeanie: 3
+    ClothingNeckFurWrap: 2

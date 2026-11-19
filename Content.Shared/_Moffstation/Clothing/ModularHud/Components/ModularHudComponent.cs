@@ -1,4 +1,4 @@
-using Content.Shared._Moffstation.Clothing.ModularHud.Systems;
+﻿using Content.Shared._Moffstation.Clothing.ModularHud.Systems;
 using Content.Shared.Inventory;
 using Content.Shared.Tools;
 using Content.Shared.Tools.Components;

@@ -12,3 +12,4 @@ public sealed partial class CommunicationsConsoleSystem
             UpdateCommsConsoleInterface(ent.Owner, ent.Comp);
     }
 }
+

@@ -678,6 +678,7 @@ public sealed partial class ClientSnapshotViewSystem : EntitySystem
         dollAppearance.EyeGlowing = humanoid.EyeGlowing;
         dollAppearance.Width = humanoid.Width;
         dollAppearance.Height = humanoid.Height;
+        // LP edit - убрано UndergarmentTop/UndergarmentBottom (нижнее бельё)
         _humanoidAppearance.UpdateSprite((doll, dollAppearance, Comp<SpriteComponent>(doll)));
 
         // Crawling/down dolls need the lying pose. The appearance-only rebuild would leave them standing.

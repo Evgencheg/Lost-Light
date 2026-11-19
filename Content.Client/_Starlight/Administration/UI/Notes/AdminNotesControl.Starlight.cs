@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using Content.Shared.Administration.Notes;
 using Content.Shared.Database;
 using Robust.Client.UserInterface.CustomControls;

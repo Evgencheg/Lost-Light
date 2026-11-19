@@ -79,7 +79,7 @@
                 ]
             ]
         },
-        {
+		{
             "name": "AssistantManager",
             "copyright": "wonderfulnewworld"
         },
@@ -131,18 +131,22 @@
         {
             "name": "CCServiceWorker",
             "copyright": "Wizards Den, modified by bynddark8"
+
         },
         {
             "name": "CCChef",
             "copyright": "Wizards Den, modified by bynddark8"
+
         },
         {
             "name": "CCBartender",
             "copyright": "Wizards Den, modified by bynddark8"
+
         },
         {
             "name": "CCJanitor",
             "copyright": "Wizards Den, modified by bynddark8"
+
         },
         {
             "name": "SalvageLead",
@@ -292,6 +296,7 @@
             "copyright": "AnyTap"
         },
         {
+
             "name": "SalvageMedic",
             "copyright": "Swonki"
         },

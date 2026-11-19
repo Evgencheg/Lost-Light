@@ -10,6 +10,6 @@ snapshot-cartridge-installed = Картридж для фото установл
 snapshot-film-category = Плёнка
 snapshot-film-load = Зарядить чистую фотографию
 snapshot-film-needs-blank = В камере закончилась плёнка.
-snapshot-film-full = В камеру уже заряжено { $max } чистых снимков.
+snapshot-film-full = Камера уже заряжена до предела: { $max } шт.
 snapshot-film-loaded = Заряжена чистая фотография ({ $charges }/{ $max }).
 snapshot-examine-flash = В установленной вспышке осталось зарядов: { $charges }.

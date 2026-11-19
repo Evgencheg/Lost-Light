@@ -84,3 +84,4 @@
   - type: EntityTargetAction
     canTargetSelf: true
     event: !type:PollenInjectPhytovitalinEvent {}
+

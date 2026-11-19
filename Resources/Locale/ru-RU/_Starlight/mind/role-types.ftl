@@ -18,6 +18,6 @@ roles-antag-selfagent-description = Агент Фронта освобожден
 role-subtype-mind-controlled = Под контролем разума
 role-subtype-CentComm = ЦентКом
 
-role-subtype-nanotrasen = NanoTrasen
+role-subtype-nanotrasen = НаноТрейзен
 role-subtype-itg = Межзвёздная торговая гильдия
 role-subtype-contractor = Подрядчик

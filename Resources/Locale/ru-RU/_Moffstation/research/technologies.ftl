@@ -1,1 +1,1 @@
-research-technology-silicon-law-matrix = Матрица законов боргов
+research-technology-silicon-law-matrix = Матрица законов синтетиков

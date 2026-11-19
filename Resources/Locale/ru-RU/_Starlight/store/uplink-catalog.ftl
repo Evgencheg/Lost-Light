@@ -172,8 +172,8 @@ uplink-plushie-linari-desc = Мастерски сшитая плюшевая я
 uplink-bombroach-microbomb-name = Телепортер бомботаракамоли
 uplink-bombroach-microbomb-desc = Вызовите удобную бомботаракамоль с имплантом пикобомбы. Взрывается после смерти или по команде самой бомботаракамоли.
 
-uplink-clothing-eyes-hud-syndicate-modular-name = Пустой визор Синдиката
-uplink-clothing-eyes-hud-syndicate-modular-desc = Знаковая модель очков, отличающая элиту Синдиката, в отличие от вас. Модули худа в комплект не входят.
+uplink-clothing-eyes-hud-syndicate-modular-name = Модульный визор Синдиката (без модулей)
+uplink-clothing-eyes-hud-syndicate-modular-desc = Культовая модель очков, по которой узнают элиту Синдиката. Не вас. Модули визора в комплект не входят.
 
 # These are from funky, but funky puts them in Wizden files, so in our files they go then
 uplink-hidden-radio-botany-name = Скрытый аплинк

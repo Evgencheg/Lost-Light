@@ -688,6 +688,7 @@ public sealed partial class ServerSnapshotCaptureSystem : SnapshotCaptureSystem
             EyeGlowing = appearance.EyeGlowing,
             Width = appearance.Width,
             Height = appearance.Height,
+            // LP edit - убрано UndergarmentTop/UndergarmentBottom (нижнее бельё)
             Standing = !_standingQuery.TryGetComponent(uid, out var standing) || standing.Standing,
         };
 
