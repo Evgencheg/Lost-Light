@@ -45,7 +45,7 @@
       weight: 4
     - id: VendingMachineWinter
       weight: 4
-    - id: VendingMachinePride
+    # LP edit - убрано: ЛГБТ-контент
     - id: VendingMachineTheater
 
 - type: entity

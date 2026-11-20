@@ -100,9 +100,7 @@
     - id: VinylSleeveVampire
     - id: VinylSleeveWeird
     - id: VinylSleeveWelcomeToSS13
-    - id: VinylSleeveNonBinary
-    - id: VinylSleevePride
-    - id: VinylSleeveTrans
+    # LP edit - убрано: ЛГБТ-контент
     - id: VinylSleeveFart # Fart/Clown Songs
       weight: 0.2
 

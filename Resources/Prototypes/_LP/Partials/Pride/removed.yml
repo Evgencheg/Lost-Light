@@ -1,0 +1,158 @@
+# Вырезанный ЛГБТ-контент: прототипы становятся абстрактными.
+# Ссылки на них убраны в references.yml и прямыми правками с `# LP edit` (таблицы лута, подарок,
+# комод, пластинки, ксенобиология, граф флагов _Inferus). Карты чистит Resources/_LP/migration.yml.
+
+# Значки, шарфы, плащи, галстук, флаги, торгомат Pride-O-Mat, пластинки, прайд-наблюдатель
+- type: !PartialOnly entity
+  id: !type:CreateVariants
+    values:
+    - ClothingNeckLGBTPin
+    - ClothingNeckAllyPin
+    - ClothingNeckAromanticPin
+    - ClothingNeckAroacePin
+    - ClothingNeckAsexualPin
+    - ClothingNeckBisexualPin
+    - ClothingNeckGayPin
+    - ClothingNeckIntersexPin
+    - ClothingNeckLesbianPin
+    - ClothingNeckNonBinaryPin
+    - ClothingNeckPansexualPin
+    - ClothingNeckPluralPin
+    - ClothingNeckOmnisexualPin
+    - ClothingNeckGenderqueerPin
+    - ClothingNeckGenderfluidPin
+    - ClothingNeckTransPin
+    - ClothingNeckScarfStripedAce
+    - ClothingNeckScarfStripedAro
+    - ClothingNeckScarfStripedAroace
+    - ClothingNeckScarfStripedBiSexual
+    - ClothingNeckScarfStripedGay
+    - ClothingNeckScarfStripedInter
+    - ClothingNeckScarfStripedLesbian
+    - ClothingNeckScarfStripedLesbianLong
+    - ClothingNeckScarfStripedPan
+    - ClothingNeckScarfStripedNonBinary
+    - ClothingNeckScarfStripedRainbow
+    - ClothingNeckScarfStripedTrans
+    - ClothingNeckScarfStripedPlural
+    - ClothingNeckCloakTrans
+    - ClothingNeckCloakAce
+    - ClothingNeckCloakAro
+    - ClothingNeckCloakAroace
+    - ClothingNeckCloakBi
+    - ClothingNeckCloakIntersex
+    - ClothingNeckCloakLesbian
+    - ClothingNeckCloakGay
+    - ClothingNeckCloakEnby
+    - ClothingNeckCloakPan
+    - ClothingNeckCloakPlural
+    - ClothingNeckLGBTie
+    - LGBTQFlag
+    - IntersexFlag
+    - TransFlag
+    - AceFlag
+    - AroFlag
+    - BiFlag
+    - LesbianFlag
+    - NonbinaryFlag
+    - GenderfluidFlag
+    - GenderqueerFlag
+    - PluralFlag
+    - LGBTQHandyFlag
+    - VendingMachinePride
+    - VendingMachinePrideEmpty
+    - VendingMachinePrideCircuitboard
+    - VinylSleeveNonBinary
+    - VinylSleevePride
+    - VinylSleeveTrans
+    - MobWatcherPride
+    - SpawnMobWatcherPride
+  abstract: true
+
+# Торгомат Pride-O-Mat
+- type: !PartialOnly vendingMachineInventory
+  id: PrideDrobeInventory
+  abstract: true
+
+- type: !PartialOnly localizedDataset
+  id: !type:CreateVariants
+    values:
+    - PrideDrobeAds
+    - PrideDrobeGoodbyes
+  abstract: true
+
+# Лоадауты значков, шарфов и галстука
+- type: !PartialOnly loadout
+  id: !type:CreateVariants
+    values:
+    - ClothingNeckLGBTPin
+    - ClothingNeckAllyPin
+    - ClothingNeckAromanticPin
+    - ClothingNeckAroacePin
+    - ClothingNeckAsexualPin
+    - ClothingNeckBisexualPin
+    - ClothingNeckGayPin
+    - ClothingNeckIntersexPin
+    - ClothingNeckLesbianPin
+    - ClothingNeckNonBinaryPin
+    - ClothingNeckPansexualPin
+    - ClothingNeckPluralPin
+    - ClothingNeckOmnisexualPin
+    - ClothingNeckGenderqueerPin
+    - ClothingNeckGenderfluidPin
+    - ClothingNeckTransPin
+    - ScarfPrideAce
+    - ScarfPrideAro
+    - ScarfPrideAroace
+    - ScarfPrideBisexual
+    - ScarfPrideGay
+    - ScarfPrideIntersex
+    - ScarfPrideLesbian
+    - ScarfPridePansexual
+    - ScarfPrideNonbinary
+    - ScarfPrideRainbow
+    - ScarfPrideTrans
+    - ScarfPridePlural
+    - ScarfPrideLongBacon
+    - LGBTieLoadout
+  abstract: true
+
+# Рецепты лат
+- type: !PartialOnly latheRecipe
+  id: !type:CreateVariants
+    values:
+    - ClothingNeckLGBTie
+    - VendingMachinePrideCircuitboard
+  abstract: true
+
+# Постройка флагов
+- type: !PartialOnly construction
+  id: !type:CreateVariants
+    values:
+    - LGBTQFlag
+    - IntersexFlag
+    - TransFlag
+    - AceFlag
+    - AroFlag
+    - BiFlag
+    - LesbianFlag
+    - NonbinaryFlag
+    - GenderfluidFlag
+    - GenderqueerFlag
+    - PluralFlag
+  abstract: true
+
+- type: !PartialOnly constructionGraph
+  id: PluralFlagGraph
+  abstract: true
+
+# Праздники
+- type: !PartialOnly holiday
+  id: !type:CreateVariants
+    values:
+    - PrideMonth
+    - BisexualPrideDay
+    - LesbianDay
+    - NationalComingOutDay
+    - TransgenderRemembranceDay
+  abstract: true
