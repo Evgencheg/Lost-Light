@@ -39,6 +39,7 @@
     - MobResomiSprites
     - MobShadekinSprites
     - MobThavenSprites
+    - MobXenoSprites
   sprites:
     UndergarmentTop: !Remove
     UndergarmentBottom: !Remove
@@ -75,6 +76,7 @@
     - MobFelionoidMarkingLimits
     - MobShadekinMarkingLimits
     - MobThavenMarkingLimits
+    - MobXenoMarkingLimits
   points:
     UndergarmentTop: !Remove
     UndergarmentBottom: !Remove
