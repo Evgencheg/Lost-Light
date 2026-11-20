@@ -34,22 +34,22 @@
     - name: Ведущий Маппер
       roles:
         - 1459986748267434116 # Ведущий Маппер
-      flags: [ADMINWHO, NAMECOLOR, ADMINCHAT, MODERATOR]
+      flags: [ADMINWHO, NAMECOLOR, ADMINCHAT, ADMIN, BAN, DEBUG, FUN, PLAYTIME, SERVER, SPAWN, VAREDIT, LOGS, ROUND, QUERY, ADMINHELP, VIEWNOTES, EDITNOTES, STEALTH, MODERATOR]
 
     - name: Ведущий Спрайтер
       roles:
         - 1459986747978154148 # Ведущий Спрайтер
-      flags: [ADMINWHO, NAMECOLOR, ADMINCHAT, MODERATOR]
+      flags: [ADMINWHO, NAMECOLOR, ADMINCHAT, ADMIN, BAN, DEBUG, FUN, PLAYTIME, SERVER, SPAWN, VAREDIT, LOGS, ROUND, QUERY, ADMINHELP, VIEWNOTES, EDITNOTES, STEALTH, MODERATOR]
 
     - name: Куратор Вики
       roles:
         - 1159224716578529322 # Куратор Вики
-      flags: [ADMINWHO, NAMECOLOR, ADMINCHAT, MODERATOR]
+      flags: [ROUND, ADMIN, ADMINWHO, NAMECOLOR, ADMINCHAT, MODERATOR]
 
     - name: Начальник Караула
       roles:
         - 1092786586447515710 # Начальник Караула
-      flags: [ADMINWHO, NAMECOLOR, ADMINCHAT, MODERATOR]
+      flags: [ROUND, ADMIN, ADMINWHO, NAMECOLOR, ADMINCHAT, MODERATOR]
 
     - name: Гейм-Мастер
       roles:
