@@ -200,7 +200,8 @@
         orGroup: GiftPool
       - id: ViolaInstrument
         orGroup: GiftPool
-      # LP edit - убрано: ЛГБТ-контент
+      - id: ClothingNeckCloakTrans
+        orGroup: GiftPool
       - id: ClothingNeckCloakAdmin
         orGroup: GiftPool
       - id: ToyFigurineSkeleton

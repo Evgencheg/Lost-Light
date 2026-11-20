@@ -71,7 +71,8 @@
   id: DresserMainLootEntityTable
   table: !type:GroupSelector
     children:
-    # LP edit - убрано: ЛГБТ-контент
+    - id: ClothingNeckLGBTPin
+      weight: 0.06
     - id: ClothingUniformJumpsuitColorGrey
       weight: 0.06
     - id: ClothingUniformJumpskirtColorGrey

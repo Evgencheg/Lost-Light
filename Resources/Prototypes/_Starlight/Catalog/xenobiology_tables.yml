@@ -544,7 +544,7 @@
       - id: ShadowPortal
       - id: CosmicEffigy
       - id: AnomalySanta
-      # LP edit - убрано: ЛГБТ-контент
+      - id: MobWatcherPride
       - !type:NestedSelector
         tableId: GoldSlimePeacefulTable
       - !type:NestedSelector
