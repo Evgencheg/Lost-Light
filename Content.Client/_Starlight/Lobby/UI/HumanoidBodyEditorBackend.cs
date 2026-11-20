@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Shared._LP.Sponsors;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
@@ -182,7 +183,7 @@ public sealed class HumanoidBodyEditorBackend : IBodyEditorBackend
 
         var onlyWhitelisted = _points.TryGetValue(category, out var points) && points.OnlyWhitelisted;
         var def = _defs.GetValueOrDefault(group.Id.Split('|')[0]);
-        return [.. _markings.MarkingsByCategoryAndSpeciesAndSex(category, _profile.Species, _profile.Sex).Values
+        return [.. RolesRestrictions.FilterMarkingsForLocal(_markings.MarkingsByCategoryAndSpeciesAndSex(category, _profile.Species, _profile.Sex)).Values // LP edit - спонсорские маркинги
             .Where(m => !onlyWhitelisted || m.SpeciesRestrictions?.Contains(_profile.Species) == true)
             .Where(m => def == null || def.Categories.Length > 1 || def.Layers.Contains(m.BodyPart))
             .OrderBy(m => Loc.GetString($"marking-{m.ID}"))];
