@@ -1,179 +1,4 @@
 Entries:
-- author: GGdoggodude
-  changes:
-  - message: Aieliths now spawn with the proper survival box!
-    type: Fix
-  id: 410314
-  time: '2026-11-11T05:33:57.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7177
-- author: redmushie
-  changes:
-  - message: Increased prefilled glowstone bag from 25 charges to 50 charges.
-    type: Tweak
-  id: 410315
-  time: '2026-11-11T10:23:24.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7180
-- author: redmushie
-  changes:
-  - message: Increased glowstone bag refill value of crystal shards from 10 to 15.
-    type: Tweak
-  id: 410316
-  time: '2026-11-11T10:23:24.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7180
-- author: redmushie
-  changes:
-  - message: Salvage Medics get a filled glowstone bag in their locker.
-    type: Add
-  id: 410317
-  time: '2026-11-11T10:23:24.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7180
-- author: redmushie
-  changes:
-  - message: Mining Specialists get a filled glowstone bag in their locker.
-    type: Add
-  id: 410318
-  time: '2026-11-11T10:23:24.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7180
-- author: redmushie
-  changes:
-  - message: Salvage Specialists get an empty glowstone bag in their locker.
-    type: Add
-  id: 410319
-  time: '2026-11-11T10:23:24.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7180
-- author: FishtopherDoe, The ETO Team
-  changes:
-  - message: Rebalanced the ETO Combat kit, replacing one of the diluted combat medipens with a syringe of saline, and changing some of the tric to be nutriment instead. TSF players rejoice!
-    type: Tweak
-  id: 410320
-  time: '2026-11-11T10:47:47.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7172
-- author: Tjmaxmillion
-  changes:
-  - message: Station AI now needs 10 hours of command.
-    type: Tweak
-  id: 410321
-  time: '2026-11-11T15:16:53.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7182
-- author: Maxim
-  changes:
-  - message: Lasers are immune to jamming at the cost of being able to melt their crystal when under sustained fire. Watch your HUD heat gauge carefully.
-    type: Tweak
-  id: 410322
-  time: '2026-11-11T15:54:00.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7173
-- author: Destiny (Creativity)
-  changes:
-  - message: Deimplanter for MedTak implants, found in MedTak techfab.
-    type: Add
-  id: 410323
-  time: '2026-11-11T16:20:36.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7160
-- author: Destiny (Creativity)
-  changes:
-  - message: Platinum MedTak Tracker.
-    type: Add
-  id: 410324
-  time: '2026-11-11T16:20:36.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7160
-- author: Rhapsody (Pepta, Soothe)
-  changes:
-  - message: The remaining pressure when inspecting a wearable air tank or jetpack is now predicted, and will now show the correct value instead of showing 1000 kPa before correcting itself shortly after.
-    type: Fix
-  id: 410325
-  time: '2026-11-11T16:45:49.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7122
-- author: Conflee
-  changes:
-  - message: Moved Incendiary Munitions from Tier 1 to Tier 2 and lowered it's cost from 10000 to 8000.
-    type: Tweak
-  id: 410326
-  time: '2026-11-11T21:36:58.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7183
-- author: Conflee
-  changes:
-  - message: Moved Uranium Munitions from Tier 1 to Tier 2.
-    type: Tweak
-  id: 410327
-  time: '2026-11-11T21:36:58.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7183
-- author: Conflee
-  changes:
-  - message: Moved Explosive Mech Ammunition from Tier 3 to Tier 4 and lowered it's cost from 15400 to 15000.
-    type: Tweak
-  id: 410328
-  time: '2026-11-11T21:36:58.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7183
-- author: Conflee
-  changes:
-  - message: Moved Scan Gate Technology from Tier 4 to Tier 3 and increased it's cost from 5000 to 8000.
-    type: Tweak
-  id: 410329
-  time: '2026-11-11T21:36:58.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7183
-- author: Hot Mic
-  changes:
-  - message: (Flotilla) Add new Paramedic Slot, now initialized with 3 slots at round start.
-    type: Add
-  id: 410330
-  time: '2026-11-12T01:33:37.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7187
-- author: Hot Mic
-  changes:
-  - message: (Flotilla) Add a missing seed extractor to "Maid"'s service department (How was this not reported to me after all this time?).
-    type: Add
-  id: 410331
-  time: '2026-11-12T01:33:37.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7187
-- author: Hot Mic
-  changes:
-  - message: (Flotilla) Add new APCs to Artifact room.
-    type: Add
-  id: 410332
-  time: '2026-11-12T01:33:37.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7187
-- author: Hot Mic
-  changes:
-  - message: (Flotilla) Add new Radiation Lockers, EOD Locker, and EVA Storage Units to Artifact room.
-    type: Add
-  id: 410333
-  time: '2026-11-12T01:33:37.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7187
-- author: Hot Mic
-  changes:
-  - message: (Flotilla) Add new directional fans to Mining Arm and Cargo Shuttle Docking.
-    type: Add
-  id: 410334
-  time: '2026-11-12T01:33:37.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7187
-- author: Hot Mic
-  changes:
-  - message: "(Flotilla) Add the new transit line: Bridge to Command's EVAC break room."
-    type: Add
-  id: 410335
-  time: '2026-11-12T01:33:37.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7187
-- author: Hot Mic
-  changes:
-  - message: (Flotilla) Minor Additions to Command (i.e Fireaxe, Station Radio, etc.).
-    type: Add
-  id: 410336
-  time: '2026-11-12T01:33:37.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7187
-- author: Hot Mic
-  changes:
-  - message: (Flotilla) Add Stir Stir to Genpop.
-    type: Add
-  id: 410337
-  time: '2026-11-12T01:33:37.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7187
-- author: Hot Mic
-  changes:
-  - message: (Flotilla) Add more TVs, at least one per department.
-    type: Add
-  id: 410338
-  time: '2026-11-12T01:33:37.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7187
 - author: Hot Mic
   changes:
   - message: (Flotilla) Add new Airlock Cycle to a few external airlocks.
@@ -2799,4 +2624,179 @@ Entries:
   id: 410713
   time: '2026-11-20T18:13:12.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/7354
+- author: Citrea
+  changes:
+  - message: Xen'Kara are allowed to breathe in emergencies.
+    type: Fix
+  id: 410714
+  time: '2026-11-20T18:53:28.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7352
+- author: Citrea
+  changes:
+  - message: The elected Voice of the Queen can now actually hear the others.
+    type: Fix
+  id: 410715
+  time: '2026-11-20T18:53:28.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7352
+- author: Citrea
+  changes:
+  - message: You no longer crash on joining the server when compatability mode is on.
+    type: Fix
+  id: 410716
+  time: '2026-11-20T18:53:28.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7352
+- author: Citrea
+  changes:
+  - message: You can independently dye Xen'Kara teeth, as intended.
+    type: Fix
+  id: 410717
+  time: '2026-11-20T18:53:28.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7352
+- author: SirLutz
+  changes:
+  - message: Passive gates now have a red dot on the output side, bringing them in line with other pipe parts that have a defined flow direction.
+    type: Add
+  id: 410718
+  time: '2026-11-20T18:53:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7357
+- author: Rhapsody (Pepta, Soothe)
+  changes:
+  - message: Fixed welding masks and goggles sometimes acting like they didn't provide welding protection for a moment before correcting themselves.
+    type: Fix
+  id: 410719
+  time: '2026-11-20T19:42:08.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7360
+- author: Swonki
+  changes:
+  - message: Changed VM97 spread from 5 to 3 rounds.
+    type: Tweak
+  id: 410720
+  time: '2026-11-20T19:42:21.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7361
+- author: Swonki
+  changes:
+  - message: Changed VM97 Recharge time from 3 to 3.75.
+    type: Tweak
+  id: 410721
+  time: '2026-11-20T19:42:21.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7361
+- author: Swonki
+  changes:
+  - message: Changed VM97, now it requires wielding.
+    type: Tweak
+  id: 410722
+  time: '2026-11-20T19:42:21.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7361
+- author: Swonki
+  changes:
+  - message: Fixed EXTREMELY low accuracy for VM97.
+    type: Fix
+  id: 410723
+  time: '2026-11-20T19:42:21.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7361
+- author: Swonki
+  changes:
+  - message: HoP no longer has salv lead access.
+    type: Fix
+  id: 410724
+  time: '2026-11-20T20:16:42.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7364
+- author: Rhapsody (Pepta, Soothe)
+  changes:
+  - message: Fixed criminal record icon HUD module briefly causing the wrong contraband status indicator to appear when inspecting the modular HUD it's in.
+    type: Fix
+  id: 410725
+  time: '2026-11-20T20:16:45.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7349
+- author: Johnny
+  changes:
+  - message: Added a new combat kit within the uplink that has patches and pills instead of autoinjectors and syringes.
+    type: Add
+  id: 410726
+  time: '2026-11-20T20:16:48.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7359
+- author: Tjmaxmillion
+  changes:
+  - message: Emergency lights no longer drain their internal battery while station grid power is active.
+    type: Fix
+  id: 410727
+  time: '2026-11-20T20:48:52.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7326
+- author: Tjmaxmillion
+  changes:
+  - message: Fixed emergency light state transitions, APC loads, and color synchronization during alert level changes.
+    type: Fix
+  id: 410728
+  time: '2026-11-20T20:48:52.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7326
+- author: Tjmaxmillion
+  changes:
+  - message: Light fixtures with backup batteries no longer drain their cells when dimmed to zero during blackout alert levels.
+    type: Fix
+  id: 410729
+  time: '2026-11-20T20:48:52.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7326
+- author: Tjmaxmillion
+  changes:
+  - message: Code Epsilon is no longer a rave.
+    type: Fix
+  id: 410730
+  time: '2026-11-20T20:48:52.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7326
+- author: VictoriaActual
+  changes:
+  - message: Added a search bar to the AAC tablet and made the window resizable.
+    type: Add
+  id: 410731
+  time: '2026-11-20T21:22:44.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7016
+- author: neomoth, conflee
+  changes:
+  - message: Added new sprites for the back equipped state of the Impact Bolt Rifle.
+    type: Add
+  id: 410732
+  time: '2026-11-20T21:22:46.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7340
+- author: Swonki
+  changes:
+  - message: PKA modkit whitelist logic.
+    type: Fix
+  id: 410733
+  time: '2026-11-20T21:22:49.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7363
+- author: redmushie
+  changes:
+  - message: (Fland) Overhauled Atmospherics. Too much to list but it should be a lot better!
+    type: Tweak
+  id: 410734
+  time: '2026-11-20T21:56:28.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7321
+- author: redmushie
+  changes:
+  - message: (Fland) Overhauled TEG. It has a fuel injection line now.
+    type: Tweak
+  id: 410735
+  time: '2026-11-20T21:56:28.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7321
+- author: redmushie
+  changes:
+  - message: (Fland) Change Distro/Waste layers to match docking port standard.
+    type: Tweak
+  id: 410736
+  time: '2026-11-20T21:56:28.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7321
+- author: redmushie
+  changes:
+  - message: (Fland) Route distro, waste and HV to every docking port.
+    type: Add
+  id: 410737
+  time: '2026-11-20T21:56:28.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7321
+- author: FoxStellar
+  changes:
+  - message: Mortizol now has a proper Contraband Level, Tier 2 Medical Access.
+    type: Add
+  id: 410738
+  time: '2026-11-20T22:27:21.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7347
 Order: -1
