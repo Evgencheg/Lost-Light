@@ -288,6 +288,11 @@ public sealed partial class CloningSystem : SharedCloningSystem
     /// </summary>
     public void CopyStatusEffects(Entity<StatusEffectContainerComponent?> original, Entity<StatusEffectContainerComponent?> target)
     {
+        // LP edit start - у оригинала может не быть контейнера статус-эффектов
+        if (!Resolve(original, ref original.Comp, false))
+            return;
+        // LP edit end
+
         foreach (var effect in _statusEffects.EnumerateStatusEffects(original, _cloneableEffectQuery))
         {
             //We are not interested in temporary effects, only permanent ones.
