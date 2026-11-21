@@ -1,4 +1,4 @@
-﻿using Robust.Shared.GameStates;
+using Robust.Shared.GameStates;
 
 // ReSharper disable CheckNamespace
 namespace Content.Shared._Starlight.Slippery;

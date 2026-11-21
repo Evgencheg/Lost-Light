@@ -1,4 +1,4 @@
-﻿using Content.Shared.Bed.Sleep;
+using Content.Shared.Bed.Sleep;
 using Content.Shared.Nutrition.Components;
 
 // ReSharper disable CheckNamespace
