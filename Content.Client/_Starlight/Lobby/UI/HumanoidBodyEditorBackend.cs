@@ -35,7 +35,8 @@ public sealed class HumanoidBodyEditorBackend : IBodyEditorBackend
         ],
         [
             MarkingCategories.Chest, MarkingCategories.Tail, MarkingCategories.TailExtras,
-            MarkingCategories.BodyCover, MarkingCategories.BodyCoverCover, MarkingCategories.Overlay
+            MarkingCategories.BodyCover, MarkingCategories.BodyCoverCover, MarkingCategories.Overlay,
+            MarkingCategories.Special
         ],
         [
             new("head", "body-editor-part-head",
@@ -172,13 +173,13 @@ public sealed class HumanoidBodyEditorBackend : IBodyEditorBackend
         if (_profile == null)
             return [];
 
-        var category = group.Id switch
+        MarkingCategories? found = group.Id switch
         {
             HairGroup => MarkingCategories.Hair,
             FacialHairGroup => MarkingCategories.FacialHair,
-            _ => TryParseGroup(group, out _, out var parsed) ? parsed : MarkingCategories.Special,
+            _ => TryParseGroup(group, out _, out var parsed) ? parsed : null,
         };
-        if (category == MarkingCategories.Special)
+        if (found is not { } category)
             return [];
 
         var onlyWhitelisted = _points.TryGetValue(category, out var points) && points.OnlyWhitelisted;

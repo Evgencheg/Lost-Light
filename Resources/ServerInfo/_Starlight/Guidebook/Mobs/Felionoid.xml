@@ -1,36 +1,49 @@
 <Document>
-  # Фелиноиды
+  # Felionoid
 
   <Box>
     <GuideEntityEmbed Entity="MobFelionoid" Caption=""/>
   </Box>
 
-  Небольшая кошачья раса, лёгкая на ногу.
+  Felionoids are a small feline species known for being light on their feet.
 
-  ## Возраст и имена
-  Продолжительность жизни фелиноидов схожа с человеческой, хотя с возрастом приходит больше осложнений.
-  Их имена - составные слова. Каждому имени предшествует название колонии или семьи, например [color=yellow]шёлк[/color][color=orange]мех[/color].
-  Разделение частей составного имени, даже в непринуждённом разговоре, считается неприличным и может быть грубым.
-  Многие фелиноиды заменяют составное имя прозвищем или получают имена, более типичные для человеческой культуры.
+  ## Age and names
+  Felionoids have a lifespan similar to that of humans, albeit with more complications as they age.
+  Their names are compound words. Each name is prefixed by their colony's or family's name, for example [color=yellow]silk[/color][color=orange]fur[/color].
+  Separating the parts of a compound name, even in casual conversation, is considered improper and may be rude.
+  Many Felionoids replace their compound name with a nickname, or are given names more typical with human culture.
 
-  ## Расовые особенности
-  Их безоружные атаки когтями наносят [color=red]3[/color] единицы режущего урона со скоростью ударов в [color=yellow]2[/color] раза выше, чем у людей.
-  В результате им легче [color=yellow]толкать[/color] и [color=red]обезоруживать[/color] других.
+  ## Racial Features
+  Their unarmed claw attacks deal [color=red]3[/color] points of Slash damage with a hit rate that is [color=yellow]2[/color] times faster than humans.
+  As a result, they have an easier time [color=yellow]shoving[/color] and [color=red]disarming[/color] others.
 
-  Кроме того, фелиноиды могут бегать на [color=lightgreen]25%[/color] быстрее людей, [color=yellow]когда не носят обувь[/color]. В обуви они бегают на [color=lightgreen]5%[/color] быстрее.
+  Compared to humans, rested Felionoids run [color=lightgreen]25%[/color] faster.
 
-  Фелиноиды также более уязвимы к урону:
-  - Они впадают в критическое состояние при [color=red]85[/color] единицах урона.
-  - Они умирают при [color=red]170[/color] единицах урона.
+  Felionoids are also more vulnerable to damage:
+  - They fall into a critical state at [color=red]85[/color] points of damage.
+  - They die at [color=red]170[/color] points of damage.
 
-  ## Отдача оружия
-  Фелиноиды обнаружат, что оружие крупного калибра отталкивает их. Они получают [color=yellow]урон оглушения[/color] за каждый выстрел из оружия крупного калибра.
+  ## Light Sleep
+  In light sleep, they can hear their surroundings and sense nearby entities through sound within [color=yellow]10 meters[/color].
 
-  В целом оружие, дающее отдачу: [color=yellow]винтовки, снайперские винтовки, дробовики, ЛПК, ТПК и гранатомёты.[/color]
+  ## Nap Time
+  After around [color=yellow]25 minutes[/color] without a nap, tiredness reduces their walking and running speeds by [color=yellow]5%[/color]. After [color=red]30 minutes[/color], the reduction reaches [color=red]25%[/color].
 
-  Особенно остерегайтесь ракетниц: так как они безоткатные, вас на самом деле [color=red]потянет вперёд вместе с ракетой[/color] на небольшое расстояние.
-  - Самое безопасное оружие, не дающее отдачи, - [color=green]пистолеты и ПП[/color].
-  - Отсутствие подскальзывания может смягчить часть отдачи от стрельбы, но не всю!
-  - Также помните, что любое ваше сопротивление выносливости РАБОТАЕТ и снижает урон выносливости от этого оружия.
+  ## Purring
+  If Felionoids are injured while asleep, they automatically start purring to slowly recover from heat, cold, blunt, slash, piercing, and blood-loss damage, and heal bleeding.
+  When held by an injured humanoid, Felionoids automatically purr to help with the healing process.
+
+  ## Pounce
+  Felionoids can leap into the arms of unsuspecting humanoids, whom they see as walking sleeping spots. The [color=yellow]Pounce[/color] action takes [color=yellow]2 seconds[/color] of tail-wiggling to charge; moving interrupts the charge. An empty-handed target can catch and pick up the pouncing Felionoid; otherwise, the impact knocks both down. Pounce recharges after [color=yellow]30 seconds[/color].
+
+  ## Weapon Knockback
+  Felionoids will find that large caliber weapons will push them around. They receive [color=yellow]Stun Damage[/color] for every shot fired from a large caliber weapon.
+
+  In general, the weapons that will give you knockback are [color=yellow]Rifles, Sniper Rifles, Shotguns, LMGs, HMGs, and Grenade Launchers.[/color]
+
+  Look out especially on Rocket launchers, as since they are recoilless, you will actually get [color=red]pulled forward with the rocket[/color] for a short distance.
+  - The safest weapons to use that will give you no knockback are [color=green]Pistols and SMGs[/color].
+  - No slips can help mitigate some of the knockback from firing weapons, but not all of it!
+  - Also keep in mind that any stamina resistance you have DOES work to reduce the stamina damage from these weapons.
 
 </Document>
