@@ -1,4 +1,4 @@
-﻿using Content.Shared.Standing;
+using Content.Shared.Standing;
 
 // ReSharper disable CheckNamespace
 namespace Content.Shared._Starlight.Slippery;
