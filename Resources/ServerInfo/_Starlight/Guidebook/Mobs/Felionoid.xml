@@ -1,49 +1,49 @@
 <Document>
-  # Felionoid
+  # Фелиноиды
 
   <Box>
     <GuideEntityEmbed Entity="MobFelionoid" Caption=""/>
   </Box>
 
-  Felionoids are a small feline species known for being light on their feet.
+  Фелиноиды - небольшая кошачья раса, известная своей лёгкой поступью.
 
-  ## Age and names
-  Felionoids have a lifespan similar to that of humans, albeit with more complications as they age.
-  Their names are compound words. Each name is prefixed by their colony's or family's name, for example [color=yellow]silk[/color][color=orange]fur[/color].
-  Separating the parts of a compound name, even in casual conversation, is considered improper and may be rude.
-  Many Felionoids replace their compound name with a nickname, or are given names more typical with human culture.
+  ## Возраст и имена
+  Фелиноиды живут примерно столько же, сколько люди, хотя с возрастом у них появляется больше проблем со здоровьем.
+  Их имена - составные слова. Каждое имя начинается с названия колонии или семьи, например [color=yellow]шёлко[/color][color=orange]шёрстка[/color].
+  Разделять части составного имени, даже в непринуждённой беседе, считается неприличным и может показаться грубостью.
+  Многие фелиноиды заменяют составное имя прозвищем или получают имена, более привычные для человеческой культуры.
 
-  ## Racial Features
-  Their unarmed claw attacks deal [color=red]3[/color] points of Slash damage with a hit rate that is [color=yellow]2[/color] times faster than humans.
-  As a result, they have an easier time [color=yellow]shoving[/color] and [color=red]disarming[/color] others.
+  ## Расовые особенности
+  Их безоружные удары когтями наносят [color=red]3[/color] единицы режущего урона, а бьют они в [color=yellow]2[/color] раза чаще людей.
+  Благодаря этому им проще [color=yellow]толкать[/color] и [color=red]обезоруживать[/color] других.
 
-  Compared to humans, rested Felionoids run [color=lightgreen]25%[/color] faster.
+  Отдохнувшие фелиноиды бегают на [color=lightgreen]25%[/color] быстрее людей.
 
-  Felionoids are also more vulnerable to damage:
-  - They fall into a critical state at [color=red]85[/color] points of damage.
-  - They die at [color=red]170[/color] points of damage.
+  Зато фелиноиды уязвимее к урону:
+  - В критическое состояние они впадают при [color=red]85[/color] единицах урона.
+  - Умирают при [color=red]170[/color] единицах урона.
 
-  ## Light Sleep
-  In light sleep, they can hear their surroundings and sense nearby entities through sound within [color=yellow]10 meters[/color].
+  ## Чуткий сон
+  В чутком сне они слышат всё вокруг и по звуку чувствуют существ в радиусе [color=yellow]10 метров[/color].
 
-  ## Nap Time
-  After around [color=yellow]25 minutes[/color] without a nap, tiredness reduces their walking and running speeds by [color=yellow]5%[/color]. After [color=red]30 minutes[/color], the reduction reaches [color=red]25%[/color].
+  ## Тихий час
+  Примерно через [color=yellow]25 минут[/color] без сна усталость снижает их скорость ходьбы и бега на [color=yellow]5%[/color]. Через [color=red]30 минут[/color] снижение достигает [color=red]25%[/color].
 
-  ## Purring
-  If Felionoids are injured while asleep, they automatically start purring to slowly recover from heat, cold, blunt, slash, piercing, and blood-loss damage, and heal bleeding.
-  When held by an injured humanoid, Felionoids automatically purr to help with the healing process.
+  ## Мурчание
+  Если фелиноид получает ранения во сне, он сам начинает мурчать и потихоньку восстанавливается от урона жаром, холодом, ушибами, порезами, уколами и кровопотерей, а также останавливает кровотечение.
+  Когда фелиноида держит на руках раненый гуманоид, фелиноид сам начинает мурчать, помогая лечению.
 
-  ## Pounce
-  Felionoids can leap into the arms of unsuspecting humanoids, whom they see as walking sleeping spots. The [color=yellow]Pounce[/color] action takes [color=yellow]2 seconds[/color] of tail-wiggling to charge; moving interrupts the charge. An empty-handed target can catch and pick up the pouncing Felionoid; otherwise, the impact knocks both down. Pounce recharges after [color=yellow]30 seconds[/color].
+  ## Наскок
+  Фелиноиды умеют запрыгивать на руки ничего не подозревающим гуманоидам, которых считают ходячими лежанками. Чтобы подготовить [color=yellow]наскок[/color], нужно [color=yellow]2 секунды[/color] повилять хвостом; движение прерывает подготовку. Цель со свободными руками может поймать и подхватить прыгнувшего фелиноида, иначе от удара падают оба. Наскок перезаряжается [color=yellow]30 секунд[/color].
 
-  ## Weapon Knockback
-  Felionoids will find that large caliber weapons will push them around. They receive [color=yellow]Stun Damage[/color] for every shot fired from a large caliber weapon.
+  ## Отдача оружия
+  Оружие крупного калибра отталкивает фелиноидов. За каждый выстрел из такого оружия они получают [color=yellow]урон оглушения[/color].
 
-  In general, the weapons that will give you knockback are [color=yellow]Rifles, Sniper Rifles, Shotguns, LMGs, HMGs, and Grenade Launchers.[/color]
+  В целом оружие, дающее отдачу: [color=yellow]винтовки, снайперские винтовки, дробовики, лёгкие и тяжёлые пулемёты и гранатомёты.[/color]
 
-  Look out especially on Rocket launchers, as since they are recoilless, you will actually get [color=red]pulled forward with the rocket[/color] for a short distance.
-  - The safest weapons to use that will give you no knockback are [color=green]Pistols and SMGs[/color].
-  - No slips can help mitigate some of the knockback from firing weapons, but not all of it!
-  - Also keep in mind that any stamina resistance you have DOES work to reduce the stamina damage from these weapons.
+  Особенно остерегайтесь ракетниц: так как они безоткатные, вас на самом деле [color=red]потянет вперёд вместе с ракетой[/color] на небольшое расстояние.
+  - Самое безопасное оружие, не дающее отдачи, - [color=green]пистолеты и ПП[/color].
+  - Нескользящая обувь может смягчить часть отдачи от стрельбы, но не всю!
+  - Также помните, что любое ваше сопротивление выносливости РАБОТАЕТ и снижает урон выносливости от этого оружия.
 
 </Document>
