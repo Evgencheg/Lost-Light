@@ -113381,10 +113381,7 @@ entities:
     - type: Transform
       parent: 30
       pos: -38.5,11.5
-    - type: AccessReader
-      accessListsOriginal:
-      - - Security
-      - - Cadet
+
     - type: EntityStorage
       air:
         temperature: 293.1496

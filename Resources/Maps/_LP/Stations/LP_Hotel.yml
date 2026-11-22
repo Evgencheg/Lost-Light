@@ -57339,10 +57339,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 22.5,-19.5
-    - type: AccessReader
-      accessListsOriginal:
-      - - Security
-      - - Cadet
+
 - proto: CrateEmergencyRadiation
   entities:
   - uid: 9245

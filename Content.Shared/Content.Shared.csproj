@@ -18,6 +18,13 @@
     <ProjectReference Include="..\Content.Starlight.Codegen\Content.Starlight.Codegen.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="_ES\Interaction\HoldToFace\" />
+    <Folder Include="_ES\Viewcone\Components\" />
+    <Folder Include="_Funkystation\FirelockBolt\Components\" />
+    <Folder Include="_Funkystation\FirelockBolt\EntitySystems\" />
+    <Folder Include="_Funkystation\FurnitureWheels\" />
+    <Folder Include="_Funkystation\Viewcone\" />
+    <Folder Include="_LP\Viewcone\" />
     <Folder Include="_Starlight\Movement\" />
     <Folder Include="Power\Components\" />
     <Folder Include="_Starlight\Spells\" />
@@ -27,6 +34,18 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Remove="DeltaV\Storage\Components\MouthStorageComponent.cs" />
+    <Compile Remove="_ES\Interaction\HoldToFace\ESForcedFacingComponent.cs" />
+    <Compile Remove="_ES\Interaction\HoldToFace\ESHoldToFaceComponent.cs" />
+    <Compile Remove="_ES\Viewcone\Components\ESViewconeComponent.cs" />
+    <Compile Remove="_ES\Viewcone\Components\ESViewconeModifierComponent.cs" />
+    <Compile Remove="_ES\Viewcone\ESViewconeAngleSystem.cs" />
+    <Compile Remove="_ES\Viewcone\ESViewconeEffectSystem.cs" />
+    <Compile Remove="_Funkystation\CCVar\ViewconeCCVars.cs" />
+    <Compile Remove="_Funkystation\Viewcone\ViewconeAlwaysFaceCursorSystem.cs" />
+    <Compile Remove="_Funkystation\Viewcone\ViewconeBlindnessComponent.cs" />
+    <Compile Remove="_LP\Viewcone\ViewconeMobStateModifierComponent.cs" />
+    <Compile Remove="_Funkystation\FirelockBolt\FirelockOverrideToggleDoAfterEvent.cs" />
+    <Compile Remove="_Funkystation\FirelockBolt\FirelockOverrideUi.cs" />
   </ItemGroup>
   <Import Project="..\RobustToolbox\MSBuild\Robust.Properties.targets" />
   <Import Project="..\RobustToolbox\MSBuild\Robust.CompNetworkGenerator.targets" />
