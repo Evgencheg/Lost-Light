@@ -36,13 +36,16 @@ public sealed partial class KeyringSystem : EntitySystem
         // LP edit start
         // Один список на все выборы: без повторов и без падения, если доступов меньше лимита.
         var possible = keyring.Comp.PossibleAccesses.ToList();
+        var changed = false;
         for (var i = 0; i < keyring.Comp.MaxPossibleAccesses && possible.Count > 0; i++)
         {
             var pick = _random.PickAndTake(possible);
-            // LP edit end
-            keyring.Comp.Tags.Add(pick); // We don't use access comp for this because otherwise you can use it like an ID card to bump open doors :P
+            changed |= keyring.Comp.Tags.Add(pick); // We don't use access comp for this because otherwise you can use it like an ID card to bump open doors :P
         }
 
+        if (changed)
+            Dirty(keyring);
+        // LP edit end
     }
     private void OnInteractUsing(Entity<KeyringComponent> keyring, ref AfterInteractEvent args)
     {
@@ -61,6 +64,7 @@ public sealed partial class KeyringSystem : EntitySystem
             {
                 BlockDuplicate = true,
                 BreakOnMove = true,
+                NeedHand = true, // LP edit
                 BreakOnHandChange = true,
                 BreakOnDamage = true,
             };
