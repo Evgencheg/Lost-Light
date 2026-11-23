@@ -139,6 +139,7 @@
       - TrashBagBlue
       - GoldenPlunger
       - WireBrush
+      - Keyring # Goobstation
       - LightReplacer
       - CleanerGrenade
   - type: ItemMapper
@@ -192,6 +193,10 @@
         whitelist:
           tags:
           - CleanerGrenade
+      keyring: # Goobstation
+        whitelist:
+          tags:
+          - Keyring
   - type: Appearance
 
 - type: entity
