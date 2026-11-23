@@ -398,4 +398,18 @@ Entries:
   id: 57
   time: '2026-11-17T19:30:48.000000+00:00'
   url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/63
+- author: Evgencheg
+  changes:
+  - message: Удалён конус зрения.
+    type: Remove
+  id: 58
+  time: '2026-11-23T15:03:16.000000+00:00'
+  url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/87
+- author: Evgencheg
+  changes:
+  - message: Удалён рычаг пожарного шлюза.
+    type: Remove
+  id: 59
+  time: '2026-11-23T15:03:16.000000+00:00'
+  url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/87
 Order: -3
