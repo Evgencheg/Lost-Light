@@ -33,18 +33,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Objectives\Interfaces\" />
-    <Folder Include="_Funkystation\FirelockBolt\EntitySystems\" />
-    <Folder Include="_Funkystation\FurnitureWheels\" />
-    <Folder Include="_Funkystation\Viewcone\" />
     <Folder Include="_Starlight\Achievement\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="build.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="_Funkystation\Viewcone\ViewconeConfigSystem.cs" />
   </ItemGroup>
   <Import Project="..\RobustToolbox\MSBuild\Robust.Properties.targets" />
   <Import Project="..\RobustToolbox\MSBuild\Robust.EntitySystemSubscriptionsGenerator.targets" />
