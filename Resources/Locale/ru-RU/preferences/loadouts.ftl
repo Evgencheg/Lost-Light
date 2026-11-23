@@ -1,6 +1,6 @@
 # Name
-loadout-name-edit-label = Имя для этой роли. Если пусто - имя персонажа.
-loadout-name-edit-label-dataset = Имя для этой роли. Если пусто - случайное имя.
+loadout-name-edit-label = Имя для этой роли. Если пусто — имя персонажа.
+loadout-name-edit-label-dataset = Имя для этой роли. Если пусто — случайное имя.
 loadout-name-edit-tooltip = Не более { $max } символов. Если имя не указано, оно будет выбрано случайным образом.
 
 # Restrictions
