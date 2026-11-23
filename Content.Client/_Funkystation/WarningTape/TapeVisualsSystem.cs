@@ -48,5 +48,7 @@ public sealed partial class TapeVisualsSystem : EntitySystem
 
         _sprite.SetOffset((ent.Owner, sprite), new Vector2(totalLength / 2f, 0f));
         _sprite.SetScale((ent.Owner, sprite), new Vector2(totalLength, 1f));
+        // LP edit - спрайт только задаёт область клика (клик-карта не учитывает цвет), рисует ленту оверлей
+        _sprite.SetColor((ent.Owner, sprite), Color.Transparent);
     }
 }

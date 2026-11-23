@@ -5,7 +5,6 @@ using Content.Shared.Popups;
 using Content.Shared.Tools;
 using Content.Shared.Tools.Systems;
 using Robust.Shared.Audio.Systems;
-using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Funkystation.WarningTape;
@@ -19,7 +18,7 @@ public sealed partial class SharedTapeSystem : EntitySystem
     [Dependency] private SharedPopupSystem _popup = null!;
     [Dependency] private SharedAudioSystem _audio = null!;
     [Dependency] private SharedToolSystem _tool = null!;
-    [Dependency] private INetManager _net = null!;
+    [Dependency] private SharedTransformSystem _transform = null!; // LP edit
 
     public override void Initialize()
     {
@@ -51,8 +50,7 @@ public sealed partial class SharedTapeSystem : EntitySystem
         _popup.PopupPredicted(Loc.GetString("warning-tape-removed"), args.User, args.User);
         _audio.PlayPredicted(ent.Comp.RemoveSound, args.User, args.User);
 
-        if (_net.IsServer)
-            QueueDel(ent.Owner);
+        QueueDel(ent.Owner); // LP edit - предсказанное удаление вместо серверного
     }
 
     private void StartDoAfter(Entity<TapeComponent> ent, EntityUid user, TimeSpan delay)
@@ -62,17 +60,35 @@ public sealed partial class SharedTapeSystem : EntitySystem
             delay,
             new TapeRemoveDoAfterEvent(),
             ent.Owner,
-            target: null,
+            target: ent.Owner, // LP edit - проверка доступности ленты до конца действия
             used: null)
         {
             BreakOnMove = true,
             NeedHand = true,
             BreakOnDamage = true,
-            DistanceThreshold = 4.0f,
+            DistanceThreshold = GetRemoveDistance(ent), // LP edit
         };
 
         _doAfter.TryStartDoAfter(doAfterArgs);
     }
+
+    // LP edit start
+    /// <summary>
+    /// Дистанция считается до начала ленты, поэтому к её длине добавляем радиус взаимодействия,
+    /// чтобы ленту можно было снять и у дальнего конца.
+    /// </summary>
+    private float GetRemoveDistance(EntityUid tape)
+    {
+        if (!TryComp<TapeVisualsComponent>(tape, out var visuals))
+            return SharedInteractionSystem.InteractionRange;
+
+        var start = _transform.GetMapCoordinates(tape);
+        var end = _transform.ToMapCoordinates(visuals.End);
+        var length = start.MapId == end.MapId ? (end.Position - start.Position).Length() : 0f;
+
+        return length + SharedInteractionSystem.InteractionRange;
+    }
+    // LP edit end
 
     private void OnRemoveDoAfter(Entity<TapeComponent> ent, ref TapeRemoveDoAfterEvent args)
     {
@@ -84,7 +100,6 @@ public sealed partial class SharedTapeSystem : EntitySystem
         _popup.PopupPredicted(Loc.GetString("warning-tape-removed"), args.User, args.User);
         _audio.PlayPredicted(ent.Comp.RemoveSound, args.User, args.User);
 
-        if (_net.IsServer)
-            QueueDel(ent.Owner);
+        QueueDel(ent.Owner); // LP edit - предсказанное удаление вместо серверного
     }
 }

@@ -206,14 +206,6 @@
           6: { state: icon-6 }
           7: { state: icon-7 }
           8: { state: icon-8 }
-
-- type: entity
-  parent: ClothingHeadHatCone
-  id: ClothingHeadHatConeFull
-  suffix: Full
-  components:
-  - type: Stack
-    count: 8
 # funky stacks end
 
 - type: entity

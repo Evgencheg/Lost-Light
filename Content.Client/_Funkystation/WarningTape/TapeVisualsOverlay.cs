@@ -32,6 +32,11 @@ public sealed class TapeVisualsOverlay(IEntityManager entManager, IPrototypeMana
             var posA = xformSystem.ToMapCoordinates(xform.Coordinates).Position;
             var posB = xformSystem.ToMapCoordinates(visuals.End).Position;
 
+            // LP edit start - отсечение лент вне экрана по всему отрезку, а не по точке начала
+            if (!IsSegmentVisible(args.WorldAABB, posA, posB))
+                continue;
+            // LP edit end
+
             DrawTapeLine(worldHandle, spriteSystem, visuals.Sprite, visuals.ContentRegion, posA, posB, visuals.TileCount);
         }
 
@@ -57,6 +62,11 @@ public sealed class TapeVisualsOverlay(IEntityManager entManager, IPrototypeMana
                 continue;
             }
 
+            // LP edit start
+            if (!IsSegmentVisible(args.WorldAABB, posA, userPos))
+                continue;
+            // LP edit end
+
             var diff = userPos - posA;
             var length = diff.Length();
             var tileLen = protoVisuals.ContentRegion.Width / EyeManager.PixelsPerMeter;
@@ -65,6 +75,17 @@ public sealed class TapeVisualsOverlay(IEntityManager entManager, IPrototypeMana
             DrawTapeLine(worldHandle, spriteSystem, protoVisuals.Sprite, protoVisuals.ContentRegion, posA, userPos, tileCount, alpha: 0.85f);
         }
     }
+
+    // LP edit start
+    /// <summary>
+    /// AABB отрезка с запасом в тайл на толщину ленты. Лента видна, если хоть часть отрезка попадает в экран.
+    /// </summary>
+    private static bool IsSegmentVisible(Box2 viewport, Vector2 posA, Vector2 posB)
+    {
+        var bounds = new Box2(Vector2.Min(posA, posB), Vector2.Max(posA, posB)).Enlarged(1f);
+        return bounds.Intersects(viewport);
+    }
+    // LP edit end
 
     private void DrawTapeLine(
         DrawingHandleWorld worldHandle,
