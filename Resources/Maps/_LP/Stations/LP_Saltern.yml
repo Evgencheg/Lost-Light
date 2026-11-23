@@ -44311,8 +44311,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 15260
-    - type: FirelockBoltControl
-      lastManualInteractionTime: 5995.6273377
 - proto: FirelockEdge
   entities:
   - uid: 6898

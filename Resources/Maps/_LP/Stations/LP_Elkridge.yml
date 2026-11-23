@@ -66529,8 +66529,6 @@ entities:
       deviceLists:
       - 129
       - 130
-    - type: FirelockBoltControl
-      lastManualInteractionTime: 1699.1983008
 - proto: Fireplace
   entities:
   - uid: 9809

@@ -69990,8 +69990,6 @@ entities:
       deviceLists:
       - 82
       - 83
-    - type: FirelockBoltControl
-      lastManualInteractionTime: 2159.2978407
   - uid: 20750
     components:
     - type: Transform
