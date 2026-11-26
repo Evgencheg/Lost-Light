@@ -162,7 +162,7 @@ namespace Content.Client.Chat.UI
                 MaxWidth = SpeechMaxWidth,
             };
 
-            label.SetMessage(FormatSpeech(message.WrappedMessage, fontColor));
+            label.SetMessage(FormatSpeech(message.WrappedMessage, fontColor), tagsAllowed: null); // LP edit
 
             var panel = new PanelContainer
             {

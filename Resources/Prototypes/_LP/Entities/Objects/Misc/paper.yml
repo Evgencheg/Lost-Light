@@ -775,15 +775,6 @@
 
 - type: entity
   parent: PaperFormCC
-  id: DocSGOrder
-  name: Station Goal Order
-  suffix: Form
-  components:
-    - type: TextFilePaperContent
-      fileName: station-goal-order.txt
-
-- type: entity
-  parent: PaperFormCC
   id: DocSSROrder
   name: Station Situation Report Order
   suffix: Form

@@ -791,16 +791,6 @@
     SheetPrinter: 100
 
 - type: latheRecipe
-  id: RecipeDocSGOrder
-  result: DocSGOrder
-  categories:
-    - Orders
-  completetime: 2
-  applyMaterialDiscount: false
-  materials:
-    SheetPrinter: 100
-
-- type: latheRecipe
   id: RecipeDocSSROrder
   result: DocSSROrder
   categories:

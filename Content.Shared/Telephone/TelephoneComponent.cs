@@ -174,7 +174,7 @@ public readonly record struct TelephoneMessageSentEvent(string Message, MsgChatM
 /// Raised when a chat message is received by a telephone from another
 /// </summary>
 [ByRefEvent]
-public readonly record struct TelephoneMessageReceivedEvent(string Message, MsgChatMessage ChatMsg, EntityUid MessageSource, Entity<TelephoneComponent> TelephoneSource, LanguagePrototype? Language = null); // Starlight
+public readonly record struct TelephoneMessageReceivedEvent(string Message, MsgChatMessage ChatMsg, EntityUid MessageSource, Entity<TelephoneComponent> TelephoneSource, LanguagePrototype? Language = null, string? Tts = null); // Starlight // LP edit - текст для TTS, null - как Message
 
 #endregion
 

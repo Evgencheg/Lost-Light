@@ -3,7 +3,7 @@
 # NanoTrasen
 highlights-blue-shield-officer = Офицер Синего щита, Синий щит, Блюшилд, "ОСЩ"
 highlights-magistrate = Магистрат, "Закон", "Маги"
-highlights-nanotrasen-representative = Представитель НаноТрейзен, "ПНТ", НТ Рэп, "Закон", "СОП", Стандартные рабочие процедуры
+highlights-nanotrasen-representative = Представитель НаноТрейзен, "ПНТ", НТ Рэп, "Закон", "СРП", Стандартные рабочие процедуры
 highlights-nanotrasen-career-trainer = Карьерный коуч НаноТрейзен, Карьерный коуч, "НКТ"
 
 # Security
@@ -30,4 +30,4 @@ highlights-performer = Артист
 highlights-assistant = Ассистент
 
 # Law
-highlights-internal-affairs-agent = Агент внутренних дел, "АВД", "Закон", "СОП", Стандартные рабочие процедуры, Юрист
+highlights-internal-affairs-agent = Агент внутренних дел, "АВД", "Закон", "СРП", Стандартные рабочие процедуры, Юрист

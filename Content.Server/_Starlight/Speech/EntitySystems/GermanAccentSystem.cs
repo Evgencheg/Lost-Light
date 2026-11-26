@@ -49,6 +49,7 @@ public sealed partial class GermanAccentSystem : EntitySystem
         message = _replacement.ApplyReplacements(message, "german");
 
         // replace th with zh (visual only for msg, TTS can handle th)
+        var ttsBuilder = new StringBuilder(message.Tts ?? message.Text); // LP edit - TTS без визуальных замен
         var msgBuilder = new StringBuilder(message.Text);
         foreach (Match match in RegexTh().Matches(message.Text))
         {
@@ -89,24 +90,29 @@ public sealed partial class GermanAccentSystem : EntitySystem
             if (!_random.Prob(0.5f))
                 continue;
 
-            msgBuilder[i] = msgBuilder[i] switch
-            {
-                'б' => 'п',
-                'Б' => 'П',
-                'в' => 'ф',
-                'В' => 'Ф',
-                'г' => 'к',
-                'Г' => 'К',
-                'д' => 'т',
-                'Д' => 'Т',
-                'з' => 'с',
-                'З' => 'С',
-                _ => msgBuilder[i]
-            };
+            msgBuilder[i] = Devoice(msgBuilder[i]);
+            if (i < ttsBuilder.Length)
+                ttsBuilder[i] = Devoice(ttsBuilder[i]);
         }
+
+        static char Devoice(char c) => c switch
+        {
+            'б' => 'п',
+            'Б' => 'П',
+            'в' => 'ф',
+            'В' => 'Ф',
+            'г' => 'к',
+            'Г' => 'К',
+            'д' => 'т',
+            'Д' => 'Т',
+            'з' => 'с',
+            'З' => 'С',
+            _ => c
+        };
         // LP edit end
 
         message.Text = msgBuilder.ToString();
+        message.Tts = ttsBuilder.ToString(); // LP edit
         return message;
     }
 

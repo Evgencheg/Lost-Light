@@ -13,6 +13,7 @@ using Content.Shared.Silicons.StationAi;
 using Content.Shared.Silicons.Borgs.Components;
 using Content.Shared.Speech;
 using Content.Shared.Speech.Components;
+using Content.Shared._Starlight.Speech;
 using Content.Shared.Telephone;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
@@ -102,7 +103,7 @@ public sealed partial class TelephoneSystem : SharedTelephoneSystem
         if (!_recentChatMessages.Add((args.Source, args.Message, entity)))
             return;
 
-        SendTelephoneMessage(args.Source, args.Message, entity);
+        SendTelephoneMessage(args.Source, args.Message, entity, tts: args.Tts); // LP edit
     }
 
     private void OnTelephoneMessageReceived(Entity<TelephoneComponent> entity, ref TelephoneMessageReceivedEvent args)
@@ -128,8 +129,9 @@ public sealed partial class TelephoneSystem : SharedTelephoneSystem
         var range = args.TelephoneSource.Comp.LinkedTelephones.Count > 1 ? ChatTransmitRange.HideChat : ChatTransmitRange.GhostRangeLimit;
         var volume = entity.Comp.SpeakerVolume == TelephoneVolume.Speak ? InGameICChatType.Speak : InGameICChatType.Whisper;
 
-        _chat.TrySendInGameICMessage(speaker, args.Message, volume, range, nameOverride: name, checkRadioPrefix: false, languageOverride: args.Language); // Starlight
-        _tts.PlayRelayedSpeech(speaker, args.MessageSource, args.Message, args.Language, volume == InGameICChatType.Whisper, TTSEffect.Phone); // LP edit - телефон и голопад говорят голосом собеседника
+        var tts = args.Tts ?? args.Message; // LP edit
+        _chat.TrySendInGameICMessage(speaker, new SpeechMessage { Text = args.Message, Tts = tts }, volume, range, nameOverride: name, checkRadioPrefix: false, languageOverride: args.Language); // Starlight // LP edit
+        _tts.PlayRelayedSpeech(speaker, args.MessageSource, tts, args.Language, volume == InGameICChatType.Whisper, TTSEffect.Phone); // LP edit - телефон и голопад говорят голосом собеседника
     }
 
     #endregion
@@ -347,7 +349,7 @@ public sealed partial class TelephoneSystem : SharedTelephoneSystem
         SetTelephoneMicrophoneState(entity, false);
     }
 
-    private void SendTelephoneMessage(EntityUid messageSource, string message, Entity<TelephoneComponent> source, bool escapeMarkup = true)
+    private void SendTelephoneMessage(EntityUid messageSource, string message, Entity<TelephoneComponent> source, bool escapeMarkup = true, string? tts = null) // LP edit
     {
         // This method assumes that you've already checked that this
         // telephone is able to transmit messages and that it can
@@ -391,7 +393,7 @@ public sealed partial class TelephoneSystem : SharedTelephoneSystem
         RaiseLocalEvent(source, ref evSentMessage);
         source.Comp.StateStartTime = _timing.CurTime;
 
-        var evReceivedMessage = new TelephoneMessageReceivedEvent(message, chatMsg, messageSource, source, _language.GetLanguage(messageSource)); // Starlight
+        var evReceivedMessage = new TelephoneMessageReceivedEvent(message, chatMsg, messageSource, source, _language.GetLanguage(messageSource), tts); // Starlight // LP edit
 
         foreach (var receiver in source.Comp.LinkedTelephones)
         {

@@ -70,16 +70,22 @@ public sealed class OwOAccentSystem : EntitySystem
         message.Text = ReplaceRussianWords(message.Text);
         message.Tts = ReplaceRussianWords(message.Tts ?? message.Text);
         // LP edit end
-        message.Text = message.Text
-            .Replace("r", "w").Replace("R", "W")
-            .Replace("l", "w").Replace("L", "W") // LP edit
-            // LP edit start
-            .Replace("р", "в").Replace("Р", "В")
-            .Replace("л", "в").Replace("Л", "В");
-            // LP edit end
+        // LP edit start - замена букв и в тексте для TTS
+        message.Text = ReplaceLetters(message.Text);
+        message.Tts = ReplaceLetters(message.Tts ?? message.Text);
+        // LP edit end
 
         return message;
     }
+
+    // LP edit start
+    private static string ReplaceLetters(string text)
+        => text
+            .Replace("r", "w").Replace("R", "W")
+            .Replace("l", "w").Replace("L", "W")
+            .Replace("р", "в").Replace("Р", "В")
+            .Replace("л", "в").Replace("Л", "В");
+    // LP edit end
 
     private void OnAccent(Entity<OwOAccentComponent> entity, ref AccentGetEvent args)
         => args.Message = Accentuate(args.Message);

@@ -17,7 +17,8 @@ public readonly record struct RadioReceiveEvent(
     ChatMessage LanguageObfuscatedChatMsg,
     LanguagePrototype Language,
     EntityUid RadioSource,
-    List<EntityUid> Receivers
+    List<EntityUid> Receivers,
+    string? Tts = null // LP edit - текст для TTS, null - как в чате
     ); // Starlight
 
 /// <summary>

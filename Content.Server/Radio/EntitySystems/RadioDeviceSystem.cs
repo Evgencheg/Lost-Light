@@ -13,6 +13,7 @@ using Content.Shared.Radio;
 using Content.Shared.Radio.Components;
 using Content.Shared.Radio.EntitySystems;
 using Content.Shared.Speech;
+using Content.Shared._Starlight.Speech;
 using Content.Shared.Speech.Components;
 using Robust.Shared.Prototypes;
 using Content.Shared.Power.EntitySystems;
@@ -182,7 +183,7 @@ public sealed partial class RadioDeviceSystem : SharedRadioDeviceSystem
         //Starlight begin
         if (_protoMan.TryIndex<RadioChannelPrototype>(component.BroadcastChannel, out var channel) &&
             _recentlySent.Add((args.Message, args.Source, channel.ID)))
-            _radio.SendRadioMessage(args.Source, args.Message, channel, uid);
+            _radio.SendRadioMessage(args.Source, new SpeechMessage { Text = args.Message, Tts = args.Tts, OriginalText = args.OriginalMessage }, channel, uid); // LP edit - текст для TTS не теряется
         else if (_chat.TryGetCustomChannel(uid, component.BroadcastChannel, out var customChannel) &&
                  _recentlySent.Add((args.Message, args.Source, customChannel.Id)))
             _radio.SendCustomRadioMessage(args.Source, args.Message, customChannel, uid);
@@ -221,16 +222,20 @@ public sealed partial class RadioDeviceSystem : SharedRadioDeviceSystem
 
         // log to chat so people can identity the speaker/source, but avoid clogging ghost chat if there are many radios
         var message = args.OriginalChatMsg.Message;
+        var tts = args.Tts ?? message; // LP edit
         if (receiverComp != null)
+        {
             message = StationRadioServerSystem.Garble(message, receiverComp.Interference, _random);
-        _chat.TrySendInGameICMessage(uid, message,
+            tts = message; // LP edit - помехи слышны и в озвучке
+        }
+        _chat.TrySendInGameICMessage(uid, new SpeechMessage { Text = message, Tts = tts }, // LP edit
             chatType,
             transmitRange,
             nameOverride: name, checkRadioPrefix: false,
             languageOverride: args.Language);
         // Starlight - end
 
-        _tts.PlayRelayedSpeech(uid, args.MessageSource, message, args.Language, chatType == InGameICChatType.Whisper, TTSEffect.Walkie); // LP edit - интерком и ручная рация говорят голосом говорящего
+        _tts.PlayRelayedSpeech(uid, args.MessageSource, tts, args.Language, chatType == InGameICChatType.Whisper, TTSEffect.Walkie); // LP edit - интерком и ручная рация говорят голосом говорящего
     }
 
     private void OnIntercomEncryptionChannelsChanged(Entity<IntercomComponent> ent, ref EncryptionChannelsChangedEvent args)

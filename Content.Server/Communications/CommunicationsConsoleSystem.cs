@@ -304,7 +304,7 @@ namespace Content.Server.Communications
             var msg = new SpeechMessage
             {
                 Text = message.Message,
-                Tts = message.Message,
+                // LP edit - убрано Tts = message.Message: TTS следует за очищенным и обрезанным текстом
                 OriginalText = message.Message,
                 Modifier = SpeechModifier.None
             };
@@ -351,11 +351,15 @@ namespace Content.Server.Communications
             title ??= comp.Title;
 
             if (comp.AnnounceSentBy)
+            {
                 msg.Text += "\n" + Loc.GetString("comms-console-announcement-sent-by") + " " + author;
+                if (msg.Tts != null) // LP edit - подпись и в отдельном тексте для TTS
+                    msg.Tts += "\n" + Loc.GetString("comms-console-announcement-sent-by") + " " + author; // LP edit
+            }
 
             if (comp.Global)
             {
-                _chatSystem.DispatchGlobalAnnouncement(msg.Tts ?? msg.Text, title, announcementSound: comp.Sound, colorOverride: comp.Color, speaker: speaker); // Starlight
+                _chatSystem.DispatchGlobalAnnouncement(msg, title, announcementSound: comp.Sound, colorOverride: comp.Color, speaker: speaker); // Starlight // LP edit - в чат шёл текст для TTS: без очистки, обрезки и подписи
 
                 _adminLogger.Add(LogType.Chat, LogImpact.Low, $"{ToPrettyString(message.Actor):player} has sent the following global announcement: {msg}");
                 return;

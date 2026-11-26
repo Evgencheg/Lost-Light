@@ -8,13 +8,15 @@ public sealed class ListenEvent : EntityEventArgs
     public readonly EntityUid Source;
     public readonly LanguagePrototype? Language; //Starlight
     public readonly string OriginalMessage; // starlight
+    public readonly string? Tts; // LP edit - текст для TTS, null - как Message
 
-    public ListenEvent(string message, EntityUid source, LanguagePrototype? language, string original) //Starlight
+    public ListenEvent(string message, EntityUid source, LanguagePrototype? language, string original, string? tts = null) //Starlight // LP edit
     {
         Message = message;
         Source = source;
         Language = language; //Starlight
         OriginalMessage = original; // starlight
+        Tts = tts; // LP edit
     }
 }
 
