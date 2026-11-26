@@ -1,74 +1,4 @@
 Entries:
-- author: redmushie
-  changes:
-  - message: (Terror Spiders) Web cocoons now heal 20x as much. Yes, really.
-    type: Tweak
-  id: 410428
-  time: '2026-11-13T23:10:02.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7215
-- author: redmushie
-  changes:
-  - message: (Terror Spiders) Placing a web over web structures (e.g. web cocoon) no longer deletes them instantly.
-    type: Fix
-  id: 410429
-  time: '2026-11-13T23:10:02.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7215
-- author: redmushie
-  changes:
-  - message: (Terror Spiders) Buckling into a web cocoon no longer makes you appear permanently invisible.
-    type: Fix
-  id: 410430
-  time: '2026-11-13T23:10:02.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7215
-- author: redmushie
-  changes:
-  - message: (Terror Spiders) Injecting eggs no longer fails silently when too far away.
-    type: Fix
-  id: 410431
-  time: '2026-11-13T23:10:02.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7215
-- author: neomoth
-  changes:
-  - message: You can now view the accesses on any player or item as an observer in replays.
-    type: Add
-  id: 410432
-  time: '2026-11-13T23:33:29.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7218
-- author: Vincolan
-  changes:
-  - message: Added Photography folder.
-    type: Add
-  id: 410433
-  time: '2026-11-13T23:33:31.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7217
-- author: Vincolan
-  changes:
-  - message: Removed the camera from reporter bag (use the app!).
-    type: Remove
-  id: 410434
-  time: '2026-11-13T23:33:31.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7217
-- author: Vincolan
-  changes:
-  - message: Reporter loses the BlankPhotosBox and receives the Photography folder instead.
-    type: Tweak
-  id: 410435
-  time: '2026-11-13T23:33:31.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7217
-- author: Vincolan
-  changes:
-  - message: Reporter News Digiboard now has a little more autonomy.
-    type: Tweak
-  id: 410436
-  time: '2026-11-13T23:33:31.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7217
-- author: CrazyPhantom
-  changes:
-  - message: PDA Cameras no longer give you more view range.
-    type: Remove
-  id: 410437
-  time: '2026-11-14T08:10:29.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/7223
 - author: CrazyPhantom
   changes:
   - message: PDA Cameras no longer flash.
@@ -2799,4 +2729,74 @@ Entries:
   id: 410827
   time: '2026-11-25T16:20:34.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/7422
+- author: Rinary
+  changes:
+  - message: Fixed old bug with missing texture when downloading AI with monochrome customization into intellicard.
+    type: Fix
+  id: 410828
+  time: '2026-11-25T18:52:37.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7423
+- author: Rinary
+  changes:
+  - message: Fixed old bug when you able to toggle item in storage even if there's not enough room.
+    type: Fix
+  id: 410829
+  time: '2026-11-25T19:19:05.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7425
+- author: Rinary
+  changes:
+  - message: Fixed bug when being regular player you can see other ticket(s) in your window.
+    type: Fix
+  id: 410830
+  time: '2026-11-25T19:52:05.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7420
+- author: Rinary
+  changes:
+  - message: Fixed old bug when default module from destroyed borg can be inserted in another borg, but can't be ejected.
+    type: Fix
+  id: 410831
+  time: '2026-11-25T19:52:08.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7426
+- author: Rinary
+  changes:
+  - message: Fixed small checkbox for character activation in Character Editor.
+    type: Fix
+  id: 410832
+  time: '2026-11-25T20:23:53.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7421
+- author: Rinary
+  changes:
+  - message: Fixed small group buttons in loadout section of Character Editor.
+    type: Fix
+  id: 410833
+  time: '2026-11-25T20:23:53.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7421
+- author: Rinary
+  changes:
+  - message: Fixed incorrect background color when using Pop Out future in Character Editor.
+    type: Fix
+  id: 410834
+  time: '2026-11-25T20:23:53.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7421
+- author: Johnny
+  changes:
+  - message: Fixed paramedic visitor's locker.
+    type: Fix
+  id: 410835
+  time: '2026-11-25T20:23:56.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7418
+- author: Alice
+  changes:
+  - message: Added new lobby/radio music "Welcome to SS14".
+    type: Add
+  id: 410836
+  time: '2026-11-25T20:24:00.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7417
+- author: Rinary
+  changes:
+  - message: Fixed old bug about character image export not capture height/weight correctly, as example for avali.
+    type: Fix
+  id: 410837
+  time: '2026-11-25T20:52:38.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/7424
 Order: -1
