@@ -426,4 +426,53 @@ Entries:
   id: 61
   time: '2026-11-23T16:40:08.000000+00:00'
   url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/97
+- author: MegaDaimond
+  changes:
+  - message: Изменены спрайты скафандров Старлайта.
+    type: Tweak
+  id: 62
+  time: '2026-11-24T19:15:53.000000+00:00'
+  url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/99
+- author: MegaDaimond
+  changes:
+  - message: Исправлены хвосты унатхов.
+    type: Fix
+  id: 63
+  time: '2026-11-24T19:15:53.000000+00:00'
+  url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/99
+- author: SanitarDurkovic
+  changes:
+  - message: Добавлена новая причёска.
+    type: Add
+  id: 64
+  time: '2026-11-24T23:18:44.000000+00:00'
+  url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/111
+- author: SanitarDurkovic
+  changes:
+  - message: Добавлены переводы декалей, экранов и банкомата.
+    type: Add
+  id: 65
+  time: '2026-11-24T23:18:44.000000+00:00'
+  url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/111
+- author: SanitarDurkovic
+  changes:
+  - message: Изменены текстуры канистр.
+    type: Tweak
+  id: 66
+  time: '2026-11-24T23:18:44.000000+00:00'
+  url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/111
+- author: SanitarDurkovic
+  changes:
+  - message: Исправлены переводы.
+    type: Fix
+  id: 67
+  time: '2026-11-24T23:18:44.000000+00:00'
+  url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/111
+- author: SanitarDurkovic
+  changes:
+  - message: Изменены карты и их прототипы.
+    type: Tweak
+  id: 68
+  time: '2026-11-25T16:27:38.000000+00:00'
+  url: https://github.com/Lost-Paradise-Project/Lost-Light/pull/100
 Order: -3
