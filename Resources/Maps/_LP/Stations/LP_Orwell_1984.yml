@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 11/22/2026 18:23:15
-  entityCount: 32112
+  entityCount: 32111
 maps:
 - 1
 grids:
@@ -78674,6 +78674,12 @@ entities:
       parent: 2
       rot: 1.5707963267948966 rad
       pos: 49.5,1.5
+  - uid: 32113
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 49.5,-0.5
 - proto: ComputerCommsCargoFilled
   entities:
   - uid: 13120
@@ -78971,12 +78977,6 @@ entities:
       pos: 71.5,-10.5
 - proto: ComputerMassMediaDesktop
   entities:
-  - uid: 13164
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 49.5,-0.5
   - uid: 13166
     components:
     - type: Transform
@@ -177401,11 +177401,6 @@ entities:
     - type: Transform
       parent: 2
       pos: 0.5,-56.5
-  - uid: 27408
-    components:
-    - type: Transform
-      parent: 2
-      pos: 49.5,-0.5
   - uid: 27410
     components:
     - type: Transform
